@@ -1,6 +1,12 @@
 Name: Gaby
 Order: -2
 Entries:
+- author: skysnowflok/supernova
+  time: '2025-02-06T12:01:00.0000000+00:00'
+  url: https://github.com/Gaby-Station/Gaby-Station/pull/129
+  changes:
+    - type: Add
+      message: Adiciona o tanque de reagente
 - author: Dreykor
   time: '2024-11-6T12:01:00.0000000+00:00'
   url: https://github.com/Scomossor/Gaby-Station/pull/2
@@ -223,3 +229,9 @@ Entries:
       message: Altera sprites dos alertas, IPCs, algemas e cartas.
   id: 30
   time: '2025-02-02T06:17:26.0000000+00:00'
+- author: skysnowflok
+  changes:
+    - type: Add
+      message: Tanque de reagentes!
+  id: .nan
+  time: '2025-02-09T16:01:20.0000000+00:00'
