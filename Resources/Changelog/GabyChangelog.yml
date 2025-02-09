@@ -223,9 +223,3 @@ Entries:
       message: Altera sprites dos alertas, IPCs, algemas e cartas.
   id: 30
   time: '2025-02-02T06:17:26.0000000+00:00'
-- author: skysnowflok
-  changes:
-    - type: Add
-      message: Added reagent tank!
-  id: .nan
-  time: '2025-02-07T22:14:42.0000000+00:00'
