@@ -7,14 +7,10 @@ using Content.Shared.Light.Components;
 using Robust.Server.GameObjects;
 using System.Text.RegularExpressions;
 using System.Globalization;
-using Content.Shared.Coordinates;
 using Content.Server.Light.EntitySystems;
-using Content.Server.Configurable;
 using Robust.Shared.Configuration;
 using Content.Shared.CCVar;
-using FastAccessors;
 using Content.Server.GameTicking;
-using System.Diagnostics;
 using System.Linq;
 using Content.Shared.Light;
 
