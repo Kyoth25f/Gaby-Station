@@ -405,8 +405,8 @@
     highImpact: true
   - type: StationEvent
     weight: 2
-    earliestStart: 60
-    minimumPlayers: 40 # how is that 20 people when rat king is 30??? changed.
+    earliestStart: 75
+    minimumPlayers: 30 # how is that 20 people when rat king is 30??? changed.
     duration: null
     maxOccurrences: 1
   - type: BlobSpawnRule

@@ -156,6 +156,7 @@
       - LightBulb
       - LedLightBulb
       - DimLightBulb
+      - WarmLightBulb
       - Bucket
       - DrinkMug
       - DrinkMugMetal
@@ -200,7 +201,6 @@
       - SubstationMachineCircuitboard
       - WallmountSubstationElectronics
       - CellRechargerCircuitboard
-      - BorgChargerCircuitboard
       - WeaponCapacitorRechargerCircuitboard
       - HandheldStationMap
       - ClothingHeadHatWelding
@@ -245,6 +245,7 @@
       - CartridgeBicaridine # Goobstation
       - CartridgeDermaline # Goobstation
       - CartridgeEphedrine # Goobstation
+      - CartridgeAtropine # Goobstation
       - CartridgePuncturase # Goobstation
       - SecHypo # Goobstation
       - ParamedHypo # Goobstation - ParamedHypo
@@ -257,8 +258,14 @@
       - MagazineBoxHighCaliber # Goobstation
       - MagazineMagnumEmpty # Goobstation
       - MagazineMagnum # Goobstation
-      - MagazineMagnumLeverRifleEmpty # Goobstation
-      - MagazineMagnumLeverRifle # Goobstation
+      - MagazineShotgunLeverRifleEmpty # Goobstation
+      - MagazineShotgunLeverRifle # Goobstation
+      - MagazineBoxShotgunHighCaliber # Goobstation
+      - MagazineBoxShotgunSlugHighCaliber # Goobstation
+      - MagazineBoxShotgunIncendiaryHighCaliber # Goobstation
+      - MagazineBoxShotgunUraniumHighCaliber # Goobstation
+      - MagazineBoxShotgunBeanbagHighCaliber # Goobstation
+      - MagazineBoxShotgunPracticeHighCaliber # Goobstation
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -355,7 +362,7 @@
       - SignalTrigger
       - VoiceTrigger
       - Igniter
-      - HandHeldMassScanner
+#      - HandHeldMassScanner - Removed by Lavaland
       - PowerCellMicroreactor
       - PowerCellHigh
       - WeaponPistolCHIMP
@@ -385,10 +392,14 @@
       - FauxTileJungleAstroGrass
       - FauxTileAstroIce
       - FauxTileAstroSnow
+      - FauxTileAstroAsteroidSand
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
       - WeaponPlasmaCutter # Goobstation
       - WeaponPlasmaRifle # Goobstation
+      - PKAUpgradeDamage # Lavaland Change
+      - PKAUpgradeRange # Lavaland Change
+      - PKAUpgradeFireRate # Lavaland Change
       - EnergyScalpel # Shitmed Change
       - EnergyCautery # Shitmed Change
       - AdvancedRetractor # Shitmed Change
@@ -437,6 +448,8 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
+      - WeaponSubMachineSmart # Goobstation
+      - MagazineSmart # Goobstation
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -496,8 +509,8 @@
     - SodaDispenserMachineCircuitboard
     - SpaceHeaterMachineCircuitBoard
     - CutterMachineCircuitboard
-    - StationAnchorCircuitboard
     - SalvageMagnetMachineCircuitboard
+    - BorgChargerCircuitboard
     - OperatingTableCircuitboard # Shitmed Change
     dynamicRecipes:
       - ThermomachineFreezerMachineCircuitBoard
@@ -521,7 +534,6 @@
       - SolarControlComputerCircuitboard
       - SolarTrackerElectronics
       - TurboItemRechargerCircuitboard
-      - PowerComputerCircuitboard
       - AutolatheHyperConvectionMachineCircuitboard
       - ProtolatheHyperConvectionMachineCircuitboard
       - CircuitImprinterHyperConvectionMachineCircuitboard
@@ -577,6 +589,7 @@
       - ReagentGrinderIndustrialMachineCircuitboard
       - JukeboxCircuitBoard
       - SMESAdvancedMachineCircuitboard
+      - HolopadMachineCircuitboard
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ShuttleGunDusterCircuitboard
@@ -657,6 +670,7 @@
     - PowerCageSmall # Goobstation - Powercell to exosuit fab
     dynamicRecipes:
     - ProximitySensor
+    - BorgModuleLollipop # Goobstation
     - BorgModuleAdvancedCleaning
     - BorgModuleAdvancedTool
     - BorgModuleGPS
@@ -793,7 +807,6 @@
     - CockroachCube
     - HumanCube # Goobstation - Start
     - DionaCube
-    - FelinidCube
     - GingerbreadCube
     - MothCube
     - DwarfCube
@@ -802,6 +815,7 @@
     - ReptilianCube
     - VulpkaninCube
     - SlimePersonCube
+    - TajaranCube
     - VoxCube
     - YowieCube # Goobstation - End
   - type: EmagLatheRecipes
@@ -810,6 +824,7 @@
     - SpaceCarpCube
     - SpaceTickCube
     - SkibidiCube # Goobstation
+    - FelinidCube
 
 - type: entity
   id: SecurityTechFab
@@ -881,12 +896,17 @@
       - CartridgeEpinephrine # Goobstation
       - CartridgeBicaridine # Goobstation
       - CartridgeDermaline # Goobstation
+      - CartridgeAtropine # Goobstation
       - SecHypo # Goobstation
       - SyringeGun # Goobstation
       - MagazineMagnumEmpty # Goobstation
       - MagazineMagnum # Goobstation
-      - MagazineMagnumLeverRifle # Goobstation
-      - MagazineMagnumLeverRifleEmpty # Goobstation
+      - MagazineShotgunLeverRifle # Goobstation
+      - MagazineShotgunLeverRifleEmpty # Goobstation
+      - ContrabandDetectorCircuitboard # Goobstation
+      - MagazineBoxShotgunHighCaliber # Goobstation
+      - MagazineBoxShotgunSlugHighCaliber # Goobstation
+      - MagazineBoxShotgunPracticeHighCaliber # Goobstation
     dynamicRecipes:
       - BoxBeanbag
       - BoxShotgunIncendiary
@@ -916,6 +936,9 @@
       - MagazineRifleUranium
       - MagazineShotgunBeanbag
       - MagazineShotgunIncendiary
+      - MagazineBoxShotgunIncendiaryHighCaliber # Goobstation
+      - MagazineBoxShotgunUraniumHighCaliber # Goobstation
+      - MagazineBoxShotgunBeanbagHighCaliber # Goobstation
       - PortableRecharger
       - PowerCageHigh
       - PowerCageMedium
@@ -941,6 +964,8 @@
       - RapidSyringeGun # Goobstation
       - SecurityCyberneticEyes # Shitmed Change
       - MedicalCyberneticEyes # Shitmed Change
+      - WeaponSubMachineSmart # Goobstation
+      - MagazineSmart # Goobstation
       # Goobstation - Mechs
       - WeaponMechCombatImmolationGun
       - WeaponMechCombatSolarisLaser
@@ -1012,6 +1037,9 @@
         - SpeedLoaderMagnumEmpty
         - MagazineMagnumEmpty # Goobstation
         - MagazineMagnum # Goobstation
+        - MagazineBoxShotgunHighCaliber # Goobstation
+        - MagazineBoxShotgunSlugHighCaliber # Goobstation
+        - MagazineBoxShotgunPracticeHighCaliber # Goobstation
     - type: EmagLatheRecipes # Goobstation
       emagStaticRecipes:
       - MagazinePistolCaselessRifle # Goobstation
@@ -1021,6 +1049,9 @@
       - MagazineHighCaliberEmpty # Goobstation
       - MagazineHighCaliber # Goobstation
       - MagazineBoxHighCaliber # Goobstation
+      - MagazineBoxShotgunIncendiaryHighCaliber # Goobstation
+      - MagazineBoxShotgunUraniumHighCaliber # Goobstation
+      - MagazineBoxShotgunBeanbagHighCaliber # Goobstation
     - type: MaterialStorage
       whitelist:
         tags:
@@ -1100,6 +1131,7 @@
       - CartridgeEpinephrine # Goobstation - ParamedHypo
       - CartridgeBicaridine # Goobstation - ParamedHypo
       - CartridgeDermaline # Goobstation - ParamedHypo
+      - CartridgeAtropine # Goobstation
       - ParamedHypo # Goobstation - ParamedHypo
     dynamicRecipes:
       - PrescriptionGlasses # Goobstation
@@ -1293,8 +1325,28 @@
       - CarpetPurple
       - CarpetCyan
       - CarpetWhite
+      # Bedsheets
+      - BedsheetBlack
+      - BedsheetBlue
+      - BedsheetBrown
+      - BedsheetGreen
+      - BedsheetGrey
+      - BedsheetOrange
+      - BedsheetPurple
+      - BedsheetRed
+      - BedsheetWhite
+      - BedsheetYellow
+      - BedsheetClown
+      - BedsheetCosmos
+      - BedsheetIan
+      - BedsheetMedical
+      - BedsheetMime
+      - BedsheetNT
+      - BedsheetRainbow
+      - BedsheetBrigmedic
   - type: EmagLatheRecipes
     emagStaticRecipes:
+      # Clothing
       - ClothingHeadHatCentcomcap
       - ClothingHeadHatCentcom
       - ClothingUniformJumpsuitCentcomAgent
@@ -1322,6 +1374,8 @@
       - ClothingOuterVestWebDurathread # Goobstation - adding durathread armoured clothing
       - ClothingOuterArmourDurathread # Goobstation - adding durathread armoured clothing
       - ClothingUniformJumpsuitDurathread # Goobstation - adding durathread armoured clothing
+      # Bedsheets
+      - BedsheetSyndie
   - type: MaterialStorage
     whitelist:
       tags:
@@ -1392,7 +1446,7 @@
     - BioGenRobustHarvest
 
 - type: entity
-  parent: BaseLathe
+  parent: [BaseLathe, BaseSiloUtilizer] # Goob edit
   id: OreProcessor
   name: ore processor
   description: It produces sheets and ingots using ores.
@@ -1412,10 +1466,17 @@
     - type: Machine
       board: OreProcessorMachineCircuitboard
     - type: MaterialStorage
+      ignoreMaterialWhiteList: true # Goob edit
+      connectToSilo: true # Goob edit
+      disconnectSiloOffMap: true # Goob edit
+      disallowOreEjection: false # Goob edit
       ignoreColor: true
       whitelist:
         tags:
           - Ore
+          - Sheet
+          - RawMaterial
+          - Ingot
     - type: Lathe
       idleState: icon
       runningState: building
@@ -1432,7 +1493,11 @@
         - IngotSilver1
         - MaterialBananium1
         - MaterialDiamond
-
+    #- type: MaterialStorageMagnetPickup # Delta V - Summary: Adds magnet pull from Frontier
+    #  magnetEnabled: True
+    #  range: 0.30 # Delta V - End Magnet Pull
+    - type: MiningPoints # DeltaV - Source of mining points for miners
+    - type: MiningPointsLathe # DeltaV
 
 - type: entity
   parent: OreProcessor

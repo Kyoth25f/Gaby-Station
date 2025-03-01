@@ -10,6 +10,7 @@
   - Headphones
   - PlushieLizard
   - PlushieSpaceLizard
+  - ThreeCandles
   - Lighter
   - CigPackGreen
   - CigPackRed
@@ -26,11 +27,15 @@
   - ClothingNeckLesbianPin
   - ClothingNeckNonBinaryPin
   - ClothingNeckPansexualPin
+  - ClothingNeckOmnisexualPin
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - CardBoxBlack # GoobStation
   - CardBoxNanotrasen # GoobStation
   - PlushieBruce # Gabystation
+  - FoodSnackLollypopWrapped # Goobstation
+  - FoodSnackLollypopWrappedRainbow # Goobstation
+  - FoodSnackLollypopWrappedCarp # Goobstation
   - TowelColorBlack
   - TowelColorDarkBlue
   - TowelColorDarkGreen
@@ -1353,6 +1358,7 @@
   loadouts:
   - ReporterJumpsuit
   - JournalistJumpsuit
+  - ReporterDress
 
 - type: loadoutGroup
   id: PsychologistJumpsuit

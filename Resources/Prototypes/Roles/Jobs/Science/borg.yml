@@ -29,4 +29,4 @@
   icon: JobIconBorg
   supervisors: job-supervisors-rd
   jobEntity: PlayerBorgBattery
-  applyTraits: false
+  applyTraits: true
