@@ -399,8 +399,7 @@
     weight: 5
     duration: 30 # DeltaV: was 60, used as a delay now
     chaos: # Goobstation
-      Hostile: 10
-      Friend: 10
+      Hostile: 20
       Medical: 50
   - type: VentCrittersRule
     entries:
@@ -423,6 +422,9 @@
     minimumPlayers: 15
     weight: 5
     duration: 30 # DeltaV: was 60, used as a delay now
+    chaos: # Goobstation
+      Hostile: 20
+      Medical: 50
   - type: VentCrittersRule
     entries:
     - id: MobPurpleSnake
@@ -444,6 +446,9 @@
     minimumPlayers: 15
     weight: 5
     duration: 30 # DeltaV: was 60, used as a delay now
+    chaos: # Goobstation
+      Hostile: 20
+      Medical: 50
   - type: VentCrittersRule
     entries:
     - id: MobGiantSpiderAngry
@@ -461,6 +466,9 @@
     minimumPlayers: 30 # DeltaV - was 20
     weight: 1 # DeltaV - was 1.5
     duration: 30 # DeltaV: was 60, used as a delay now
+    chaos: # Goobstation
+      Hostile: 20
+      Medical: 50
   - type: VentCrittersRule
     playerRatio: 35 # DeltaV: Clown spiders are very robust
     entries:
@@ -477,8 +485,7 @@
     weight: 1 # Zombies was happening basically every single survival round, so now it's super rare
     duration: 1
     chaos: # Goobstation
-      Hostile: 40
-      Friend: 60
+      Hostile: 100
       Medical: 200
       Death: 200
   - type: ZombieRule
@@ -516,9 +523,8 @@
     duration: 1
     maxOccurrences: 1 # Gabystation - loneops apenas uma vez por round
     chaos: # Goobstation
-      Hostile: 20
-      Friend: 40
-      Medical: 200
+      Hostile: 60
+      Medical: 75
       Death: 100
   - type: RuleGrids
   - type: LoadMapRule
@@ -587,6 +593,8 @@
     duration: 150
     maxDuration: 300
     reoccurrenceDelay: 30
+    chaos: # Goobstation
+      Friend: 20
   - type: MassHallucinationsRule
     minTimeBetweenIncidents: 0.1
     maxTimeBetweenIncidents: 300
@@ -602,6 +610,10 @@
     weight: 8
     reoccurrenceDelay: 20
     duration: 1
+    chaos: # Goobstation
+      Hostile: 10
+      Friend: 20
+      Mess: 30
   - type: IonStormRule
 
 - type: entity
@@ -613,6 +625,10 @@
     minimumPlayers: 20
     maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
     weight: 5
+    chaos: # Goobstation
+      Hostile: 20 # for when they're actually properly hostile
+      Hunger: 10
+      Thirst: 10
   - type: MobReplacementRule
 
 - type: entity
@@ -625,6 +641,9 @@
     weight: 5
     minimumPlayers: 25
     reoccurrenceDelay: 20
+    chaos: # Goobstation
+      Atmos: 15
+      Mess: 30
   - type: GreytideVirusRule
     accessGroups:
     - Cargo
@@ -646,6 +665,10 @@
     reoccurrenceDelay: 20
     minimumPlayers: 4
     duration: null
+    chaos: # Goobstation
+      # can be both hostile and friendly
+      Hostile: 10
+      Friend: -10
   - type: SpaceSpawnRule
     spawnDistance: 0
   - type: AntagSpawner
