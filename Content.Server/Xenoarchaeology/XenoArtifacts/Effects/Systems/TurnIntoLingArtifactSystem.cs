@@ -31,8 +31,8 @@ public sealed class TurnIntoLingArtifactSystem : EntitySystem
         var player = target.PlayerSession;
 
         //TODO: Arrumar isso!!
-        if (!HasComp<SiliconComponent>(args.Activator))
-            //_antag.ForceMakeAntag<ChangelingRuleComponent>(player, "Changeling");
+        /*if (!HasComp<SiliconComponent>(args.Activator))
+            _antag.ForceMakeAntag<ChangelingRuleComponent>(player, "Changeling"); */
 
     }
 }
