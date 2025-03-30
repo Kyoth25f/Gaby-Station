@@ -28,6 +28,6 @@ public sealed class TurnIntoBlobArtifactSystem : EntitySystem
 
         var player = target.PlayerSession;
 
-        EnsureComp<Shared._Goobstation.Blob.Components.BlobCarrierComponent>((EntityUid) args.Activator).HasMind = HasComp<ActorComponent>((EntityUid) args.Activator);
+        EnsureComp<Goobstation.Common.Blob.BlobCarrierComponent>((EntityUid) args.Activator).HasMind = HasComp<ActorComponent>((EntityUid) args.Activator);
     }
 }
