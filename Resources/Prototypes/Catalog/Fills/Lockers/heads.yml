@@ -21,6 +21,7 @@
     - id: AstroNavCartridge
     - id: PrinterDocFlatpack # Gabystation [port corvax]
     - id: CargoTechFabCircuitboard # Goobstation - Cargo Techfab
+    - id: MailTeleporterMachineCircuitboard # GoobStation port of DeltaV mail
 
 - type: entity
   id: LockerQuarterMasterFilled
