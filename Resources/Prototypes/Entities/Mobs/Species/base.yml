@@ -494,7 +494,6 @@
   abstract: true
   components:
   - type: Absorbable # Goobstation - changelings
-  - type: DiseaseCarrier # backmen
   - type: Barotrauma
     damage:
       types:

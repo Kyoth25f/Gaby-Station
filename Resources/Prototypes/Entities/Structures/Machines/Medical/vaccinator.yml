@@ -25,8 +25,6 @@
     - state: unlit
       shader: unshaded
       map: ["enum.DiseaseMachineVisualLayers.IsOn"]
-  - type: DiseaseMachine
-    machineOutput: Vaccine
   - type: Appearance
   - type: DiseaseMachineVisuals
     idleState: icon
@@ -37,21 +35,4 @@
     containers:
       machine_board: !type:Container
       machine_parts: !type:Container
-<<<<<<< HEAD
-  - type: ResearchClient
-  - type: DiseaseVaccineCreator
-  - type: ActivatableUI
-    key: enum.VaccineMachineUiKey.Key
-  - type: ActivatableUIRequiresPower
-  - type: UserInterface
-    interfaces:
-      enum.VaccineMachineUiKey.Key:
-        type: VaccineMachineBoundUserInterface
-      enum.ResearchClientUiKey.Key:
-        type: ResearchClientBoundUserInterface
-  - type: MaterialStorage
-    materialWhiteList:
-    - Biomass
-=======
->>>>>>> goob/master
   - type: RequireProjectileTarget
