@@ -134,7 +134,7 @@
     - FootstepSound
     - DoorBumpOpener
     - VulpEmotes
-  - type: FootPrints # WD EDIT
+  # - type: FootPrints # WD EDIT
   - type: Wagging # Einstein-Engine
 
 - type: entity
