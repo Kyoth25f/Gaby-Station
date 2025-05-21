@@ -50,8 +50,10 @@ namespace Content.Shared.Localizations
             var culture = new CultureInfo(Culture);
             _loc.LoadCulture(culture);
 
+            _loc.LoadCulture(culture);
             _loc.AddFunction(culture, "MAKEPLURAL", FormatMakePlural);
             _loc.AddFunction(culture, "MANY", FormatMany);
+            _loc.AddFunction(culture, "PRESSURE", FormatPressure);
             _loc.AddFunction(culture, "POWERWATTS", FormatPowerWatts);
             _loc.AddFunction(culture, "POWERJOULES", FormatPowerJoules);
             _loc.AddFunction(culture, "UNITS", FormatUnits);
@@ -60,7 +62,6 @@ namespace Content.Shared.Localizations
             _loc.AddFunction(culture, "NATURALFIXED", FormatNaturalFixed);
             _loc.AddFunction(culture, "NATURALPERCENT", FormatNaturalPercent);
             _loc.AddFunction(culture, "PLAYTIME", FormatPlaytime);
-            _loc.AddFunction(culture, "PRESSURE", FormatPressure);
 
             _loc.AddFunction(culture, "ARTIGO-O", FuncArtigoDefinido);
             _loc.AddFunction(culture, "ARTIGO-UM", FuncArtigoIndefinido);
@@ -79,8 +80,8 @@ namespace Content.Shared.Localizations
             _loc.LoadCulture(cultureEn);
             _loc.SetFallbackCluture(cultureEn);
 
-            _loc.AddFunction(cultureEn, "MAKEPLURAL", FormatMakePlural);
-            _loc.AddFunction(cultureEn, "MANY", FormatMany);
+            //_loc.AddFunction(cultureEn, "MAKEPLURAL", FormatMakePlural);
+            //_loc.AddFunction(cultureEn, "MANY", FormatMany);
             _loc.AddFunction(cultureEn, "POWERWATTS", FormatPowerWatts);
             _loc.AddFunction(cultureEn, "POWERJOULES", FormatPowerJoules);
             _loc.AddFunction(cultureEn, "UNITS", FormatUnits);
