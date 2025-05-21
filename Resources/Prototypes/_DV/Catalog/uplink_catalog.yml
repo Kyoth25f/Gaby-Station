@@ -22,7 +22,6 @@
 #  - !type:BuyerWhitelistCondition
 #    blacklist:
 #      components:
-<<<<<<< HEAD
 #      - SurplusBundle
 
 - type: listing
@@ -67,6 +66,3 @@
     whitelist:
       tags:
       - NukeOpsUplink
-=======
-#      - SurplusBundle
->>>>>>> goob/master

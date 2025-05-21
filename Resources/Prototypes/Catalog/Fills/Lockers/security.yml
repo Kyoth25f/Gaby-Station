@@ -242,11 +242,8 @@
       - id: BoxEvidenceMarkers
       - id: HandLabeler
       - id: BoxTapeRecorder # DeltaV
-<<<<<<< HEAD
       - id: CassetteTapeInterview # Gabystation - lore
         prob: 0.25
-=======
->>>>>>> goob/master
 
 - type: entity
   id: ClosetBombFilled

@@ -224,15 +224,6 @@
   description: traitor-description
   showInVote: false
   rules:
-<<<<<<< HEAD
-    - Traitor
-    - SubGamemodesRule
-    - BasicStationEventScheduler
-    - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - LavalandStormScheduler # Lavaland Change
-=======
   - DummyNonAntagChance
   - Traitor
   - SubGamemodesRule
@@ -241,7 +232,6 @@
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
   - LavalandStormScheduler # Lavaland Change
->>>>>>> goob/master
 
 - type: gamePreset
   id: Deathmatch
@@ -264,24 +254,14 @@
   description: nukeops-description
   showInVote: false
   rules:
-<<<<<<< HEAD
     - Nukeops
+    - DummyNonAntagChance
     - SubGamemodesRule
     - BasicStationEventScheduler
-    - MeteorSwarmScheduler
+    #  - MeteorSwarmScheduler Goobstation - nuh uh
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
     - LavalandStormScheduler # Lavaland Change
-=======
-  - Nukeops
-  - DummyNonAntagChance
-  - SubGamemodesRule
-  - BasicStationEventScheduler
-  #  - MeteorSwarmScheduler Goobstation - nuh uh
-  - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
-  - LavalandStormScheduler # Lavaland Change
->>>>>>> goob/master
 
 - type: gamePreset
   id: Revolutionary
@@ -293,24 +273,15 @@
   description: rev-description
   showInVote: false
   rules:
-<<<<<<< HEAD
+    - DummyNonAntagChance
     - Revolutionary
     - SubGamemodesRule
     - BasicStationEventScheduler
-    - MeteorSwarmScheduler
+    #  - MeteorSwarmScheduler Goobstation - nuh uh
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
     - LavalandStormScheduler # Lavaland Change
-=======
-  - DummyNonAntagChance  
-  - Revolutionary
-  - SubGamemodesRule
-  - BasicStationEventScheduler
-  #  - MeteorSwarmScheduler Goobstation - nuh uh
-  - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
-  - LavalandStormScheduler # Lavaland Change
->>>>>>> goob/master
+
 
 - type: gamePreset
   id: Zombie

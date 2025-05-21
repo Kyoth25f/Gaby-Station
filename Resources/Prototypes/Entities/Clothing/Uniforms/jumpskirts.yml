@@ -1017,7 +1017,6 @@
   - type: Tag
     tags:
     - ClownSuit
-<<<<<<< HEAD
     - WhitelistChameleon
 
 - type: entity
@@ -1292,6 +1291,3 @@
       - state: equipped-OUTERCLOTHING-base
       - state: equipped-OUTERCLOTHING-color
         color: "#ffcc00"
-=======
-    - WhitelistChameleon
->>>>>>> goob/master

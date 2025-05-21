@@ -1380,14 +1380,10 @@
         factor: 3
     Medicine:
       effects:
-<<<<<<< HEAD
-      - !type:RemoveCogchampAccent
-=======
       - !type:CleanseCult # DeltaV - Cosmic Cult
         conditions:
         - !type:ReagentThreshold
           min: 10
->>>>>>> goob/master
       - !type:HealthChange
         conditions:
         - !type:TotalDamage

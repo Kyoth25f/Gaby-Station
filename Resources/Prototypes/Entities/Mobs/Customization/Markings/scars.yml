@@ -39,12 +39,8 @@
   id: ScarTopSurgeryShort
   bodyPart: Chest
   markingCategory: Chest
-<<<<<<< HEAD
   speciesRestriction: [Human, Dwarf, Felinid, Oni]
   sexRestriction: [Male]
-=======
-  speciesRestriction: [ Human, Dwarf, Oni ]
->>>>>>> goob/master
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -54,11 +50,7 @@
   id: ScarTopSurgeryLong
   bodyPart: Chest
   markingCategory: Chest
-<<<<<<< HEAD
   speciesRestriction: [Human, Dwarf, Felinid,  Oni]
-=======
-  speciesRestriction: [Human, Dwarf, Oni]
->>>>>>> goob/master
   sexRestriction: [Male]
   followSkinColor: true
   sprites:
@@ -69,16 +61,12 @@
   id: ScarChest
   bodyPart: Chest
   markingCategory: Chest
-<<<<<<< HEAD
   speciesRestriction: [Human, Dwarf, Felinid, Oni]
-=======
-  speciesRestriction: [Human, Dwarf, Oni]
->>>>>>> goob/master
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
     state: scar_chest
-    
+
 - type: marking
   id: ScarNeck
   bodyPart: Head

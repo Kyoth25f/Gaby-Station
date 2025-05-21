@@ -420,7 +420,6 @@
   - type: Clothing
     sprite: Clothing/Head/Misc/hairflower.rsi
 
-<<<<<<< HEAD
 
 - type: entity
   parent: ClothingHeadBase
@@ -432,7 +431,7 @@
     sprite: Clothing/Head/Misc/robocophead.rsi
   - type: Clothing
     sprite: Clothing/Head/Misc/robocophead.rsi
-=======
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadPerformerWig
@@ -446,4 +445,3 @@
   - type: HideLayerClothing
     slots:
     - Hair
->>>>>>> goob/master

@@ -31,7 +31,6 @@
   - type: Sprite
     sprite: Clothing/Under/Socks/coder.rsi
   - type: Clothing
-<<<<<<< HEAD
     sprite: Clothing/Under/Socks/coder.rsi
 
 - type: entity
@@ -44,6 +43,3 @@
     sprite: Clothing/Under/simplefem.rsi
   - type: Clothing
     sprite: Clothing/Under/simplefem.rsi
-=======
-    sprite: Clothing/Under/Socks/coder.rsi
->>>>>>> goob/master

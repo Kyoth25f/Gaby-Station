@@ -108,12 +108,9 @@
           availableJobs:
             #command
             Captain: [ 1, 1 ]
-<<<<<<< HEAD
             AdministrativeAssistant: [ 1, 1 ] # Gabystation - admin assist
-=======
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
->>>>>>> goob/master
             #service
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 2, 2 ]

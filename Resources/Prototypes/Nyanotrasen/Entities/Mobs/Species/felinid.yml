@@ -86,15 +86,11 @@
     - FootstepSound
     - DoorBumpOpener
     - FelinidEmotes
-<<<<<<< HEAD
-  - type: FootPrints # WD EDIT
   - type: Wagging # DeltaV + Einstein-Engine
-=======
   #- type: FootPrints # WD EDIT
   - type: Consciousness
     cap: 160
     threshold: 80
->>>>>>> goob/master
 
 - type: entity
   save: false

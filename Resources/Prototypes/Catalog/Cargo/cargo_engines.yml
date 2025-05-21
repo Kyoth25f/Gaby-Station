@@ -124,7 +124,6 @@
   product: CrateEngineeringTeslaGroundingRod
   cost: 400
   category: cargoproduct-category-name-engineering
-<<<<<<< HEAD
   group: market
 
 - type: cargoProduct
@@ -135,6 +134,4 @@
   product: CrateEngineeringTEGKit
   cost: 8000
   category: cargoproduct-category-name-engineering
-=======
->>>>>>> goob/master
   group: market

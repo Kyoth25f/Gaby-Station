@@ -135,14 +135,6 @@
     interactFailureString: petting-failure-tesla
     interactSuccessSpawn: EffectHearts
   - type: SupermatterImmune # Goobstation
-<<<<<<< HEAD
-  - type: MetaData # Goobstation
-  #- type: RandomMetadata # Goobstation
-  #  nameSegments:
-  #  - goob_generators_names_first
-  #  - goob_generators_names_tesla_last # Gabystation - QoL & Roleplay
-=======
->>>>>>> goob/master
   - type: GuideHelp # For the curious among the brave.
     guides:
     - TeslaEngine

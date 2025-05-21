@@ -161,7 +161,6 @@
   - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
     state: basic_bow
   - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
-<<<<<<< HEAD
     state: basic_bell
 
 # Felinid Tail Wag (DeltaV)
@@ -225,6 +224,3 @@
     state: basic_bow_wag
   - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
     state: basic_bell_wag
-=======
-    state: basic_bell
->>>>>>> goob/master

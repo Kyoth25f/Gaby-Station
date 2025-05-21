@@ -456,14 +456,11 @@
     accent-cowboy-words-93: accent-cowboy-replacement-93
     accent-cowboy-words-94: accent-cowboy-replacement-94
     accent-cowboy-words-95: accent-cowboy-replacement-95
-<<<<<<< HEAD
     accent-cowboy-words-96: accent-cowboy-replacement-96
-=======
 #    accent-cowboy-words-96: accent-cowboy-replacement-96 -GoobStation
     accent-cowboy-words-97: accent-cowboy-replacement-97
     accent-cowboy-words-98: accent-cowboy-replacement-98
     accent-cowboy-words-99: accent-cowboy-replacement-99
->>>>>>> goob/master
 
 - type: accent
   id: southern

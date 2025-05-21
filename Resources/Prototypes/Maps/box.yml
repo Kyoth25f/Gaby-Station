@@ -147,7 +147,6 @@
             #silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
-<<<<<<< HEAD
         # Goobstation blob-config-start HUGE
         - type: StationBlobConfig
           stageBegin: 40
@@ -155,5 +154,3 @@
           stageTheEnd: 900
         # Goobstation blob-config-end
 
-=======
->>>>>>> goob/master

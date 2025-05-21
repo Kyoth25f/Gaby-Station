@@ -216,7 +216,6 @@
         type: PaperBoundUserInterface
   - type: FaxableObject
   - type: PaperVisuals
-<<<<<<< HEAD
   - type: Flammable
     fireSpread: true
     alwaysCombustible: true
@@ -262,13 +261,11 @@
     materialComposition:
       SheetPrinter: 100
 # Corvax-Printer-End
-=======
   # Goobstation - needed so you can click with spray painter
   - type: Construction
     graph: SpesosCounterfeit
     node: start
 
->>>>>>> goob/master
 - type: entity
   name: paper scrap
   parent: BasePaper

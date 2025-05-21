@@ -716,7 +716,6 @@
   - type: SpawnArtifact
     maxSpawns: 1
     spawns:
-<<<<<<< HEAD
     - id: TeslaEnergyBall
 
 ## Dice of fate update ##
@@ -834,6 +833,4 @@
     maxSpawns: 1
     spawns:
     - id: ClothingBackpackHolding
-=======
     - id: TeslaEnergyBall
->>>>>>> goob/master

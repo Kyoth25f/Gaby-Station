@@ -56,12 +56,9 @@
     RiotLaserShield: 2
     RiotBulletShield: 2
     RadioHandheldSecurity: 5
-<<<<<<< HEAD
     SurveillanceWirelessCameraBodySecurity: 5
     CassetteTape: 4
     TapeRecorder: 1
-    BolaEnergy: 5 # Goobstation
-=======
     BolaEnergy: 5 # Goobstation - start
     PepperSpray: 3
     SecHypo: 4
@@ -69,7 +66,6 @@
     CartridgeSaline: 4
     CartridgeBicaridine: 4
     CartridgeDermaline: 4 # Goobstation - end
->>>>>>> goob/master
   # security officers need to follow a diet regimen!
   contrabandInventory:
     WeaponMeleeNeedle: 2

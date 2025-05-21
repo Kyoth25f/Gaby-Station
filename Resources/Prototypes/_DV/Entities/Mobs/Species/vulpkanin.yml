@@ -134,11 +134,8 @@
     - FootstepSound
     - DoorBumpOpener
     - VulpEmotes
-<<<<<<< HEAD
   - type: FootPrints # WD EDIT
   - type: Wagging # Einstein-Engine
-=======
->>>>>>> goob/master
 
 - type: entity
   save: false

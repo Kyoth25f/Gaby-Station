@@ -87,12 +87,4 @@
       location: supermatter
     - type: StealTarget
       stealGroup: SupermatterSliver # uses to verify sm existense on map
-<<<<<<< HEAD
-    - type: MetaData # Goobstation
-    #- type: RandomMetadata # Goobstation
-    #  nameSegments:
-    #  - goob_generators_names_first
-    #  - goob_generators_names_supermatter_last # Gabystation - QoL & Roleplay
-=======
->>>>>>> goob/master
     - type: PhysicsGunBlacklist

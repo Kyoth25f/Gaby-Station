@@ -24,14 +24,10 @@
   sprites:
     Head: MobMothHead
     Snout: MobHumanoidAnyMarking
-<<<<<<< HEAD
     Hair: MobHumanoidAnyMarking
     FacialHair: MobHumanoidAnyMarking
-    Chest: MobMothTorso
-=======
     Chest: MobMothChest
     Groin: MobMothGroin
->>>>>>> goob/master
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
     Tail: MobHumanoidAnyMarking
