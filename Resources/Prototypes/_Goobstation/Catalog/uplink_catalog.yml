@@ -1226,20 +1226,4 @@
   conditions:
   - !type:BuyerSpeciesCondition
     whitelist:
-      tags:
-      - LoneOpsUplink
-
-- type: listing
-  id: UplinkEnergyPickaxe
-  name: uplink-energy-pickaxe-name
-  description: uplink-energy-pickaxe-desc
-  icon: { sprite: /Textures/_NF/Objects/Weapons/Melee/energy_pickaxe.rsi, state: icon }
-  productEntity: NFEnergyPickaxe
-  cost:
-    Telecrystal: 32 # Worse than esword for combat, better for breaching
-  categories:
-  - UplinkWeaponry
-  conditions:
-  - !type:BuyerSpeciesCondition
-    whitelist:
     - Dwarf # Rock and stone
