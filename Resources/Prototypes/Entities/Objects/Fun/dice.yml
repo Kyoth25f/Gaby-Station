@@ -165,7 +165,6 @@
     damage:
       types:
         Piercing: 5
-<<<<<<< HEAD
     # I love this
 
 - type: entity
@@ -204,6 +203,3 @@
   - type: RgbLightController
     cycleRate: 0.2
   - type: ActiveReagentGrinder
-=======
-    # I love this
->>>>>>> goob/master

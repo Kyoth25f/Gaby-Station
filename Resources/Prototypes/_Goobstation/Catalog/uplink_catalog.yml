@@ -77,21 +77,6 @@
   categories:
     -  UplinkDisruption
 
-<<<<<<< HEAD
-# skibidi no more D:
-#- type: listing
-#  id: UplinkBoxSkibidiRizz
-#  name: Box of Skibidi Rizz
-#  description: Contains 3 Skibidi Toilet cubes and 3 glasses of SigmaJuice... Chat, is this real?
-#  productEntity: BoxSkibidiRizz
-#  cost:
-#    Telecrystal: 30
-#  categories:
-#    - UplinkDisruption
-#  saleLimit: 1
-
-=======
->>>>>>> goob/master
 - type: listing
   id: UplinkSarinGasGrenade
   name: uplink-sarin-gas-grenade-name
@@ -770,11 +755,8 @@
       blacklist:
         tags:
           - NukeOpsUplink # i guess we dont let nukies have this, they have to mutch TC
-<<<<<<< HEAD
-  saleLimit: 1
-=======
           - ContravendUplink
->>>>>>> goob/master
+  saleLimit: 1
 
 - type: listing
   id: UplinkSmokeImplanter
@@ -1244,9 +1226,6 @@
   conditions:
   - !type:BuyerSpeciesCondition
     whitelist:
-<<<<<<< HEAD
       tags:
       - LoneOpsUplink
-=======
-    - Dwarf # Rock and stone
->>>>>>> goob/master
+      - Dwarf # Rock and stone

@@ -195,7 +195,6 @@
   components:
   - type: StorageFill
     contents:
-<<<<<<< HEAD
       - id: TeslaGroundingRodFlatpack
 
 - type: entity
@@ -212,6 +211,3 @@
       - id: GasAnalyzer
       - id: SheetSteel
         amount: 1
-=======
-      - id: TeslaGroundingRodFlatpack
->>>>>>> goob/master
