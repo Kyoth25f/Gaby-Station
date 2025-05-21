@@ -50,7 +50,6 @@ namespace Content.Shared.Localizations
             var culture = new CultureInfo(Culture);
             _loc.LoadCulture(culture);
 
-            _loc.LoadCulture(culture);
             _loc.AddFunction(culture, "MAKEPLURAL", FormatMakePlural);
             _loc.AddFunction(culture, "MANY", FormatMany);
             _loc.AddFunction(culture, "PRESSURE", FormatPressure);
