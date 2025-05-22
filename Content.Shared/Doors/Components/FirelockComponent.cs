@@ -22,10 +22,10 @@
 // SPDX-FileCopyrightText: 2023 Jezithyr <jezithyr@gmail.com>
 // SPDX-FileCopyrightText: 2023 Tom Leys <tom@crump-leys.com>
 // SPDX-FileCopyrightText: 2024 Aidenkrz <aiden@djkraz.com>
-// SPDX-FileCopyrightText: 2024 ShadowCommander <10494922+ShadowCommander@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 nikthechampiongr <32041239+nikthechampiongr@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 ArtisticRoomba <145879011+ArtisticRoomba@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 ShadowCommander <10494922+ShadowCommander@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -113,6 +113,52 @@ namespace Content.Shared.Doors.Components
         /// </summary>
         [DataField, AutoNetworkedField]
         public bool Powered;
+
+        #endregion
+
+        #region Client animation
+
+        /// <summary>
+        /// The sprite state used to animate the airlock frame when the airlock opens.
+        /// </summary>
+        [DataField]
+        public string OpeningLightSpriteState = "opening_unlit";
+
+        /// <summary>
+        /// The sprite state used to animate the airlock frame when the airlock closes.
+        /// </summary>
+        [DataField]
+        public string ClosingLightSpriteState = "closing_unlit";
+
+        /// <summary>
+        /// The sprite state used to animate the airlock panel when the airlock opens.
+        /// </summary>
+        [DataField]
+        public string OpeningPanelSpriteState = "panel_opening";
+
+        /// <summary>
+        /// The sprite state used to animate the airlock panel when the airlock closes.
+        /// </summary>
+        [DataField]
+        public string ClosingPanelSpriteState = "panel_closing";
+
+        /// <summary>
+        /// The sprite state used for the open airlock lights.
+        /// </summary>
+        [DataField]
+        public string OpenLightSpriteState = "open_unlit";
+
+        /// <summary>
+        /// The sprite state used for the closed airlock lights.
+        /// </summary>
+        [DataField]
+        public string WarningLightSpriteState = "closed_unlit";
+
+        /// <summary>
+        /// The sprite state used for the 'access denied' lights animation.
+        /// </summary>
+        [DataField]
+        public string DenySpriteState = "deny_unlit";
 
         #endregion
     }
