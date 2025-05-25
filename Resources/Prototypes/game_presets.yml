@@ -60,7 +60,7 @@
   alias:
     - survival
   name: survival-title
-  showInVote: true # Gabystation - melhor que dynamic
+  showInVote: false # Gabystation - desativado por enquanto
   description: survival-description
   rules:
     - MeteorSwarmScheduler
@@ -171,7 +171,7 @@
     - secret
     - sekrit
   name: secret-title
-  showInVote: true # Goob - Game Director
+  showInVote: false # Gaby - desativa por agora
   description: secret-description
   rules:
     - Secret
