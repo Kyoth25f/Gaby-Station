@@ -1,6 +1,10 @@
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
 # SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Ilya246 <ilyukarno@gmail.com>
+# SPDX-FileCopyrightText: 2025 TheBorzoiMustConsume <197824988+TheBorzoiMustConsume@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 #
@@ -23,6 +27,9 @@
       Hostile: 100
       Medical: 100
       Death: 100
+    eventType: HostilesSpawn
+  - type: GameRule
+    chaosScore: 250
   - type: AlertLevelInterceptionRule
   - type: AntagSelection
     selectionTime: PostPlayerSpawn
@@ -58,6 +65,9 @@
       Hostile: 100
       Medical: 100
       Death: 100
+    eventType: HostilesSpawn
+  - type: GameRule
+    chaosScore: 300
   - type: AlertLevelInterceptionRule
   - type: AntagSelection
     selectionTime: PostPlayerSpawn
@@ -78,6 +88,7 @@
     tags:
       - MidroundAntag
 
+# Midround Heretics
 - type: entity
   parent: Heretic
   id: HereticMidround
@@ -95,6 +106,9 @@
       Hostile: 200
       Medical: 150
       Death: 200
+    eventType: HostilesSpawn
+  - type: GameRule
+    chaosScore: 300
   - type: AlertLevelInterceptionRule
   - type: AntagSelection
     selectionTime: PostPlayerSpawn
@@ -137,6 +151,9 @@
       Power: 50
       Medical: 50
       Atmos: 50
+    eventType: HostilesSpawn
+  - type: GameRule
+    chaosScore: 800
   - type: AntagSelection
     selectionTime: PostPlayerSpawn
     definitions:
@@ -174,6 +191,9 @@
       Hostile: 40
       Medical: 40
       Death: 40
+    eventType: Chaotic
+  - type: GameRule
+    chaosScore: 90
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
   - type: Tag
@@ -201,6 +221,9 @@
       Power: 50
       Medical: 50
       Atmos: 50
+    eventType: HostilesSpawn
+  - type: GameRule
+    chaosScore: 800
   - type: BlobSpawnRule
     carrierBlobProtos:
     - SpawnPointGhostBlobRat
