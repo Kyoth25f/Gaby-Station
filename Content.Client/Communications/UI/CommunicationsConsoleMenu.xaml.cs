@@ -170,8 +170,8 @@ namespace Content.Client.Communications.UI
             EmergencyShuttleButton.OnPressed += _ => OnEmergencyLevel?.Invoke();
             EmergencyShuttleButton.Disabled = !CanCall;
 
-            MaintEmergencyButton.OnPressed += _ => OnCentcomm?.Invoke(); // Gabystation
-            CentCommButton.OnPressed += _ => OnMaint?.Invoke(); // Gabystation
+            MaintEmergencyButton.OnPressed += _ => OnMaint?.Invoke(); // Gabystation
+            CentCommButton.OnPressed += _ => OnCentcomm?.Invoke(); // Gabystation
 
             UpdateCountdown();
         }
