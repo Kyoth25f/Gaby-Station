@@ -96,6 +96,7 @@
   - ChaplainTitleMonk
   - ChaplainTitleInstructor
 
+- type: startingGear
   id: ChaplainGear
   equipment:
     shoes: ClothingShoesColorBlack

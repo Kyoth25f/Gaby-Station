@@ -88,13 +88,13 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial # goobstation
+    components:
+      - type: SecurityStaff
   alternateTitles:
   - DetectiveTitleInvestigator
   - DetectiveTitleExpert
   - DetectiveTitleAnalist
-  - !type:AddComponentSpecial # goobstation
-    components:
-      - type: SecurityStaff
 
 - type: startingGear
   id: DetectiveGear

@@ -133,6 +133,9 @@
       - type: CommandStaff
       - type: Condemned
         soulOwnedNotDevil: true
+  alternateTitles:
+  - NanotrasenRepresentativeTitleLiason
+  - NanotrasenRepresentativeTitleInspector
 
 - type: startingGear
   id: NanotrasenRepresentativeGear
@@ -145,3 +148,11 @@
     back:
     - Flash
     - TelescopicBaton
+
+- type: jobAlternateTitle
+  id: NanotrasenRepresentativeTitleLiason
+  name: job-name-alt-nanotrasenrepresentative-liason
+
+- type: jobAlternateTitle
+  id: NanotrasenRepresentativeTitleInspector
+  name: job-name-alt-nanotrasenrepresentative-inspector

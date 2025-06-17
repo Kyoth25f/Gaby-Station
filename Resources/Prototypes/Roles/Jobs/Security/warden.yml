@@ -168,6 +168,7 @@
   - WardenTitleDispacher
   - WardenTitleManager
 
+- type: startingGear
   id: WardenGear
   equipment:
     eyes: ClothingEyesGlassesSecurity
