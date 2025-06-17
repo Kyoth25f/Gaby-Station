@@ -274,6 +274,8 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 else
                     SetPdaAndIdCardData(entity.Value, profile.Name, prototype, station, null);
             }
+            else if (prototype is not null)
+                SetPdaAndIdCardData(entity.Value, profile.Name, prototype, station, null);
 
             _humanoidSystem.LoadProfile(entity.Value, profile);
             _metaSystem.SetEntityName(entity.Value, profile.Name);
