@@ -57,7 +57,6 @@
 // SPDX-FileCopyrightText: 2024 Simon <63975668+Simyon264@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Spessmann <156740760+Spessmann@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
 // SPDX-FileCopyrightText: 2024 Thomas <87614336+Aeshus@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Unisol <1929445+Unisol@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Winkarst <74284083+Winkarst-cpu@users.noreply.github.com>
@@ -69,7 +68,6 @@
 // SPDX-FileCopyrightText: 2024 github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 lunarcomets <140772713+lunarcomets@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 metalgearsloth <comedian_vs_clown@hotmail.com>
 // SPDX-FileCopyrightText: 2024 nikthechampiongr <32041239+nikthechampiongr@users.noreply.github.com>
@@ -88,10 +86,14 @@
 // SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 // SPDX-FileCopyrightText: 2025 JORJ949 <159719201+JORJ949@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Milon <milonpl.git@proton.me>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 // SPDX-FileCopyrightText: 2025 SX_7 <sn1.test.preria.2002@gmail.com>
 // SPDX-FileCopyrightText: 2025 SpaceManiac <tad@platymuus.com>
+// SPDX-FileCopyrightText: 2025 Tayrtahn <tayrtahn@gmail.com>
 // SPDX-FileCopyrightText: 2025 Theodore Lukin <66275205+pheenty@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 joshepvodka <86210200+joshepvodka@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 joshepvodka <guilherme.ornel@gmail.com>
+// SPDX-FileCopyrightText: 2025 lzk <124214523+lzk228@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -262,21 +264,6 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
 
         if (profile != null)
         {
-            if (prototype is not null && _configurationManager.GetCVar(GabyCVars.ICAlternateJobTitlesEnable))
-            {
-                if (profile.JobAlternateTitles.TryGetValue(prototype.ID, out var altTitleId))
-                {
-                    if (_prototypeManager.TryIndex(altTitleId, out var altTitle))
-                        SetPdaAndIdCardData(entity.Value, profile.Name, prototype, station, altTitle);
-                    else
-                        SetPdaAndIdCardData(entity.Value, profile.Name, prototype, station, null);
-                }
-                else
-                    SetPdaAndIdCardData(entity.Value, profile.Name, prototype, station, null);
-            }
-            else if (prototype is not null)
-                SetPdaAndIdCardData(entity.Value, profile.Name, prototype, station, null);
-
             _humanoidSystem.LoadProfile(entity.Value, profile);
             _metaSystem.SetEntityName(entity.Value, profile.Name);
 
@@ -299,6 +286,20 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
 
         var gearEquippedEv = new StartingGearEquippedEvent(entity.Value);
         RaiseLocalEvent(entity.Value, ref gearEquippedEv);
+
+        if (prototype != null && TryComp(entity.Value, out MetaDataComponent? metaData))
+        {
+            if (profile is not null && profile.JobAlternateTitles.TryGetValue(prototype.ID, out var altTitleId) &&
+                 _configurationManager.GetCVar(GabyCVars.ICAlternateJobTitlesEnable))
+            {
+                if (_prototypeManager.TryIndex(altTitleId, out var altTitle))
+                    SetPdaAndIdCardData(entity.Value, metaData.EntityName, prototype, station, altTitle);
+                else
+                    SetPdaAndIdCardData(entity.Value, metaData.EntityName, prototype, station, null);
+            }
+            else
+                SetPdaAndIdCardData(entity.Value, metaData.EntityName, prototype, station, null);
+        }
 
         DoJobSpecials(job, entity.Value);
         _identity.QueueIdentityUpdate(entity.Value);
