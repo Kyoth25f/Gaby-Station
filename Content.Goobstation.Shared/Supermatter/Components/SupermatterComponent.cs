@@ -383,6 +383,12 @@ public sealed partial class SupermatterComponent : Component
         {Gas.Healium, 0f}, // Assmos - /tg/ gases
         {Gas.Pluoxium, 0f}, // Assmos - /tg/ gases
         {Gas.Hydrogen, 0f}, // Assmos - /tg/ gases
+        {Gas.HyperNoblium, 0f}, // Assmos - /tg/ gases
+        {Gas.ProtoNitrate, 0f}, // Assmos - /tg/ gases
+        {Gas.Zauker, 0f}, // Assmos - /tg/ gases
+        {Gas.Halon, 0f }, // Assmos - /tg/ gases
+        {Gas.Helium, 0f }, // Assmos - /tg/ gases
+        {Gas.AntiNoblium, 0f }, // Assmos - /tg/ gases
     };
 
     /// <summary>
