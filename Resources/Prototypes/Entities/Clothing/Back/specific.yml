@@ -141,7 +141,6 @@
   - type: ItemSlots
     slots:
       nozzle_slot:
-      nozzle_slot:
         name: FirefighterNozzle
         startingItem: FirefighterNozzle
         whitelist:
