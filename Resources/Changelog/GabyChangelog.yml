@@ -414,3 +414,11 @@ Entries:
         lindas.)!
   id: 49
   time: '2025-06-23T23:31:32.0000000+00:00'
+- author: Arguemeu, mkanke-real
+  changes:
+    - type: Add
+      message: >-
+        Adiciona Boombox, que são jukebox portateis, pesquisa avançada de
+        serviço para poder fabricar!
+  id: 50
+  time: '2025-06-23T23:37:55.0000000+00:00'
