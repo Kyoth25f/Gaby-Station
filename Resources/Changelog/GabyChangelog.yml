@@ -422,3 +422,11 @@ Entries:
         serviço para poder fabricar!
   id: 50
   time: '2025-06-23T23:37:55.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Tweak
+      message: >-
+        O controlador remoto do capitão agora tem acesso total, para a
+        felicidade dos poucos que jogam de capitão.
+  id: 51
+  time: '2025-06-24T18:47:53.0000000+00:00'
