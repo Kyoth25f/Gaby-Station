@@ -430,3 +430,12 @@ Entries:
         felicidade dos poucos que jogam de capitão.
   id: 51
   time: '2025-06-24T18:47:53.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Add
+      message: >-
+        Consoles de teleporte e pads de teleporte adicionados. Se tratam de
+        estruturas para mapping e eventos admeme. Espere ver em um futuro não
+        tão distante!
+  id: 52
+  time: '2025-06-25T00:48:43.0000000+00:00'
