@@ -439,3 +439,9 @@ Entries:
         tão distante!
   id: 52
   time: '2025-06-25T00:48:43.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Add
+      message: Tem relatos da NT usando um novo alerta para ameaças internas...
+  id: 53
+  time: '2025-06-26T14:03:58.0000000+00:00'
