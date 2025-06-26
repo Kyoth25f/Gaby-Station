@@ -22,8 +22,10 @@
 // SPDX-FileCopyrightText: 2024 silver2127 <silver21728@gmail.com>
 // SPDX-FileCopyrightText: 2024 username <113782077+whateverusername0@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
+// SPDX-FileCopyrightText: 2025 AgentePanela <agentepanela@gmail.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 CerberusWolfie <wb.johnb.willis@gmail.com>
+// SPDX-FileCopyrightText: 2025 Dreykor <160512778+Dreykor@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Dreykor <Dreykor12@gmail.com>
 // SPDX-FileCopyrightText: 2025 Dreykor <arguemeu@gmail.com>
 // SPDX-FileCopyrightText: 2025 Errant <35878406+Errant-4@users.noreply.github.com>
@@ -85,6 +87,7 @@ using Content.Shared._EinsteinEngines.Revolutionary;
 using Robust.Shared.Player;
 using Content.Server.Traitor.Uplink;
 using Content.Shared.PDA.Ringer;
+using Content.Shared.PDA;
 
 
 namespace Content.Server.GameTicking.Rules;
@@ -168,7 +171,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
         _antag.SendBriefing(traitor, Loc.GetString("head-rev-role-greeting"), Color.Red, null);
 
         if (_role.MindHasRole<RevolutionaryRoleComponent>(mindId, out var revRoleComp))
-            AddComp(revRoleComp.Value, new RoleBriefingComponent { Briefing = Loc.GetString("head-rev-briefing", ("code", string.Join("-", code).Replace("sharp", "#"))) }, overwrite: true);
+            AddComp(revRoleComp.Value, new RoleBriefingComponent { Briefing = Loc.GetString("head-rev-briefing", ("code", string.Join("-", code ?? Array.Empty<Note>()).Replace("sharp", "#"))) }, overwrite: true);
 
         return true;
     }
@@ -234,7 +237,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
                         Loc.GetString("revolutionaries-open-revolt-announcement", ("nameList", headRevNameList)),
                         Loc.GetString("revolutionaries-sender-cc"),
                         colorOverride: Color.Red);
-                
+
                 component.OpenRevoltAnnouncementPending = false;
             }
         }
@@ -245,7 +248,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
     {
         _roundEnd.EndRound();
     }
-    
+
     protected override void AppendRoundEndText(EntityUid uid, RevolutionaryRuleComponent component, GameRuleComponent gameRule,
         ref RoundEndTextAppendEvent args)
     {
