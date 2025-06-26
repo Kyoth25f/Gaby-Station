@@ -79,7 +79,7 @@
   - apocalypse
   name: apostle-title
   description: apostle-description
-  showInVote: true
+  showInVote: faslse # teste de caos
   minPlayers: 5
   rules:
     - ApocalypseDynamic
@@ -90,7 +90,7 @@
   - secretdirector
   - director
   name: secret-director-title
-  showInVote: true # Goob - Game Director
+  showInVote: false # teste de cas
   description: secret-director-description
   rules:
     - SecretDirector
