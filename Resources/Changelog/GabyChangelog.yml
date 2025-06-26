@@ -445,3 +445,15 @@ Entries:
       message: Tem relatos da NT usando um novo alerta para ameaças internas...
   id: 53
   time: '2025-06-26T14:03:58.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Tweak
+      message: >-
+        Agora o Abductor precisa estar a um raio de 200m da estação para ter
+        acesso as cameras e se teleportar.
+    - type: Tweak
+      message: >-
+        Ao teleportar pra estação, a habilidade de retornar a nave do Abductor
+        entra em cooldown por 20 segundos.
+  id: 54
+  time: '2025-06-26T14:08:10.0000000+00:00'
