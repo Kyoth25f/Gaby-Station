@@ -457,3 +457,11 @@ Entries:
         entra em cooldown por 20 segundos.
   id: 54
   time: '2025-06-26T14:08:10.0000000+00:00'
+- author: Arguemeu, taydeo, Rainbeon
+  changes:
+    - type: Add
+      message: >-
+        Rework nos revolucionários, uplink e um novo sistema de declarar revolta
+        para head revs!
+  id: 55
+  time: '2025-06-26T14:09:00.0000000+00:00'
