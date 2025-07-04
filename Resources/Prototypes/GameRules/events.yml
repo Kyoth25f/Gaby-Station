@@ -178,7 +178,6 @@
     - id: SpiderSpawn
     - id: VentClog
     - id: NecromorphSpawn # Gabystation add
-    - id: DiseaseOutbreak # Gabystation add
     - id: TidemindDevelop # Goobstation - Tidemind
     - id: MothroachSpawn # DeltaV
     - id: XenoVents # DeltaV
