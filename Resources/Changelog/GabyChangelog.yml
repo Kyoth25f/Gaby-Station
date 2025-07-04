@@ -510,3 +510,13 @@ Entries:
         um boteco!!!
   id: 61
   time: '2025-07-04T18:46:28.0000000+00:00'
+- author: AgentePanela (vyas)
+  changes:
+    - type: Fix
+      message: Tradução do analisador medico.
+    - type: Fix
+      message: Anuncio de chegada na estação.
+    - type: Tweak
+      message: Jogo base atualizado para 04/07 (Goob).
+  id: 61
+  time: '2025-07-04T18:41:45.0000000+00:00'
