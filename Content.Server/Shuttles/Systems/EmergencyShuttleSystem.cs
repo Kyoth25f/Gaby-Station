@@ -105,6 +105,9 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Shared.DeviceNetwork.Components;
+using Content.Shared.Random;
+using Robust.Shared.Prototypes;
+using Content.Shared.Random.Helpers;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -136,6 +139,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly TransformSystem _transformSystem = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly IPrototypeManager _prototype = default!; // Gabystation change
 
     private const float ShuttleSpawnBuffer = 1f;
 
@@ -143,6 +147,9 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
 
     [ValidatePrototypeId<TagPrototype>]
     private const string DockTag = "DockEmergency";
+
+    [ValidatePrototypeId<WeightedRandomPrototype>]
+    private const string MapsProto = "CentcommWeights"; // Gabystation change
 
     public override void Initialize()
     {
@@ -604,6 +611,16 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
             component.Entity = otherComp.Entity;
             component.ShuttleIndex = otherComp.ShuttleIndex;
             return;
+        }
+
+        // Gabystation change start
+        if (!_prototype.TryIndex<WeightedRandomPrototype>(MapsProto, out var maps))
+        {
+            Log.Error($"Random centcomm prototype '{MapsProto}' not found. Using default centcomm map.");
+        }
+        else
+        {
+            component.Map = new ResPath(maps.Pick(_random));
         }
 
         if (string.IsNullOrEmpty(component.Map.ToString()))
