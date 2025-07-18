@@ -536,3 +536,11 @@ Entries:
       message: 'Todas as medalhas agora permitem especificar o motivo da condecoração.  '
   id: 64
   time: '2025-07-13T00:07:46.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Tweak
+      message: >-
+        A NanoTrasen readaptou suas naves de mineração para a nova realidade dos
+        especialistas em exploração, apesar da falta de verba.
+  id: 65
+  time: '2025-07-18T14:05:02.0000000+00:00'
