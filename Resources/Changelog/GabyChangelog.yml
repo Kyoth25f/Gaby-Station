@@ -556,3 +556,11 @@ Entries:
       message: Sem mais meta. Portas falsas estão corretamente traduzidas.
   id: 67
   time: '2025-07-18T14:32:31.0000000+00:00'
+- author: samarieh
+  changes:
+    - type: Add
+      message: >-
+        Adiciona um cartucho que cura o envenenamento, disponível nos
+        departamentos de segurança e medicina.
+  id: 68
+  time: '2025-07-18T15:12:37.0000000+00:00'
