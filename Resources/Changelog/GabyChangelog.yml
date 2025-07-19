@@ -610,3 +610,9 @@ Entries:
       message: Arruma algumas coisas faltantes da nave de salvatagem.
   id: 72
   time: '2025-07-19T04:12:37.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Add
+      message: Ergam suas tochas, vampiros se infiltraram na estação!
+  id: 73
+  time: '2025-07-19T04:14:32.0000000+00:00'
