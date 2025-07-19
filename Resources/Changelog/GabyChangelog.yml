@@ -604,3 +604,9 @@ Entries:
       message: Tempo durante a central de comando agora é de 5 minutos.
   id: 71
   time: '2025-07-18T17:08:22.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Fix
+      message: Arruma algumas coisas faltantes da nave de salvatagem.
+  id: 72
+  time: '2025-07-19T04:12:37.0000000+00:00'
