@@ -624,3 +624,9 @@ Entries:
         virar um boteco!!!
   id: 74
   time: '2025-07-19T05:53:35.0000000+00:00'
+- author: samarieh
+  changes:
+    - type: Tweak
+      message: Agora PTL custa 200 mil e agora vem em uma caixa segura da engenharia.
+  id: 75
+  time: '2025-07-19T06:06:02.0000000+00:00'
