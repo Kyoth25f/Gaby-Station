@@ -244,7 +244,7 @@
   components:
   - type: BlobRule
   - type: GameRule
-    chaosScore: 1000
+    chaosScore: 1500
 
 - type: entity
   id: BlobGameMode
@@ -253,8 +253,8 @@
   components:
   - type: BlobRule
   - type: GameRule
-    minPlayers: 15
-    chaosScore: 1000
+    minPlayers: 30
+    chaosScore: 1500
   - type: AntagSelection
     selectionTime: IntraPlayerSpawn
     definitions:
@@ -280,8 +280,8 @@
     weight: 5.5 # Gabystation - faz blob raro
     duration: 1
     earliestStart: 50
-    minimumPlayers: 20
-    maxOccurrences: 2
+    minimumPlayers: 30
+    maxOccurrences: 1
     chaos:
       Hostile: 150
       Medical: 150
@@ -294,7 +294,7 @@
       Atmos: 70
     eventType: HostilesSpawn
   - type: GameRule
-    chaosScore: 1000
+    chaosScore: 1500
   - type: BlobSpawnRule
     carrierBlobProtos:
     - SpawnPointGhostBlobRat
