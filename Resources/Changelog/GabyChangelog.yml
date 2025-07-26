@@ -654,3 +654,11 @@ Entries:
       message: Adicionada Eyes Without a Face de Billy Idol na jukebox!
   id: 78
   time: '2025-07-26T10:32:52.0000000+00:00'
+- author: CRISOOOOO
+  changes:
+    - type: Add
+      message: >-
+        Nova estação Tramstation! Diferente da outra chamada Train, essa aqui
+        tem um literal TREM dentro dela!
+  id: 79
+  time: '2025-07-26T10:37:17.0000000+00:00'
