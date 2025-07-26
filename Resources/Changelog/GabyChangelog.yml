@@ -697,3 +697,9 @@ Entries:
         obrigados a seguir as ordens da IA da estação.
   id: 80
   time: '2025-07-26T10:39:08.0000000+00:00'
+- author: CRISOOOOO
+  changes:
+    - type: Remove
+      message: O mapa "Barratry" foi removido da rotação de mapas, mas não do jogo.
+  id: 81
+  time: '2025-07-26T10:40:51.0000000+00:00'
