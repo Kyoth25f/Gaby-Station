@@ -17,10 +17,10 @@ Uncomment and modify the following line if you wish to change the license from t
 ## Anexos
 <!-- Imagens ou videos sobre as mudanças da PR (opcional | recomendado). -->
 
-<!--## Requirimentos -->
+## Requirimentos
 <!--Confirme botando X entre os colchetes [X]: -->
-<!-- - [ ] Eu li e estou seguindo a [Politica de pull requests e changelog](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
-- [ ] Eu adicionei anexos à esta PR ou não precisa de imagens in-game. -->
+- [ ] Eu li e estou seguindo a [Politica de pull requests e changelog](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
+- [ ] Eu adicionei anexos à esta PR ou não precisa de imagens in-game.
 
 **Changelog**
 <!-- Adicione uma entrada para changelog do servidor, bote o emoji :cl: e siga com as mudanças assim como o exemplo.
