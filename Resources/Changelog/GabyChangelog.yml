@@ -728,3 +728,11 @@ Entries:
       message: Nova aba de costumização sobre os seus registros de personagem!
   id: 84
   time: '2025-08-01T02:27:12.0000000+00:00'
+- author: dffdff242, AgentePanela
+  changes:
+    - type: Add
+      message: >-
+        Agora é possivel esconder o seu username pela trait OOC "Esconder
+        username".
+  id: 85
+  time: '2025-08-01T14:25:16.0000000+00:00'
