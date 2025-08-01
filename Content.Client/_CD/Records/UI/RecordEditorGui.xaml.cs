@@ -37,8 +37,8 @@ public sealed partial class RecordEditorGui : Control
                 return;
 
             // Gaby change start
-            var max = 75;
-            var min = 250;
+            var min = 75;
+            var max = 250;
             newHeight = MathHelper.Clamp(newHeight, min, max);
             // Gaby change end
 
@@ -52,8 +52,8 @@ public sealed partial class RecordEditorGui : Control
                 return;
 
             // Gaby change start
-            var max = 10;
-            var min = 200;
+            var min = 10;
+            var max = 200;
             newWeight = MathHelper.Clamp(newWeight, min, max);
             // Gaby change end
 
