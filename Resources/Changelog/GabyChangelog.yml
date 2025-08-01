@@ -739,8 +739,10 @@ Entries:
 - author: Pinkbat5, AirFryerBuyOneGetOneFree, AgentePanela
   changes:
     - type: Add
-      message: Marking para roupas intimas
+      message: Marking para roupas intimas.
     - type: Add
-      message: Agora é possivel dobrar jumpsuits na cintura
+      message: Opção de censura pra roupa intima (ativa por padrão).
+    - type: Add
+      message: Agora é possivel dobrar (algumas) jumpsuits na cintura.
   id: 86
   time: '2025-08-01T14:53:49.0000000+00:00'
