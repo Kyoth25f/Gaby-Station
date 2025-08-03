@@ -33,6 +33,8 @@
 // SPDX-FileCopyrightText: 2025 CRISOOOOO <130084560+CRISOOOOO@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 CRISOOOOO <cristiandeavila.uow@gmail.com>
 // SPDX-FileCopyrightText: 2025 Deerstop <edainturner@gmail.com>
+// SPDX-FileCopyrightText: 2025 Dreykor <160512778+Dreykor@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Dreykor <Dreykor12@gmail.com>
 // SPDX-FileCopyrightText: 2025 ElectroJr <leonsfriedrich@gmail.com>
 // SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 // SPDX-FileCopyrightText: 2025 Gallagin <64706450+Gallagin@users.noreply.github.com>
@@ -46,6 +48,7 @@
 // SPDX-FileCopyrightText: 2025 Panela <107573283+AgentePanela@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
 // SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
+// SPDX-FileCopyrightText: 2025 Rinary <rinary.super@gmail.com>
 // SPDX-FileCopyrightText: 2025 Rouden <149893554+Roudenn@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 // SPDX-FileCopyrightText: 2025 SX_7 <sn1.test.preria.2002@gmail.com>
@@ -204,6 +207,7 @@ using Robust.Shared.IoC;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
+using Content.Shared.Station.Components;
 using Robust.Shared.Utility;
 using YamlDotNet.RepresentationModel;
 using Robust.Shared.Map.Events;
@@ -292,7 +296,7 @@ namespace Content.IntegrationTests.Tests
             "Submarine", // Goobstation - add Submarine
             "Lambda", // Goobstation - add Lambda
             "Leonid", // Goobstation - add Leonid
-            "Amber", 
+            "Amber",
             "Gate", // Goobstation - goob changes
             "Lavatest", // Lavaland Change
             "Loop",

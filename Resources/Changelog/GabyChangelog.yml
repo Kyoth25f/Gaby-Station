@@ -754,3 +754,52 @@ Entries:
       message: Train está de volta! Agora com teleportes melhores e conteúdo novo.
   id: 87
   time: '2025-08-01T15:08:06.0000000+00:00'
+- author: SolsticeOfTheWinter, Diggy, dootythefrooty, AgentePanela
+  changes:
+    - type: Add
+      message: Loadout civil adicionado a todos os cargos (não militares)!
+    - type: Add
+      message: Roupas civil do EE
+    - type: Add
+      message: Algumas roupas civils nas vends/drobes
+  id: 88
+  time: '2025-08-01T17:39:23.0000000+00:00'
+- author: CRISOOOOO
+  changes:
+    - type: Remove
+      message: Train foi removido novamente do vote
+  id: 89
+  time: '2025-08-02T04:30:29.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Tweak
+      message: >-
+        Rework no sistema de armas balísticas, elas agora usam sistema hitscan,
+        igual armamento laser usa, ao invés de lançar um objeto em alta
+        velocidade, o que torna mais realista e belo.
+    - type: Add
+      message: >-
+        Tiros vão fazer seu sangue espalhar no chão, isto pode ser limpado com
+        limpador espacial.
+    - type: Tweak
+      message: >-
+        Armamento a laser tomou sérios buffs, que envolvem maior dano em disparo
+        e capacidade de munição muito maior, esses buffs servem para tornar
+        armamentos lasers uma opção tão viável quanto armamento balísticos.
+    - type: Fix
+      message: >-
+        A munição de stun do Riot Launcher não vai mais causar insta stun, do
+        qual acontecia por bug.
+    - type: Add
+      message: >-
+        Armas balísticas agora vão apenas acertar alvos perto do mouse do
+        atirador, o que evita drasticamente fogo amigo, mas que permite errar o
+        alvo se jogar o mouse pra longe da tela, vai precisar mirar corretamente
+        agora.
+    - type: Add
+      message: >-
+        Tiros balísticos em borgs vai soltar faíscas e emitir som de metal sendo
+        acertado, futuramente o mesmo efeito será aplicado a hardsuits com altos
+        valores de proteção.
+  id: 90
+  time: '2025-08-02T04:32:21.0000000+00:00'
