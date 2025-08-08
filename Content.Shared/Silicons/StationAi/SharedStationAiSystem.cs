@@ -116,6 +116,8 @@ public abstract partial class SharedStationAiSystem : EntitySystem
     private static readonly EntProtoId DefaultAi = "StationAiBrain";
     private readonly ProtoId<ChatNotificationPrototype> _downloadChatNotificationPrototype = "IntellicardDownload";
 
+    private const float MaxVisionMultiplier = 5f;
+
     public override void Initialize()
     {
         base.Initialize();
