@@ -803,3 +803,11 @@ Entries:
         valores de proteção.
   id: 90
   time: '2025-08-02T04:32:21.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Add
+      message: >-
+        Meteoros, e immovable rods foram ativados devoltas a lista de seleção do
+        Game Director
+  id: 91
+  time: '2025-08-09T01:42:27.0000000+00:00'
