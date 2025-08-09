@@ -2,7 +2,10 @@
 // SPDX-FileCopyrightText: 2024 Mr. 27 <45323883+Dutch-VanDerLinde@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Mr. 27 <koolthunder019@gmail.com>
 // SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 AgentePanela <agentepanela@gmail.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -73,7 +76,8 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
         LoadoutsContainer.DisposeAllChildren();
         // Didn't use options because this is more robust in future.
 
-        var selected = loadout.SelectedLoadouts[_groupProto.ID];
+        loadout.SelectedLoadouts.TryGetValue(_groupProto.ID, out var selected); // Gaby change
+        selected ??= new List<Loadout>(); // Gaby change
 
         foreach (var loadoutProto in _groupProto.Loadouts)
         {
