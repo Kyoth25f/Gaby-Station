@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+/ SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 // SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
 //
@@ -18,7 +18,7 @@ public sealed class SurgeryCVars : CVars
     /// Whether or not players can operate on themselves.
     /// </summary>
     public static readonly CVarDef<bool> CanOperateOnSelf =
-        CVarDef.Create("surgery.can_operate_on_self", true, CVar.SERVERONLY);
+        CVarDef.Create("surgery.can_operate_on_self", false, CVar.SERVERONLY);
 
     /// <summary>
     /// How many times per second do we want to heal wounds.
