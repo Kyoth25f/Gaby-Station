@@ -817,3 +817,9 @@ Entries:
       message: Bug do Comando Central não spawnando e a evacuação não vindo corrigido.
   id: 92
   time: '2025-08-16T13:56:38.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: Loudouts corrigidos!
+  id: 93
+  time: '2025-08-16T16:43:04.0000000+00:00'
