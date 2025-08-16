@@ -20,8 +20,8 @@
       map: ["enum.ToggleVisuals.Layer"]
   - type: GenericVisualizer
     visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
   - type: ToggleableLightVisuals
@@ -119,7 +119,7 @@
   - type: StaticPrice
     price: 1200
 
-            
+
   #Ignorar parte abaixo comentada
 
   # - type: MagazineAmmoProvider
@@ -144,9 +144,9 @@
   # - type: Appearance
   # - type: StaticPrice
   #   price: 1200
-      
+
 # TODO: TROCAR POR BATERIAS. CUTTERS NÃO USAM CARTUCHOS! #
-      
+
   # - type: ItemSlots
     # slots:
       # gun_magazine:

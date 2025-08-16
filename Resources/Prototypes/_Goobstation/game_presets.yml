@@ -9,6 +9,7 @@
 # SPDX-FileCopyrightText: 2025 August Eymann <august.eymann@gmail.com>
 # SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Dreykor <Dreykor12@gmail.com>
+# SPDX-FileCopyrightText: 2025 CometVoid <cometsstrile@gmail.com>
 # SPDX-FileCopyrightText: 2025 FaDeOkno <143940725+FaDeOkno@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 # SPDX-FileCopyrightText: 2025 Gareth Quaile <garethquaile@gmail.com>
@@ -45,7 +46,7 @@
     - Changeling
     - SubGamemodesRule
     - BasicStationEventScheduler
-    - MeteorSwarmScheduler # Gaby - Reativa meteoros
+    - MeteorSwarmScheduler
     - BasicRoundstartVariation
     - LavalandStormScheduler # Lavaland Change
 
@@ -61,7 +62,7 @@
     - CalmLing
     - CalmTraitor
     - BasicStationEventScheduler
-    - MeteorSwarmScheduler # Gaby - Reativa meteoros
+    - MeteorSwarmScheduler
     - BasicRoundstartVariation
     - LavalandStormScheduler # Lavaland Change
 
@@ -78,7 +79,7 @@
     - Calmops
     - CalmTraitor
     - BasicStationEventScheduler
-    - MeteorSwarmScheduler # Gaby - Reativa meteoros
+    - MeteorSwarmScheduler
     - BasicRoundstartVariation
     - LavalandStormScheduler # Lavaland Change
 
@@ -94,7 +95,7 @@
     - Calmops
     - CalmLing
     - BasicStationEventScheduler
-    - MeteorSwarmScheduler # Gaby - Reativa meteoros
+    - MeteorSwarmScheduler
     - BasicRoundstartVariation
     - LavalandStormScheduler # Lavaland Change
 
@@ -111,7 +112,7 @@
     - CalmRevs
     - CalmTraitor
     - BasicStationEventScheduler
-    - MeteorSwarmScheduler # Gaby - Reativa meteoros
+    - MeteorSwarmScheduler
     - LavalandStormScheduler # Lavaland Change
 
 - type: gamePreset
@@ -126,7 +127,7 @@
     - CalmRevs
     - CalmLing
     - BasicStationEventScheduler
-    - MeteorSwarmScheduler # Gaby - Reativa meteoros
+    - MeteorSwarmScheduler
     - BasicRoundstartVariation
     - BasicRoundstartVariation
     - LavalandStormScheduler # Lavaland Change
@@ -158,7 +159,7 @@
     - Honkops
     - SubGamemodesRule
     - BasicStationEventScheduler
-    - MeteorSwarmScheduler # Gaby - Reativa meteoros
+    - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
     - LavalandStormScheduler

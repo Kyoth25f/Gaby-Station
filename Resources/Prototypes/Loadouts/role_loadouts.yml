@@ -131,6 +131,11 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - CaptainEnvirohelm
+  - CaptainEnvirosuit
+  - CaptainEnvirogloves
+  - CaptainGloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -154,7 +159,11 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
-  - PassengerJumpsuit
+  # Goobstation - EE Plasmeme Change.
+  - HoPEnvirohelm
+  - HoPEnvirosuit
+  - HoPEnvirogloves
+  - HoPGloves  - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
   - PassengerHat
@@ -187,6 +196,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - AssistantEnvirohelm
+  - AssistantEnvirosuit
+  - AssistantEnvirogloves
   - PassengerHat
   - PassengerNeck
   - PassengerFace
@@ -208,6 +221,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - BartenderEnvirohelm
+  - BartenderEnvirosuit
+  - BartenderEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -228,6 +245,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - ServiceWorkerEnvirohelm
+  - ServiceWorkerEnvirosuit
+  - ServiceWorkerEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -251,6 +272,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - ChefEnvirohelm
+  - ChefEnvirosuit
+  - ChefEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -271,6 +296,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - LibrarianEnvirohelm
+  - LibrarianEnvirosuit
+  - LibrarianEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -292,6 +321,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - LawyerEnvirohelm
+  - LawyerEnvirosuit
+  - LawyerEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -316,6 +349,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - ChaplainEnvirohelm
+  - ChaplainEnvirosuit
+  - ChaplainEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -340,6 +377,10 @@
   - JanitorPlunger
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - JanitorEnvirohelm
+  - JanitorEnvirosuit
+  - JanitorEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -362,6 +403,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - BotanistEnvirohelm
+  - BotanistEnvirosuit
+  - BotanistEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -394,7 +439,10 @@
   - PassengerShoes
   - PassengerBelt
   - Animals
-
+  # Goobstation - EE Plasmeme Change.
+  - ClownEnvirohelm
+  - ClownEnvirosuit
+  - ClownEnvirogloves
 
 - type: roleLoadout
   id: JobMime
@@ -419,6 +467,11 @@
   - PassengerShoes
   - PassengerBelt
   - Animals
+  # Goobstation - EE Plasmeme Change.
+  - MimeEnvirohelm
+  - MimeEnvirosuit
+  - MimeEnvirogloves
+  - MimeGloves
 
 - type: roleLoadout
   id: JobMusician
@@ -433,6 +486,10 @@
   - Instruments
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - MusicianEnvirohelm
+  - MusicianEnvirosuit
+  - MusicianEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -458,6 +515,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - QuartermasterEnvirohelm
+  - QuartermasterEnvirosuit
+  - QuartermasterEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -482,6 +543,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - CargoTechnicianEnvirohelm
+  - CargoTechnicianEnvirosuit
+  - CargoTechnicianEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -504,6 +569,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - SalvageEnvirohelm
+  - SalvageEnvirosuit
+  - SalvageEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -528,6 +597,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - ChiefEngineerEnvirohelm
+  - ChiefEngineerEnvirosuit
+  - ChiefEngineerEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -546,6 +619,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - TechnicalAssistantEnvirohelm
+  - TechnicalAssistantEnvirosuit
+  - TechnicalAssistantEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -569,6 +646,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - StationEngineerEnvirohelm
+  - StationEngineerEnvirosuit
+  - StationEngineerEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -591,6 +672,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - AtmosEnvirohelm
+  - AtmosEnvirosuit
+  - AtmosEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -617,6 +702,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - ResearchDirectorEnvirosuit
+  - ResearchDirectorEnvirohelm
+  - ResearchDirectorEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -643,6 +732,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - ScientistEnvirohelm
+  - ScientistEnvirosuit
+  - ScientistEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -663,6 +756,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - ResearchAssistantEnvirohelm
+  - ResearchAssistantEnvirosuit
+  - ResearchAssistantEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -689,6 +786,11 @@
   - SecurityStar
   - Animals
   - GroupSpeciesBreathToolSecurity
+  # Goobstation - EE Plasmeme Change.
+  - HeadofSecurityEnvirohelm
+  - HeadofSecurityEnvirosuit
+  - HeadofSecurityEnvirogloves
+  - HeadofSecurityGloves
 
 - type: roleLoadout
   id: JobWarden
@@ -706,6 +808,10 @@
   - SecurityStar
   - Animals
   - GroupSpeciesBreathToolSecurity
+  # Goobstation - EE Plasmeme Change.
+  - WardenEnvirohelm
+  - WardenEnvirosuit
+  - WardenEnvirogloves
 
 - type: roleLoadout
   id: JobSecurityOfficer
@@ -724,6 +830,10 @@
   - SecurityStar
   - Animals
   - GroupSpeciesBreathToolSecurity
+  # Goobstation - EE Plasmeme Change.
+  - SecurityOfficerEnvirohelm
+  - SecurityOfficerEnvirosuit
+  - SecurityOfficerEnvirogloves
 
 - type: roleLoadout
   id: JobDetective
@@ -739,6 +849,11 @@
   - SecurityStar
   - Animals
   - GroupSpeciesBreathToolSecurity
+  # Goobstation - EE Plasmeme Change.
+  - DetectiveEnvirohelm
+  - DetectiveEnvirosuit
+  - DetectiveEnvirogloves
+  - DetectiveGloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -760,7 +875,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathToolSecurity
-
+  # Goobstation - EE Plasmeme Change.
+  - SecurityCadetEnvirohelm
+  - SecurityCadetEnvirosuit
+  - SecurityCadetEnvirogloves
 
 # Medical
 - type: roleLoadout
@@ -780,6 +898,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathToolMedical
+  # Goobstation - EE Plasmeme Change.
+  - ChiefMedicalOfficerEnvirohelm
+  - ChiefMedicalOfficerEnvirosuit
+  - ChiefMedicalOfficerEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -805,6 +927,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathToolMedical
+  # Goobstation - EE Plasmeme Change.
+  - MedicalDoctorEnvirohelm
+  - MedicalDoctorEnvirosuit
+  - MedicalDoctorEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -824,6 +950,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathToolMedical
+  # Goobstation - EE Plasmeme Change.
+  - MedicalInternEnvirohelm
+  - MedicalInternEnvirosuit
+  - MedicalInternEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -847,6 +977,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathToolMedical
+  # Goobstation - EE Plasmeme Change.
+  - ChemistEnvirohelm
+  - ChemistEnvirosuit
+  - ChemistEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -871,6 +1005,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathToolMedical
+  # Goobstation - EE Plasmeme Change.
+  - ParamedicEnvirohelm
+  - ParamedicEnvirosuit
+  - ParamedicEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -883,6 +1021,8 @@
 - type: roleLoadout
   id: JobZookeeper
   groups:
+  - ZookeeperHead
+  - ZookeeperJumpsuit
   - GroupTankHarness
   - CommonBackpack
   - Glasses
@@ -890,6 +1030,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - ZookeeperEnvirohelm
+  - ZookeeperEnvirosuit
+  - ZookeeperEnvirogloves
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
@@ -910,7 +1054,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
-  - PassengerJumpsuit
+  # Goobstation - EE Plasmeme Change.
+  - ReporterEnvirohelm
+  - ReporterEnvirosuit
+  - ReporterEnvirogloves  - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
   - PassengerFace
@@ -930,6 +1077,10 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - PsychologistEnvirohelm
+  - PsychologistEnvirosuit
+  - PsychologistEnvirogloves
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -951,6 +1102,9 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathTool
+  # Goobstation - EE Plasmeme Change.
+  - BoxerEnvirohelm
+  - BoxerEnvirosuit
   - PassengerJumpsuit
   - PassengerNeck
   - PassengerHat
