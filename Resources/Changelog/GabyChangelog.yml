@@ -823,3 +823,13 @@ Entries:
       message: Loudouts corrigidos!
   id: 93
   time: '2025-08-16T16:43:04.0000000+00:00'
+- author: vyas e Kyoth25f
+  changes:
+    - type: Add
+      message: Adicionado Do Funda da Grota by Baitaca na jukebox e lobby!
+    - type: Add
+      message: >-
+        Adicionado É disso que o velhos gosta by Gaúcho da Fronteira na jukebox
+        e lobby!
+  id: 94
+  time: '2025-08-21T15:46:14.0000000+00:00'
