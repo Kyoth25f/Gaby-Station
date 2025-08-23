@@ -3,9 +3,7 @@
 # SPDX-FileCopyrightText: 2024 Adrian16199 <144424013+Adrian16199@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-# SPDX-FileCopyrightText: 2025 Michelle Szinger <chell@alterae.online>
 # SPDX-FileCopyrightText: 2025 MilenVolf <63782763+MilenVolf@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Rouge2t7 <81053047+Sarahon@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Rouge2t7 <sarahoneill132@hotmail.com>
@@ -37,8 +35,6 @@
     Head: MobDionaHead
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
-    Underwear: MobHumanoidAnyMarking # DeltaV
-    Undershirt: MobHumanoidAnyMarking # DeltaV
     Chest: MobDionaChest
     Groin: MobDionaGroin
     Eyes: MobDionaEyes
@@ -70,14 +66,6 @@
     Legs:
       points: 6
       required: false
-    # Begin DeltaV changes.
-    Underwear:
-      points: 1
-      required: false
-    Undershirt:
-      points: 1
-      required: false
-    # End DeltaV changes.
     Arms:
       points: 1
       required: false

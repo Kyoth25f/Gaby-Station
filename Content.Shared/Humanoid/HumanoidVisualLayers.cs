@@ -18,7 +18,11 @@
 // SPDX-FileCopyrightText: 2025 Trest <144359854+trest100@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
+// SPDX-FileCopyrightText: 2025 Spatison <137375981+Spatison@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 kurokoTurbo <92106367+kurokoTurbo@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Trest <144359854+trest100@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Roudenn <romabond091@gmail.com>
+// SPDX-FileCopyrightText: 2025 Kayzel <43700376+KayzelW@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -35,12 +39,8 @@ namespace Content.Shared.Humanoid
         Hair,
         FacialHair,
         Face, // EE Plasmeme Port
-        UndergarmentTop,
-        UndergarmentBottom,
         Chest,
         Groin,
-        Underwear, // DeltaV
-        Undershirt, // DeltaV
         Head,
         Snout,
         HeadSide, // side parts (i.e., frills)
@@ -49,6 +49,7 @@ namespace Content.Shared.Humanoid
         RArm,
         LArm,
         RHand,
+
         LHand,
         RLeg,
         LLeg,

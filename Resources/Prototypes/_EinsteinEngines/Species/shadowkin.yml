@@ -1,6 +1,4 @@
-# SPDX-FileCopyrightText: 2025 AgentePanela <agentepanela@gmail.com>
 # SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 # SPDX-FileCopyrightText: 2025 Rouden <149893554+Roudenn@users.noreply.github.com>
 #
@@ -69,14 +67,6 @@
     Arms:
       points: 8
       required: false
-    # Begin DeltaV changes.
-    Underwear:
-      points: 1
-      required: false
-    Undershirt:
-      points: 1
-      required: false
-    # End DeltaV changes
 
 - type: humanoidBaseSprite
   id: MobShadowkinAnyMarkingFollowSkin

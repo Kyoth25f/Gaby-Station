@@ -52,14 +52,6 @@
     Overlay:
       points: 1
       required: false
-    # Begin DeltaV changes.
-    Underwear:
-      points: 1
-      required: false
-    Undershirt:
-      points: 1
-      required: false
-    # End DeltaV changes
 
 - type: speciesBaseSprites
   id: MobTajaranSprites
