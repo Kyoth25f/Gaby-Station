@@ -186,6 +186,7 @@
   - RuleR18
   - RuleR19
   - RuleR20
+  - RuleR21
 
 - type: guideEntry
   id: RuleR1
@@ -340,11 +341,11 @@
   text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RuleR20NewLifeRule.xml"
 
 - type: guideEntry
-  id: RuleR16
-  name: guide-entry-rules-r16
+  id: RuleR21
+  name: guide-entry-rules-r21
   ruleEntry: true
-  priority: 16
-  text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RuleR16AtmosTech.xml"
+  priority: 21
+  text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RuleR21AtmosTech.xml"
 
 - type: guideEntry
   id: SiliconRules

@@ -95,4 +95,4 @@ guide-entry-soups = Sopas
 guide-entry-salads = Saladas
 guide-entry-sauces = Condimentos
 
-
+guide-entry-rules-r21 = R21
