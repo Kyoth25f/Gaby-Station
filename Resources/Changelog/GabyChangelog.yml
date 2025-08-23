@@ -863,3 +863,11 @@ Entries:
       message: Novo guia de produção de plástico adicionado, pelo merge, e traduzido.
   id: 97
   time: '2025-08-23T14:28:21.0000000+00:00'
+- author: Tropica1Owl
+  changes:
+    - type: Tweak
+      message: >-
+        Botânica é finalmente divertida, cheque o Github para aprender sobre
+        como o cotonete funciona.
+  id: 98
+  time: '2025-08-23T16:29:50.0000000+00:00'
