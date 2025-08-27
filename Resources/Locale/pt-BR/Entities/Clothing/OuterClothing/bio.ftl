@@ -1,6 +1,6 @@
 ent-ClothingOuterBioGeneral = macacão para perigo biológico
     .desc = Um traje que protege o usuário contra qualquer tipo de ameaça biológica.
-    .suffix = Generico
+    .suffix = Generica
 
 ent-ClothingOuterBioCmo = macacão para perigo biológico
     .desc = Um traje que protege o usuário contra qualquer tipo de ameaça biológica. Em cores médicas.
