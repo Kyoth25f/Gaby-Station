@@ -1,4 +1,4 @@
-ent-ClothingEyesHudDiagnostic = hud de robóticista
+ent-ClothingEyesHudDiagnostic = hud de roboticista
      .desc = Um visor capaz de analisar a integridade e as condições tanto da robótica quanto dos exosuits.
 
 ent-ClothingEyesHudMedical = hud médico
