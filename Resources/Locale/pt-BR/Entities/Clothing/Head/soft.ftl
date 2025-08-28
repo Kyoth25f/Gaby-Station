@@ -74,5 +74,5 @@ ent-ClothingHeadHatBizarreSoft = boné de valentão
     .desc = Isso foi uma JOJO REFERENCE??!!
 
 ent-ClothingHeadHatBizarreSoftFlipped = boné de valentão ao contrário
-    .desc = Isso foi uma JOJO REFERENCE??!! AO CONTRARIA??!! E BEM MANEIRA??!!
+    .desc = Isso foi uma JOJO REFERENCE??!! AO CONTRÁRIA??!! E BEM MANEIRA??!!
 
