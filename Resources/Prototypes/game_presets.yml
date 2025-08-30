@@ -190,7 +190,7 @@
     - secret
     - sekrit
   name: secret-title
-  showInVote: false # Gaby - desativa por agora
+  showInVote: true
   description: secret-description
   rules:
     - Secret
