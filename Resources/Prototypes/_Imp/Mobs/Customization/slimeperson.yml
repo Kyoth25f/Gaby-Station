@@ -169,7 +169,6 @@
     state: glow
   shader: unshaded
 
-
 - type: marking
   id: SlimeEyesDroopy
   bodyPart: Eyes
