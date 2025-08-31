@@ -61,7 +61,6 @@
 // SPDX-FileCopyrightText: 2024 Southbridge <7013162+southbridge-fur@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Spanky <scott@wearejacob.com>
 // SPDX-FileCopyrightText: 2024 Spessmann <156740760+Spessmann@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
 // SPDX-FileCopyrightText: 2024 Thomas <87614336+Aeshus@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Truoizys <153248924+Truoizys@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 TsjipTsjip <19798667+TsjipTsjip@users.noreply.github.com>
@@ -89,6 +88,7 @@
 // SPDX-FileCopyrightText: 2025 BombasterDS2 <shvalovdenis.workmail@gmail.com>
 // SPDX-FileCopyrightText: 2025 CerberusWolfie <wb.johnb.willis@gmail.com>
 // SPDX-FileCopyrightText: 2025 FoxxoTrystan <45297731+FoxxoTrystan@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 // SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 IrisTheAmped <iristheamped@gmail.com>
@@ -99,6 +99,7 @@
 // SPDX-FileCopyrightText: 2025 SX_7 <sn1.test.preria.2002@gmail.com>
 // SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
 // SPDX-FileCopyrightText: 2025 Superlagg <sprambersonson@gmail.com>
+// SPDX-FileCopyrightText: 2025 Tayrtahn <tayrtahn@gmail.com>
 // SPDX-FileCopyrightText: 2025 Tim <timfalken@hotmail.com>
 // SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
 // SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
@@ -672,7 +673,8 @@ public sealed partial class ChatSystem : SharedChatSystem
             return;
 
         // The Original Message [-] Einstein Engines - Language
-        var message = FormattedMessage.RemoveMarkupOrThrow(originalMessage);  // Remove markup before transforming.
+        var message = FormattedMessage.EscapeText(originalMessage); // Escape before removing markup
+        message = FormattedMessage.RemoveMarkupOrThrow(message);  // Remove markup before transforming.
         message = TransformSpeech(source, message, language);
 
         if (message.Length == 0)
@@ -1220,11 +1222,17 @@ public sealed partial class ChatSystem : SharedChatSystem
     /// </summary>
     public string WrapMessage(LocId wrapId, InGameICChatType chatType, EntityUid source, string entityName, string message, LanguagePrototype? language)
     {
+        var speech = GetSpeechVerb(source, message);
         language ??= _language.GetLanguage(source);
+
+        // Goobstation - Bolded Language Overrides begin
+        if (language.SpeechOverride.BoldFontId != null && speech.Bold)
+            wrapId = "chat-manager-entity-say-bolded-language-wrap-message";
+        // Goobstation end
+
         if (language.SpeechOverride.MessageWrapOverrides.TryGetValue(chatType, out var wrapOverride))
             wrapId = wrapOverride;
 
-        var speech = GetSpeechVerb(source, message);
         var verbId = language.SpeechOverride.SpeechVerbOverrides is { } verbsOverride
             ? _random.Pick(verbsOverride).ToString()
             : _random.Pick(speech.SpeechVerbStrings);
@@ -1235,19 +1243,13 @@ public sealed partial class ChatSystem : SharedChatSystem
             ? Loc.GetString("chat-manager-language-prefix", ("language", language.ChatName))
             : "";
 
-        // Goobstation Edit - Custom Bold Fonts begin
-        var boldId = language.SpeechOverride.BoldFontId ?? speech.FontId;
-        if (language.SpeechOverride.BoldFontId == null && language.SpeechOverride.FontId != null)
-            boldId = language.SpeechOverride.FontId;
-        // Goobstation Edit - end
-
         return Loc.GetString(wrapId,
             ("color", color),
             ("entityName", entityName),
             ("verb", Loc.GetString(verbId)),
             ("fontType", language.SpeechOverride.FontId ?? speech.FontId),
             ("fontSize", language.SpeechOverride.FontSize ?? speech.FontSize),
-            ("boldFontType", boldId), // Goob Edit - Custom Bold Fonts
+            ("boldFontType", language.SpeechOverride.BoldFontId ?? language.SpeechOverride.FontId ?? speech.FontId), // Goob Edit - Custom Bold Fonts
             ("message", message),
             ("language", languageDisplay));
     }

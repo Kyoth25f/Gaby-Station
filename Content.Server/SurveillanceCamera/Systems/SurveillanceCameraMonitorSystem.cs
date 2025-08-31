@@ -42,7 +42,6 @@
 // SPDX-FileCopyrightText: 2024 ShadowCommander <10494922+ShadowCommander@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Simon <63975668+Simyon264@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Spessmann <156740760+Spessmann@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
 // SPDX-FileCopyrightText: 2024 Thomas <87614336+Aeshus@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Truoizys <153248924+Truoizys@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 TsjipTsjip <19798667+TsjipTsjip@users.noreply.github.com>
@@ -57,7 +56,6 @@
 // SPDX-FileCopyrightText: 2024 github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 godisdeadLOL <169250097+godisdeadLOL@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 metalgearsloth <comedian_vs_clown@hotmail.com>
 // SPDX-FileCopyrightText: 2024 neutrino <67447925+neutrino-laser@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 osjarw <62134478+osjarw@users.noreply.github.com>
@@ -68,9 +66,18 @@
 // SPDX-FileCopyrightText: 2024 themias <89101928+themias@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Арт <123451459+JustArt1m@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 BombasterDS2 <bombasterds.github@mail.ru>
+// SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
+// SPDX-FileCopyrightText: 2025 Hagvan <22118902+Hagvan@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 John Willis <143434770+CerberusWolfie@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Roudenn <romabond091@gmail.com>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
+// SPDX-FileCopyrightText: 2025 Tayrtahn <tayrtahn@gmail.com>
+// SPDX-FileCopyrightText: 2025 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Goobstation.Common.SurveillanceCamera; // Goobstation
 using Content.Server.DeviceNetwork.Systems;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Events;
@@ -78,9 +85,8 @@ using Content.Shared.Power;
 using Content.Shared.SurveillanceCamera;
 using Content.Shared.UserInterface;// Goobstation
 using Robust.Server.GameObjects;
-using Robust.Shared.Player;
 using Robust.Shared.Map; // Goobstation
-using Robust.Shared.Timing; // Goobstation
+using Robust.Shared.Player;
 
 namespace Content.Server.SurveillanceCamera;
 
@@ -96,7 +102,7 @@ public sealed class SurveillanceCameraMonitorSystem : EntitySystem
         SubscribeLocalEvent<SurveillanceCameraMonitorComponent, PowerChangedEvent>(OnPowerChanged);
         SubscribeLocalEvent<SurveillanceCameraMonitorComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<SurveillanceCameraMonitorComponent, DeviceNetworkPacketEvent>(OnPacketReceived);
-        SubscribeLocalEvent<SurveillanceCameraMonitorComponent, ComponentStartup>(OnComponentStartup);
+        // SubscribeLocalEvent<SurveillanceCameraMonitorComponent, ComponentStartup>(OnComponentStartup); Goobstation remove
         SubscribeLocalEvent<SurveillanceCameraMonitorComponent, AfterActivatableUIOpenEvent>(OnToggleInterface);
         Subs.BuiEvents<SurveillanceCameraMonitorComponent>(SurveillanceCameraMonitorUiKey.Key, subs =>
         {
@@ -116,11 +122,10 @@ public sealed class SurveillanceCameraMonitorSystem : EntitySystem
         var query = EntityQueryEnumerator<ActiveSurveillanceCameraMonitorComponent, SurveillanceCameraMonitorComponent>();
         while (query.MoveNext(out var uid, out _, out var monitor))
         {
-            if (Paused(uid))
+            /*if (Paused(uid))
             {
                 continue;
-            }
-
+            } Goobstation remove */
             monitor.LastHeartbeatSent += frameTime;
             SendHeartbeat(uid, monitor);
             monitor.LastHeartbeat += frameTime;
@@ -128,9 +133,20 @@ public sealed class SurveillanceCameraMonitorSystem : EntitySystem
             if (monitor.LastHeartbeat > _maxHeartbeatTime)
             {
                 DisconnectCamera(uid, true, monitor);
-                EntityManager.RemoveComponent<ActiveSurveillanceCameraMonitorComponent>(uid);
+                RemComp<ActiveSurveillanceCameraMonitorComponent>(uid); // Goobstation
             }
         }
+        // Goobstation start
+        var queryTwo = EntityQueryEnumerator<ReconnectingSurveillanceCameraMonitorComponent, SurveillanceCameraMonitorComponent>();
+        while (queryTwo.MoveNext(out var uid, out var reconnectingComponent, out var monitor))
+        {
+            if (reconnectingComponent.TicksDelay-- == 0)
+            {
+                ReconnectToSubnets(uid, monitor);
+                RemComp<ReconnectingSurveillanceCameraMonitorComponent>(uid);
+            }
+        }
+        // Goobstation end
     }
 
     /// ROUTING:
@@ -156,10 +172,10 @@ public sealed class SurveillanceCameraMonitorSystem : EntitySystem
     /// Router - [ monitor freq ] -> Monitor
 
     #region Event Handling
-    private void OnComponentStartup(EntityUid uid, SurveillanceCameraMonitorComponent component, ComponentStartup args)
+    /*private void OnComponentStartup(EntityUid uid, SurveillanceCameraMonitorComponent component, ComponentStartup args)
     {
         RefreshSubnets(uid, component);
-    }
+    } Goobstation remove */
 
     private void OnPacketReceived(EntityUid uid, SurveillanceCameraMonitorComponent component,
         DeviceNetworkPacketEvent args)
@@ -319,13 +335,14 @@ public sealed class SurveillanceCameraMonitorSystem : EntitySystem
 
         monitor.ActiveCamera = null;
         monitor.ActiveCameraAddress = string.Empty;
-        EntityManager.RemoveComponent<ActiveSurveillanceCameraMonitorComponent>(uid);
+        RemComp<ActiveSurveillanceCameraMonitorComponent>(uid); // Goobstation
         UpdateUserInterface(uid, monitor);
     }
 
     private void RefreshSubnets(EntityUid uid, SurveillanceCameraMonitorComponent? monitor = null)
     {
-        if (!Resolve(uid, ref monitor))
+        if (!Resolve(uid, ref monitor)
+            || HasComp<ReconnectingSurveillanceCameraMonitorComponent>(uid)) // Goobstation
         {
             return;
         }
@@ -344,8 +361,7 @@ public sealed class SurveillanceCameraMonitorSystem : EntitySystem
         monitor.KnownSubnets.Clear();
         PingCameraNetwork(uid, monitor);
 
-        // Slight delay to let known subnets to respond and be added to KnownSubnets
-        Timer.Spawn(TimeSpan.FromMilliseconds(700f), () => ReconnectToSubnets(uid, monitor)); // Goobstation
+        EnsureComp<ReconnectingSurveillanceCameraMonitorComponent>(uid); // Goobstation
     }
 
     // Goobstation start
@@ -468,7 +484,7 @@ public sealed class SurveillanceCameraMonitorSystem : EntitySystem
 
         monitor.ActiveCamera = camera;
 
-        AddComp<ActiveSurveillanceCameraMonitorComponent>(uid);
+        EnsureComp<ActiveSurveillanceCameraMonitorComponent>(uid); // Goobstation
 
         UpdateUserInterface(uid, monitor);
     }
