@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 loltart <159829224+loltart@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Goobstation.Server.Implants.Components;
 using Content.Shared.Clumsy;
 using Content.Shared.Implants;
