@@ -877,3 +877,9 @@ Entries:
       message: Adiciona as últimas mudanças do Goob 30/08 (confira a aba do Goob).
   id: 99
   time: '2025-08-31T02:37:25.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Add
+      message: Atualizações do goob até 31/08 ás 10h adicionadas.
+  id: 100
+  time: '2025-08-31T13:22:01.0000000+00:00'
