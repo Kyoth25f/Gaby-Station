@@ -45,6 +45,8 @@
     - Tajaran
     - Chitinid
     - Plasmaman
+    - Daengati
+    - Shadowkin
 
 - type: guideEntry
   id: Arachnid
@@ -131,3 +133,13 @@
   id: Plasmaman
   name: species-name-plasmaman
   text: "/ServerInfo/Guidebook/Mobs/Plasmaman.xml"
+
+- type: guideEntry
+  id: Daengati
+  name: species-name-daengati
+  text: "/ServerInfo/Guidebook/Mobs/_EstacaoPirata/Daengati.xml"
+
+- type: guideEntry
+  id: Shadowkin
+  name: species-name-shadowkin
+  text: "/ServerInfo/Guidebook/Mobs/_EinsteinEngines/Shadowkin.xml"
