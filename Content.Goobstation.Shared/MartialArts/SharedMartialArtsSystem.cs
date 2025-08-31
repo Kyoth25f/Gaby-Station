@@ -5,10 +5,12 @@
 // SPDX-FileCopyrightText: 2025 Aviu00 <aviu00@protonmail.com>
 // SPDX-FileCopyrightText: 2025 Baptr0b0t <152836416+Baptr0b0t@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Baptr0b0t <152836416+baptr0b0t@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 // SPDX-FileCopyrightText: 2025 Lincoln McQueen <lincoln.mcqueen@gmail.com>
 // SPDX-FileCopyrightText: 2025 Marcus F <marcus2008stoke@gmail.com>
 // SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
+// SPDX-FileCopyrightText: 2025 Roudenn <romabond091@gmail.com>
 // SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 // SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 // SPDX-FileCopyrightText: 2025 SolsticeOfTheWinter <solsticeofthewinter@gmail.com>
@@ -137,6 +139,9 @@ public abstract partial class SharedMartialArtsSystem : EntitySystem
         var query = EntityQueryEnumerator<CanPerformComboComponent>();
         while (query.MoveNext(out var ent, out var comp))
         {
+            if (comp.CurrentTarget != null && TerminatingOrDeleted(comp.CurrentTarget.Value))
+                comp.CurrentTarget = null;
+
             if (_timing.CurTime < comp.ResetTime
                 || comp.LastAttacks.Count == 0
                 && comp.ConsecutiveGnashes == 0)
