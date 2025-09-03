@@ -24,4 +24,4 @@ ent-JugSugar = { ent-Jug }
 ent-JugNitrogen = { ent-Jug }
 ent-JugOxygen = { ent-Jug }
 ent-JugPlantBGone = { ent-Jug }
-ent-JugWeldingFuel = { ent-Jug } 
+ent-JugWeldingFuel = { ent-Jug }
