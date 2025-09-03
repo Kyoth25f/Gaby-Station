@@ -883,3 +883,12 @@ Entries:
       message: Atualizações do goob até 31/08 ás 10h adicionadas.
   id: 100
   time: '2025-08-31T13:22:01.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Tweak
+      message: >-
+        Lei 3 da NT Default atualizada. A IA deve levar em conta o bem-estar da
+        tripulação e não dela mesma ao realizar ou não os interesses da
+        tripulação.
+  id: 101
+  time: '2025-09-03T00:09:41.0000000+00:00'
