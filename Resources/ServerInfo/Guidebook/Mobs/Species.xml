@@ -38,7 +38,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   <Box>
     <GuideEntityEmbed Entity="MobResomi" Caption="Resomi"/>
     <GuideEntityEmbed Entity="MobRodentia" Caption="Rodentia"/>
-    <GuideEntityEmbed Entity="MobShadowkinDummy" Caption="Shadowkin"/> <!-- usa o Dummy pq o normal tem perna bugada -->
+    <GuideEntityEmbed Entity="MobShadowkin" Caption="Shadowkin"/>
     <GuideEntityEmbed Entity="MobTajaran" Caption="Tajaran"/>
     <GuideEntityEmbed Entity="MobVox" Caption="Vox"/>
     <GuideEntityEmbed Entity="MobVulpkanin" Caption="Vulpkanin"/>

@@ -2,7 +2,7 @@
   # Shadowkins
 
     <Box>
-      <GuideEntityEmbed Entity="MobShadowkinDummy" Caption=""/>
+      <GuideEntityEmbed Entity="MobShadowkin" Caption=""/>
     </Box>
 
   Shadowkins são uma espécie misteriosa que se originou de uma dimensão extremamente hostil, O Sombrio. Eles tendem a guardar
