@@ -84,7 +84,7 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: job # goob edit
+- type: job
   id: Passenger
   name: job-name-passenger
   description: job-description-passenger
@@ -92,13 +92,11 @@
   startingGear: PassengerGear
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
-  goobcoins: 0 #Goob content
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 36000 #10 hrs
-      inverted: true # get a job you bum
-  #  access:
+  goobcoins: 1 # Gaby station
+  canBeAntag: false # Gaby station
+  #  access: # Gabystation
   #  - Maintenance
+  #
   # gaby alt job titles
   alternateTitles:
   - AssistantTitlePassenger
@@ -117,9 +115,11 @@
   equipment:
     id: PassengerPDA
     ears: ClothingHeadsetGrey
-  #storage:
-    #back:
-    #- Stuff
+  storage:
+    back:
+    - PrintedDocumentConstructionPermit
+    - PrintedDocumentRequestForPromotion
+    #- CarteiraDeTrabalhoVazia
 
 - type: chameleonOutfit
   id: PassengerChameleonOutfit
