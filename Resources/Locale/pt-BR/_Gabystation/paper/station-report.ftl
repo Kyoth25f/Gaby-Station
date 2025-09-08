@@ -1,4 +1,4 @@
-station-report-text = b
+station-report-text = A FALHA EM PREENCHER ESSE ARQUIVO RESULTARA EM MULTA
 	[color=#1b67a5]░░██░░ [head=2]Documento Oficial[/head]
 	▀████▀ [head=3]Assunto: Relatório Setorial – Status Operacional da Estação[/head]
 	▄█▀▀█▄ [head=3]De: Representante Nanotrasen[/head]
