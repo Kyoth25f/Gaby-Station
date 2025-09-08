@@ -925,3 +925,19 @@ Entries:
         loadout civil!
   id: 105
   time: '2025-09-06T18:05:45.0000000+00:00'
+- author: STARLIGHT TEAM, CringeCursed e Kyoth25f
+  changes:
+    - type: Fix
+      message: Os revolveres foram corrigidos.
+    - type: Fix
+      message: >-
+        Agora, a chance de acerto depende da distância do atirador e é sempre de
+        100% se o cursor estiver em cima do alvo. Isso significa que acertos
+        fora da tela são garantidos se a trajetória da bala cruzar o alvo. Além
+        disso, a chance de acerto dentro de 2 quadrados à frente do cursor
+        também é de 100% e, em seguida, diminui linearmente para 0 nos próximos
+        2 quadrados.
+    - type: Tweak
+      message: Examinar as magazines mostra as quantidades e tipos de danos.
+  id: 106
+  time: '2025-09-08T04:40:29.0000000+00:00'
