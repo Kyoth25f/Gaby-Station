@@ -957,3 +957,15 @@ Entries:
       message: Adicionada armadura atmosiana.
   id: 108
   time: '2025-09-11T02:32:10.0000000+00:00'
+- author: Lucasalemao10
+  changes:
+    - type: Fix
+      message: Daengati não tem mais visão noturna inerente, roube seus olhos!
+    - type: Fix
+      message: >-
+        Daengati agora tem as marcas padrão das especies, utilize toda sua
+        criatividade!
+    - type: Add
+      message: Daengati agora tem texturas para seus olhos
+  id: 109
+  time: '2025-09-11T02:34:16.0000000+00:00'
