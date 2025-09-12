@@ -33,6 +33,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Content.Shared.Weapons.Melee.Events;
 using System.Linq;
+using Robust.Shared.Configuration;
 
 namespace Content.Server._Shitmed.Medical.Surgery;
 
