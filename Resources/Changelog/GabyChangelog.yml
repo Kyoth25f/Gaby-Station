@@ -981,3 +981,11 @@ Entries:
       message: Adicionadas últimas mudanças do Goob até 12/09.
   id: 111
   time: '2025-09-13T10:03:44.0000000+00:00'
+- author: marc-pelletier e Kyoth25f
+  changes:
+    - type: Add
+      message: >-
+        Adicionadas bombas de calor. Podem ser feitas no menu de construção (por
+        padrão, G) ou usando um RPD.
+  id: 112
+  time: '2025-09-13T10:05:21.0000000+00:00'
