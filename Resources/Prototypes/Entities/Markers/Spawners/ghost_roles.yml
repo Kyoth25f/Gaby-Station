@@ -88,6 +88,10 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# The mind roles specified here will be overwritten by the actual entities' GhostRoleComponent when they spawn
+# But the mind roles specified here are the ones checked for role bans when taking a ghost role!
+# TODO make this simpler
+
 - type: entity
   abstract: true
   parent: MarkerBase
@@ -181,7 +185,7 @@
   - type: GhostRole
     rules: ghost-role-information-rules-team-antagonist
     mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
+    - MindRoleNukeops
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
@@ -225,7 +229,7 @@
     description: roles-antag-nuclear-operative-commander-objective
     rules: ghost-role-information-rules-team-antagonist
     mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
+    - MindRoleNukeopsCommander
 
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]
@@ -237,7 +241,7 @@
     description: roles-antag-nuclear-operative-agent-objective
     rules: ghost-role-information-rules-team-antagonist
     mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
+    - MindRoleNukeopsMedic
 
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]
@@ -249,7 +253,7 @@
     description: roles-antag-nuclear-operative-objective
     rules: ghost-role-information-rules-team-antagonist
     mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
+    - MindRoleNukeops
 
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]
@@ -261,7 +265,7 @@
     description: ghost-role-information-space-dragon-description
     rules: ghost-role-information-space-dragon-rules
     mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
+    - MindRoleDragon
     requirements: # Goobstation - ghost roles requirements
     - !type:OverallPlaytimeRequirement
       time: 18000 #5 hours
@@ -281,7 +285,7 @@
     description: ghost-role-information-space-ninja-description
     rules: ghost-role-information-antagonist-rules
     mindRoles:
-    - MindRoleGhostRoleSoloAntagonist
+    - MindRoleNinja
     raffle:
       settings: default
     requirements: # Goobstation - ghost roles requirements
@@ -304,7 +308,7 @@
     description: ghost-role-information-paradox-clone-description
     rules: ghost-role-information-antagonist-rules
     mindRoles:
-    - MindRoleGhostRoleSoloAntagonist
+    - MindRoleParadoxClone
     raffle:
       settings: default
   - type: Sprite
@@ -324,7 +328,7 @@
     description: ghost-role-information-derelict-cyborg-description
     rules: ghost-role-information-silicon-rules
     mindRoles:
-    - MindRoleGhostRoleSilicon
+    - MindRoleSubvertedSilicon
     raffle:
       settings: default
     requirements: # Goobstation - ghost roles requirements
