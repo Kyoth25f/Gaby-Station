@@ -995,3 +995,9 @@ Entries:
       message: Espere ver mais muito mais estruturas na Lavaland.
   id: 113
   time: '2025-09-13T10:07:45.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: Corrigido bug da barra de scroll do chat desaparecendo.
+  id: 114
+  time: '2025-09-17T02:32:58.0000000+00:00'
