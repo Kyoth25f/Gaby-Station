@@ -75,6 +75,7 @@
     - SharedBoards
     - CameraBoards
     - ShuttleBoards
+    - ShuttleBoardsGoob
     - BluespaceTheory
     - ScienceClothing
     - UpgradeKits
@@ -139,6 +140,7 @@
     - CargoBoards
     - SharedBoards
     - ShuttleBoards
+    - ShuttleBoardsGoob
     - BluespaceTheory
     - ScienceClothing
   - type: EmagLatheRecipes
@@ -215,6 +217,7 @@
     - SharedBoards
     - ScienceBoards
     - ShuttleBoards
+    - ShuttleBoardsGoob
     - MedicalBoardsGoob
     - BluespaceTheory
     - ExperimentalScienceGoob
