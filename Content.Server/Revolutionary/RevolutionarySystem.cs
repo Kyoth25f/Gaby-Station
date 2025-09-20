@@ -16,6 +16,7 @@ namespace Content.Server.Revolutionary;
 public sealed class RevolutionarySystem : SharedRevolutionarySystem
 {
     [Dependency] private readonly ActionsSystem _actions = default!;
+    [Dependency] private readonly LanguageSystem _languageSystem = default!;
 
     public override void Initialize()
     {
