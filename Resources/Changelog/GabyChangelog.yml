@@ -1021,3 +1021,9 @@ Entries:
       message: Novo plushie da "Niku Hatsume", disponível no loadout.
   id: 117
   time: '2025-09-20T18:50:31.0000000+00:00'
+- author: Dreykor, RadsammyT
+  changes:
+    - type: Add
+      message: Mais interações RP para fazer com seus migos!!
+  id: 118
+  time: '2025-09-21T05:31:29.0000000+00:00'
