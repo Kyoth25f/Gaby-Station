@@ -1027,3 +1027,25 @@ Entries:
       message: Mais interações RP para fazer com seus migos!!
   id: 118
   time: '2025-09-21T05:31:29.0000000+00:00'
+- author: 'Dreykor, LuciferEOS '
+  changes:
+    - type: Add
+      message: Port de um Rework para o NTR! Creditos aos LuciferEOS e BEBRIGHT
+    - type: Add
+      message: >-
+        NTR agora possui um novo item: maleta executiva, que é usada para
+        comprar coisas legais para ele e para a estação.
+    - type: Add
+      message: >-
+        O armário do NTR agora possui um novo flatpack de console de tarefas,
+        com várias tarefas para fazer.
+    - type: Add
+      message: >-
+        O NTR pode escanear contrabandos mágicos e syndies para gerar pontos na
+        sua maleta.
+    - type: Add
+      message: Novo objetivo raro de traidor para roubar a maleta executiva do NTR.
+    - type: Add
+      message: Blueshield Deputado e esquadrão interno Goon.
+  id: 119
+  time: '2025-09-21T05:39:25.0000000+00:00'
