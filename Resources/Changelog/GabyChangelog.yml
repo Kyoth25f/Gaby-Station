@@ -1049,3 +1049,35 @@ Entries:
       message: Blueshield Deputado e esquadrão interno Goon.
   id: 119
   time: '2025-09-21T05:39:25.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Add
+      message: >-
+        O Reator de Fusão Hypertorus pode ser comprado na cargo! Procure na aba
+        de atmosfera ou pelo nome "rfh".
+    - type: Add
+      message: Adicionados Pipe Manifold e Half Pipe no RPD.
+    - type: Add
+      message: Adicionada aba de sensores e monitores no RPD.
+    - type: Tweak
+      message: Guia de Atmosfera atualizado.
+    - type: Tweak
+      message: >-
+        O RPD, menu G E cristalizador são compatíveis com o sistema de pipe
+        layers.
+    - type: Fix
+      message: >-
+        O cristalizador não manterá mais a temperatura com uma quantidade baixa
+        de gás na porta do regulador.
+    - type: Fix
+      message: >-
+        A taxa máxima de entrada do cristalizador agora está limitada a 250
+        mol/s.
+    - type: Fix
+      message: >-
+        O sprite do cristalizador mostra corretamente as duas entradas. Também é
+        possível rotacionar. As duas entradas são diferentes, ainda não há uma
+        forma visual de diferenciar. Se de um lado der errado, tente o outro ou
+        rotacione.
+  id: 120
+  time: '2025-09-22T03:57:18.0000000+00:00'
