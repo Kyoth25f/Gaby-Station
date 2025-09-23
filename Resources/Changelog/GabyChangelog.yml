@@ -1081,3 +1081,11 @@ Entries:
         rotacione.
   id: 120
   time: '2025-09-22T03:57:18.0000000+00:00'
+- author: Kyoth25f e bogopablogames
+  changes:
+    - type: Add
+      message: >-
+        Adiciona músicas de Armandinho, Seu Jorge, Charlie Brown Jr, Os
+        Paralamas Do Sucesso e Djavan.
+  id: 121
+  time: '2025-09-23T01:32:08.0000000+00:00'
