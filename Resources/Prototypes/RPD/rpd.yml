@@ -130,7 +130,7 @@
 - type: rcd
   id: PressureRegulator
   category: PumpsValves
-  sprite: /Textures/Interface/Radial/RPD/pneumatic_valve.png
+  sprite: /Textures/Interface/Radial/RPD/pressure_regulator.png.png
   mode: ConstructObject
   prototype: GasPressureRegulator
   cost: 2
