@@ -1089,3 +1089,9 @@ Entries:
         Paralamas Do Sucesso e Djavan.
   id: 121
   time: '2025-09-23T01:32:08.0000000+00:00'
+- author: joaofernandez
+  changes:
+    - type: Tweak
+      message: Alterado buscas de máquinas para não considerar acentuação
+  id: 122
+  time: '2025-09-27T05:45:27.0000000+00:00'
