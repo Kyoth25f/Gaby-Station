@@ -1101,3 +1101,9 @@ Entries:
       message: Adiciona as mudanças do Goob 27/09.
   id: 123
   time: '2025-09-28T02:35:43.0000000+00:00'
+- author: Day-OS
+  changes:
+    - type: Add
+      message: Added NUNO cards
+  id: 124
+  time: '2025-09-28T02:39:42.0000000+00:00'
