@@ -58,6 +58,7 @@
   - WeaponCapacitorRechargerCircuitboard
   - FreezerElectronics
   - ThermomachineFreezerMachineCircuitBoard
+  - BankATMCircuitboard # Gabystation change
 
 - type: latheRecipePack
   id: EngineeringBoardsStatic
