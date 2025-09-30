@@ -12,9 +12,7 @@
 using Content.Goobstation.Server.IoC;
 using Content.Goobstation.Common.JoinQueue;
 using Content.Goobstation.Common.ServerCurrency;
-using Content.Goobstation.Server.ServerCurrency;
 using Robust.Shared.ContentPack;
-using Robust.Shared.IoC;
 
 namespace Content.Goobstation.Server.Entry;
 
