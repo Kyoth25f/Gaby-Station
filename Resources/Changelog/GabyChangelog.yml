@@ -1160,3 +1160,9 @@ Entries:
         menos mortal
   id: 129
   time: '2025-10-03T01:00:36.0000000+00:00'
+- author: Day-OS
+  changes:
+    - type: Add
+      message: Nuno card box are now present in Good Clean Fun vending machines
+  id: 130
+  time: '2025-10-03T01:06:59.0000000+00:00'
