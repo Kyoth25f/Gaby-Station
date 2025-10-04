@@ -1172,3 +1172,9 @@ Entries:
       message: Revolucionarios de cair normalmente em uma partida.
   id: 131
   time: '2025-10-04T04:21:16.0000000+00:00'
+- author: Alpha-Two, starch, Will-Oliver-Br
+  changes:
+    - type: Add
+      message: Os líquidos agora pegam fogo. Cuidado!
+  id: 132
+  time: '2025-10-04T04:54:21.0000000+00:00'
