@@ -94,6 +94,7 @@
 // SPDX-FileCopyrightText: 2025 J <billsmith116@gmail.com>
 // SPDX-FileCopyrightText: 2025 MilenVolf <63782763+MilenVolf@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Myra <vascreeper@yahoo.com>
+// SPDX-FileCopyrightText: 2025 Panela <107573283+AgentePanela@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Princess Cheeseballs <66055347+Pronana@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 RocketBoss360 <rocketboss360@gmail.com>
 // SPDX-FileCopyrightText: 2025 Rouden <149893554+Roudenn@users.noreply.github.com>
@@ -102,11 +103,13 @@
 // SPDX-FileCopyrightText: 2025 TemporalOroboros <TemporalOroboros@gmail.com>
 // SPDX-FileCopyrightText: 2025 Zachary Higgs <compgeek223@gmail.com>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
+// SPDX-FileCopyrightText: 2025 starch <starchpersonal@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
 using Content.Server.Administration.Logs;
+using Content.Server.Atmos.EntitySystems;
 using Content.Server.Chemistry.TileReactions;
 using Content.Server.DoAfter;
 using Content.Server.Fluids.Components;
@@ -166,6 +169,7 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
     [Dependency] private readonly TileFrictionController _tile = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly TurfSystem _turf = default!;
+    [Dependency] private readonly AtmosphereSystem _atmos = default!;
 
 
     [ValidatePrototypeId<ReagentPrototype>]
@@ -441,6 +445,7 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
         base.Update(frameTime);
         foreach (var ent in _deletionQueue)
         {
+            UpdateFlammability(ent, null);
             Del(ent);
         }
 
@@ -463,9 +468,22 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
         }
 
         _deletionQueue.Remove(entity);
+        UpdateFlammability((entity.Owner, entity.Comp), args.Solution);
         UpdateSlip((entity, entity.Comp), args.Solution);
         UpdateSlow(entity, args.Solution, entity.Comp); // Corvax-Next-Footprints
         UpdateEvaporation(entity, args.Solution);
+    }
+    private void UpdateFlammability(Entity<PuddleComponent?> entity, Solution? solution)
+    {
+        if (solution is null)
+        {
+            _atmos.SetPuddleFlammabilityAtTile(entity.Owner, 0);
+            return;
+        }
+
+        var flammability = solution.GetSolutionFlammability(_prototypeManager);
+        _atmos.SetPuddleFlammabilityAtTile(entity.Owner, flammability);
+
     }
 
     private void UpdateSlip(Entity<PuddleComponent> entity, Solution solution)
