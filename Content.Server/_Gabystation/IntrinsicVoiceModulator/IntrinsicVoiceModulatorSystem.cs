@@ -5,7 +5,7 @@ using Content.Shared.CCVar;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._Gabystation.MalfAi;
+namespace Content.Server._Gabystation.IntrinsicVoiceModulator;
 
 public sealed partial class IntrinsicVoiceModulatorSystem : SharedIntrinsicVoiceModulatorSystem
 {
@@ -40,6 +40,7 @@ public sealed partial class IntrinsicVoiceModulatorSystem : SharedIntrinsicVoice
 
     private void OnNameChangedMessage(Entity<IntrinsicVoiceModulatorComponent> ent, ref IntrinsicVoiceModulatorNameChangedMessage args)
     {
+        // Isso nunca deveria acontecer com um cliente "não-hackaeado". Criar um popup falando que deu errado?
         if (args.Name.Length > _maxNameLenght)
             return;
 

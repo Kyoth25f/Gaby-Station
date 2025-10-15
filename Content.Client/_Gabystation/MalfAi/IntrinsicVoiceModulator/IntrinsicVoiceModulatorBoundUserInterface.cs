@@ -6,12 +6,9 @@
 //
 // SPDX-License-Identifier: MIT
 
-using Content.Client.MalfAI.Theme;
-using Content.Shared._Gabystation.MalfAi;
-using Content.Shared.MalfAI;
+using Content.Shared._Gabystation.IntrinsicVoiceModulator;
+using Content.Shared.Speech;
 using Content.Shared.StatusIcon;
-using Robust.Client.Graphics;
-using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 
@@ -29,8 +26,15 @@ public sealed class IntrinsicVoiceModulatorBoundUserInterface : BoundUserInterfa
 
         _window = this.CreateWindow<IntrinsicVoiceModulatorWindow>();
 
+        _window.ReloadVerbs();
+        _window.AddVerbs();
+
+        _window.ReloadJobIcons();
+        _window.AddJobIcons();
+
         _window.OnNameChanged += OnNameChanged;
         _window.OnJobIconChanged += OnJobIconChanged;
+        _window.OnVerbChange += OnVerbChanged;
     }
 
     private void OnNameChanged(string newName)
@@ -43,6 +47,11 @@ public sealed class IntrinsicVoiceModulatorBoundUserInterface : BoundUserInterfa
         SendMessage(new IntrinsicVoiceModulatorJobIconChangedMessage(newJobIconId));
     }
 
+    public void OnVerbChanged(ProtoId<SpeechVerbPrototype>? protoId)
+    {
+        SendMessage(new IntrinsicVoicemodulatorVerbChangedMessage(protoId));
+    }
+
     protected override void UpdateState(BoundUserInterfaceState state)
     {
         base.UpdateState(state);
@@ -52,6 +61,8 @@ public sealed class IntrinsicVoiceModulatorBoundUserInterface : BoundUserInterfa
             return;
 
         _window.SetCurrentName(cast.CurrentName);
+        _window.SetCurrentSpeechVerb(cast.CurrentVerb);
+        _window.SetCurrentJobIcon(cast.JobIcon);
     }
 }
 

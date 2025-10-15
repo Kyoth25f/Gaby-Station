@@ -1,8 +1,9 @@
+using Content.Shared.Speech;
 using Content.Shared.StatusIcon;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._Gabystation.MalfAi;
+namespace Content.Shared._Gabystation.IntrinsicVoiceModulator;
 
 public abstract class SharedIntrinsicVoiceModulatorSystem : EntitySystem;
 
@@ -16,10 +17,14 @@ public enum IntrinsicVoiceModularUiKey : byte
 public sealed class IntrinsicVoiceModulatorBoundUserInterfaceState : BoundUserInterfaceState
 {
     public string CurrentName { get; }
+    public ProtoId<SpeechVerbPrototype>? CurrentVerb { get; }
+    public ProtoId<JobIconPrototype>? JobIcon { get; }
 
-    public IntrinsicVoiceModulatorBoundUserInterfaceState(string currentName)
+    public IntrinsicVoiceModulatorBoundUserInterfaceState(string currentName, ProtoId<SpeechVerbPrototype>? currentVerb, ProtoId<JobIconPrototype>? jobIcon)
     {
         CurrentName = currentName;
+        CurrentVerb = currentVerb;
+        JobIcon = jobIcon;
     }
 }
 
@@ -40,5 +45,15 @@ public sealed class IntrinsicVoiceModulatorJobIconChangedMessage : BoundUserInte
     public IntrinsicVoiceModulatorJobIconChangedMessage(ProtoId<JobIconPrototype> jobIconProtoId)
     {
         JobIconProtoId = jobIconProtoId;
+    }
+}
+
+public sealed class IntrinsicVoicemodulatorVerbChangedMessage : BoundUserInterfaceMessage
+{
+    public ProtoId<SpeechVerbPrototype>? SpeechProtoId { get; }
+
+    public IntrinsicVoicemodulatorVerbChangedMessage(ProtoId<SpeechVerbPrototype>? speechProtoId)
+    {
+        SpeechProtoId = speechProtoId;
     }
 }
