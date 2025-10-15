@@ -17,6 +17,9 @@ public sealed partial class IntrinsicVoiceModulatorComponent : Component
     public ProtoId<JobIconPrototype>? JobIconId;
 
     [DataField]
+    public string? JobName;
+
+    [DataField]
     public EntProtoId Action = "ActionChangeIntrinsicVoiceModulator";
 
     [DataField]

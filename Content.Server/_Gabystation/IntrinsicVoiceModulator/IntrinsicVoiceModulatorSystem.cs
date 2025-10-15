@@ -1,10 +1,15 @@
+using System.Diagnostics.CodeAnalysis;
 using Content.Shared._Gabystation.IntrinsicVoiceModulator;
 using Content.Shared._Gabystation.IntrinsicVoiceModulator.Components;
 using Content.Shared._Gabystation.MalfAi.Events;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
+using Content.Shared.Chat;
 using Content.Shared.Database;
+using Content.Shared.Inventory;
 using Content.Shared.Popups;
+using Content.Shared.Roles;
+using Content.Shared.StatusIcon;
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
@@ -24,6 +29,8 @@ public sealed partial class IntrinsicVoiceModulatorSystem : SharedIntrinsicVoice
     {
         base.Initialize();
 
+        SubscribeLocalEvent<IntrinsicVoiceModulatorComponent, TransformSpeakerNameEvent>(OnTransformSpeakerName);
+        SubscribeLocalEvent<IntrinsicVoiceModulatorComponent, TransformSpeakerJobIconEvent>(OnTransformJobIcon);
         SubscribeLocalEvent<IntrinsicVoiceModulatorComponent, OpenIntrinsicVoiceModulatorMenuEvent>(OnOpenVoiceModulatorMenu);
 
         Subs.BuiEvents<IntrinsicVoiceModulatorComponent>(IntrinsicVoiceModularUiKey.Key, subs =>
@@ -36,11 +43,28 @@ public sealed partial class IntrinsicVoiceModulatorSystem : SharedIntrinsicVoice
         Subs.CVar(_cfgManager, CCVars.MaxNameLength, value => _maxNameLenght = value, true);
     }
 
+    private void OnTransformSpeakerName(Entity<IntrinsicVoiceModulatorComponent> ent, ref TransformSpeakerNameEvent args)
+    {
+        if (!string.IsNullOrWhiteSpace(ent.Comp.VoiceName))
+            args.VoiceName = ent.Comp.VoiceName;
+
+        if (ent.Comp.VoiceMaskSpeechVerb is { } speechVerb)
+            args.SpeechVerb = speechVerb;
+    }
+
+    private void OnTransformJobIcon(Entity<IntrinsicVoiceModulatorComponent> ent, ref TransformSpeakerJobIconEvent args)
+    {
+        if (ent.Comp.JobIconId is { } jobIcon)
+            args.JobIcon = jobIcon;
+
+        if (!string.IsNullOrWhiteSpace(ent.Comp.JobName))
+            args.JobName = ent.Comp.JobName;
+    }
+
     private void OnOpenVoiceModulatorMenu(Entity<IntrinsicVoiceModulatorComponent> ent, ref OpenIntrinsicVoiceModulatorMenuEvent ev)
     {
         if (!UiSystem.HasUi(ev.Performer, IntrinsicVoiceModularUiKey.Key))
             return;
-
 
         UiSystem.OpenUi(ev.Performer, IntrinsicVoiceModularUiKey.Key, ev.Performer);
     }
@@ -65,7 +89,7 @@ public sealed partial class IntrinsicVoiceModulatorSystem : SharedIntrinsicVoice
     private void OnVerbChangeMessage(Entity<IntrinsicVoiceModulatorComponent> ent, ref IntrinsicVoicemodulatorVerbChangedMessage args)
     {
         if (args.SpeechProtoId is not { } speechProtoId
-            || _protoManager.HasIndex(speechProtoId))
+            || !_protoManager.HasIndex(speechProtoId))
             return;
 
         ent.Comp.VoiceMaskSpeechVerb = speechProtoId;
@@ -82,6 +106,9 @@ public sealed partial class IntrinsicVoiceModulatorSystem : SharedIntrinsicVoice
 
         ent.Comp.JobIconId = proto.ID;
 
+        if (TryFindJobProtoFromIcon(proto, out var job))
+            ent.Comp.JobName = job.LocalizedName;
+
         _popup.PopupEntity(Loc.GetString("intrinsic-voice-modulator-popup-success"), ent, args.Actor);
         UpdateUi(ent);
     }
@@ -96,5 +123,20 @@ public sealed partial class IntrinsicVoiceModulatorSystem : SharedIntrinsicVoice
         var buiState = new IntrinsicVoiceModulatorBoundUserInterfaceState(comp.VoiceName, comp.VoiceMaskSpeechVerb, comp.JobIconId);
 
         UiSystem.SetUiState(uid, IntrinsicVoiceModularUiKey.Key, buiState);
+    }
+
+    private bool TryFindJobProtoFromIcon(JobIconPrototype jobIcon, [NotNullWhen(true)] out JobPrototype? job)
+    {
+        foreach (var jobPrototype in _protoManager.EnumeratePrototypes<JobPrototype>())
+        {
+            if (jobPrototype.Icon == jobIcon.ID)
+            {
+                job = jobPrototype;
+                return true;
+            }
+        }
+
+        job = null;
+        return false;
     }
 }
