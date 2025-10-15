@@ -12,10 +12,11 @@ using Content.Shared.StatusIcon;
 using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._Gabystation.MalfAI.IntrinsicVoiceModulator;
+namespace Content.Client._Gabystation.IntrinsicVoiceModulator;
 
 public sealed class IntrinsicVoiceModulatorBoundUserInterface : BoundUserInterface
 {
+    [ViewVariables]
     private IntrinsicVoiceModulatorWindow? _window;
 
     public IntrinsicVoiceModulatorBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey) { }

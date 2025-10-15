@@ -1,7 +1,8 @@
-using Content.Shared._Gabystation.MalfAi;
-using Content.Shared._Gabystation.MalfAi.Components;
+using Content.Shared._Gabystation.IntrinsicVoiceModulator;
+using Content.Shared._Gabystation.IntrinsicVoiceModulator.Components;
 using Content.Shared._Gabystation.MalfAi.Events;
 using Content.Shared.CCVar;
+using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 
@@ -10,7 +11,6 @@ namespace Content.Server._Gabystation.IntrinsicVoiceModulator;
 public sealed partial class IntrinsicVoiceModulatorSystem : SharedIntrinsicVoiceModulatorSystem
 {
     [Dependency] private readonly IConfigurationManager _cfgManager = default!;
-    [Dependency] private readonly SharedUserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
 
     private int _maxNameLenght;
@@ -32,15 +32,14 @@ public sealed partial class IntrinsicVoiceModulatorSystem : SharedIntrinsicVoice
 
     private void OnOpenVoiceModulatorMenu(Entity<IntrinsicVoiceModulatorComponent> ent, ref OpenIntrinsicVoiceModulatorMenuEvent ev)
     {
-        if (_uiSystem.HasUi(ev.Performer, IntrinsicVoiceModularUiKey.Key))
+        if (!UiSystem.HasUi(ev.Performer, IntrinsicVoiceModularUiKey.Key))
             return;
 
-        _uiSystem.OpenUi(ev.Performer, IntrinsicVoiceModularUiKey.Key, ev.Performer);
+        UiSystem.OpenUi(ev.Performer, IntrinsicVoiceModularUiKey.Key, ev.Performer);
     }
 
     private void OnNameChangedMessage(Entity<IntrinsicVoiceModulatorComponent> ent, ref IntrinsicVoiceModulatorNameChangedMessage args)
     {
-        // Isso nunca deveria acontecer com um cliente "não-hackaeado". Criar um popup falando que deu errado?
         if (args.Name.Length > _maxNameLenght)
             return;
 

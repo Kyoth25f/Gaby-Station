@@ -3,9 +3,6 @@
 							 xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
 							 Title="{Loc intrinsic-voice-modulator-menu-title}">
 	<PanelContainer Name="RootBackdrop">
-		<PanelContainer.PanelOverride>
-			<gfx:StyleBoxFlat BackgroundColor="#000000FF" />
-		</PanelContainer.PanelOverride>
 		<BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="150">
 			<Label Name="CurrentName" Text="{Loc 'intrinsic-voice-modulator-current-name'}" />
 			<LineEdit Name="NameLineEdit" />

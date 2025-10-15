@@ -1,0 +1,8 @@
+- type: entity
+  id: ActionChangeIntrinsicVoiceModulator
+  name: Open voice modulator menu
+  description: Let's you change your voice and way of speak.
+  components:
+  - type: Action
+  - type: InstantAction
+    event: !type:OpenIntrinsicVoiceModulatorMenuEvent

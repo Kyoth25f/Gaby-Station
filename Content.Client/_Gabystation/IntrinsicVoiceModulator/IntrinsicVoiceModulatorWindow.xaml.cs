@@ -19,14 +19,12 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.CustomControls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
-using static Robust.Client.UserInterface.Controls.BaseButton;
 
-namespace Content.Client._Gabystation.MalfAI.IntrinsicVoiceModulator;
+namespace Content.Client._Gabystation.IntrinsicVoiceModulator;
 
 [GenerateTypedNameReferences]
 public sealed partial class IntrinsicVoiceModulatorWindow : DefaultWindow
 {
-    [Dependency] private readonly IResourceCache _resCache = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly IEntitySystemManager _entitySystem = default!;
 
