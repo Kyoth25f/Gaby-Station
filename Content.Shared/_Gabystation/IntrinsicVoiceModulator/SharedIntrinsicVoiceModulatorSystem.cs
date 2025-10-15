@@ -7,6 +7,7 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Gabystation.IntrinsicVoiceModulator;
 
+// Isso não está rodando no cliente propositalmente. Talvez mandar tudo pro servidor, então?
 public abstract class SharedIntrinsicVoiceModulatorSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actions = default!;

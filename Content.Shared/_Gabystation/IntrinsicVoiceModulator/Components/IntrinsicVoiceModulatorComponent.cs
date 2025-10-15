@@ -8,7 +8,7 @@ namespace Content.Shared._Gabystation.IntrinsicVoiceModulator.Components;
 public sealed partial class IntrinsicVoiceModulatorComponent : Component
 {
     [DataField]
-    public string? VoiceName = null;
+    public string VoiceName = "";
 
     [DataField]
     public ProtoId<SpeechVerbPrototype>? VoiceMaskSpeechVerb;
