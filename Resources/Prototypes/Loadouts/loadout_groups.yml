@@ -413,6 +413,7 @@
   minLimit: 0
   loadouts:
   - HoPWintercoat
+  - HoPLongcoat #goob
 
 # Civilian
 - type: loadoutGroup
@@ -1415,6 +1416,7 @@
   loadouts:
   - ResearchDirectorLabCoat
   - ResearchDirectorWintercoat
+  - ResearchDirectorLabCoatPurple #goob
 
 - type: loadoutGroup
   id: ResearchDirectorShoes
@@ -1573,6 +1575,7 @@
   loadouts:
   - WardenCoat
   - WardenArmoredWinterCoat
+  - WardenCoatBlue #goob
 
 - type: loadoutGroup
   id: SecurityHead
