@@ -31,7 +31,7 @@
 # while SmallRuins should spawn only small and not important ruins.
 
 - type: lavalandRuinPool
-  id: Lavaland
+  id: LavalandRuins
   gridRuins:
     SyndicateBase: 1
     HierophantArena: 1
