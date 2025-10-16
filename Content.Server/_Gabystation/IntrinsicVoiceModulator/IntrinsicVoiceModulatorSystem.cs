@@ -53,7 +53,7 @@ public sealed partial class IntrinsicVoiceModulatorSystem : EntitySystem
 
     private void OnComponentInit(Entity<IntrinsicVoiceModulatorComponent> ent, ref ComponentInit args)
     {
-        _alerts.ShowAlert(ent.Owner, ent.Comp.ToggleAlertProtoId, 1);
+        _alerts.ShowAlert(ent.Owner, ent.Comp.ToggleAlertProtoId, (short) (ent.Comp.Enabled ? 1 : 0));
 
         var action = _actions.AddAction(ent.Owner, ent.Comp.ActionProtoId);
         ent.Comp.ActionEntity = action;

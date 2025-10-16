@@ -1,9 +1,10 @@
 - type: entity
   id: ActionChangeIntrinsicVoiceModulator
   name: Open voice modulator menu
-  description: Let's you change your voice and way of speak.
+  description: Let's you change your voice and the way you speak.
   components:
   - type: Action
+    icon: { sprite: Interface/Actions/voice-mask.rsi, state: icon }
   - type: InstantAction
     event: !type:OpenIntrinsicVoiceModulatorMenuEvent
 
@@ -11,12 +12,11 @@
   id: IntrinsicVoiceModulator
   clickEvent: !type:ToggleIntrinsicVoiceModulatorEvent
   icons:
-  - sprite: /Textures/Interface/Alerts/stealthy.rsi
-    state: stealthy-off
-  - sprite: /Textures/Interface/Alerts/stealthy.rsi
-    state: stealthy-on
-  name: Toggle voice modulator
-  descriptions: aaa
+  - sprite: /Textures/_Gabystation/Interface/Alerts/intrinsic_voice_modulator.rsi
+    state: off
+  - sprite: /Textures/_Gabystation/Interface/Alerts/intrinsic_voice_modulator.rsi
+    state: on
+  name: intrinsic-voice-modulator-alert-name
+  descriptions: intrinsic-voice-modulator-alert-name-description
   minSeverity: 0
   maxSeverity: 1
-
