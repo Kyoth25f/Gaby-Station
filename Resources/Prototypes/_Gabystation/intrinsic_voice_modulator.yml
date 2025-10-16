@@ -6,3 +6,17 @@
   - type: Action
   - type: InstantAction
     event: !type:OpenIntrinsicVoiceModulatorMenuEvent
+
+- type: alert
+  id: IntrinsicVoiceModulator
+  clickEvent: !type:ToggleIntrinsicVoiceModulatorEvent
+  icons:
+  - sprite: /Textures/Interface/Alerts/stealthy.rsi
+    state: stealthy-off
+  - sprite: /Textures/Interface/Alerts/stealthy.rsi
+    state: stealthy-on
+  name: Toggle voice modulator
+  descriptions: aaa
+  minSeverity: 0
+  maxSeverity: 1
+

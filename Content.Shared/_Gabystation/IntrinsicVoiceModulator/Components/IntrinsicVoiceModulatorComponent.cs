@@ -1,3 +1,4 @@
+using Content.Shared.Alert;
 using Content.Shared.Speech;
 using Content.Shared.StatusIcon;
 using Robust.Shared.Prototypes;
@@ -11,17 +12,23 @@ public sealed partial class IntrinsicVoiceModulatorComponent : Component
     public string VoiceName = "";
 
     [DataField]
-    public ProtoId<SpeechVerbPrototype>? VoiceMaskSpeechVerb;
+    public ProtoId<SpeechVerbPrototype>? SpeechVerbProtoId;
 
     [DataField]
-    public ProtoId<JobIconPrototype>? JobIconId;
+    public ProtoId<JobIconPrototype>? JobIconProtoId;
 
     [DataField]
     public string? JobName;
 
     [DataField]
-    public EntProtoId Action = "ActionChangeIntrinsicVoiceModulator";
+    public EntProtoId ActionProtoId = "ActionChangeIntrinsicVoiceModulator";
 
     [DataField]
     public EntityUid? ActionEntity;
+
+    [DataField]
+    public ProtoId<AlertPrototype> ToggleAlertProtoId = "IntrinsicVoiceModulator";
+
+    [DataField]
+    public bool Enabled;
 }
