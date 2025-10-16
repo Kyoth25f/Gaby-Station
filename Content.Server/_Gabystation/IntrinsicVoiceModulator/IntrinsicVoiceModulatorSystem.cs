@@ -7,7 +7,6 @@ using System.Diagnostics.CodeAnalysis;
 using Content.Shared._Gabystation.IntrinsicVoiceModulator;
 using Content.Shared._Gabystation.IntrinsicVoiceModulator.Components;
 using Content.Shared._Gabystation.IntrinsicVoiceModulator.Events;
-using Content.Shared._Gabystation.MalfAi.Events;
 using Content.Shared.Actions;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Alert;
@@ -46,7 +45,7 @@ public sealed partial class IntrinsicVoiceModulatorSystem : EntitySystem
         SubscribeLocalEvent<IntrinsicVoiceModulatorComponent, OpenIntrinsicVoiceModulatorMenuEvent>(OnOpenVoiceModulatorMenu);
         SubscribeLocalEvent<IntrinsicVoiceModulatorComponent, ToggleIntrinsicVoiceModulatorEvent>(OnToggle);
 
-        Subs.BuiEvents<IntrinsicVoiceModulatorComponent>(IntrinsicVoiceModularUiKey.Key, subs =>
+        Subs.BuiEvents<IntrinsicVoiceModulatorComponent>(IntrinsicVoiceModulatorUiKey.Key, subs =>
         {
             subs.Event<IntrinsicVoiceModulatorNameChangedMessage>(OnNameChangedMessage);
             subs.Event<IntrinsicVoiceModulatorJobIconChangedMessage>(OnJobIconChanged);
@@ -65,7 +64,7 @@ public sealed partial class IntrinsicVoiceModulatorSystem : EntitySystem
 
         // Isso ser hardcoded é terrível, mas acho que não tem outra forma de conseguir o nome da classe. Ela vive no cliente, não daria pra pegar aqui.
         var data = new InterfaceData("IntrinsicVoiceModulatorBoundUserInterface");
-        _ui.SetUi(ent.Owner, IntrinsicVoiceModularUiKey.Key, data);
+        _ui.SetUi(ent.Owner, IntrinsicVoiceModulatorUiKey.Key, data);
     }
 
     private void OnComponentRemove(Entity<IntrinsicVoiceModulatorComponent> ent, ref ComponentRemove args)
@@ -111,10 +110,10 @@ public sealed partial class IntrinsicVoiceModulatorSystem : EntitySystem
 
     private void OnOpenVoiceModulatorMenu(Entity<IntrinsicVoiceModulatorComponent> ent, ref OpenIntrinsicVoiceModulatorMenuEvent ev)
     {
-        if (!_ui.HasUi(ev.Performer, IntrinsicVoiceModularUiKey.Key))
+        if (!_ui.HasUi(ev.Performer, IntrinsicVoiceModulatorUiKey.Key))
             return;
 
-        _ui.OpenUi(ev.Performer, IntrinsicVoiceModularUiKey.Key, ev.Performer);
+        _ui.OpenUi(ev.Performer, IntrinsicVoiceModulatorUiKey.Key, ev.Performer);
     }
 
     private void OnNameChangedMessage(Entity<IntrinsicVoiceModulatorComponent> ent, ref IntrinsicVoiceModulatorNameChangedMessage args)
@@ -156,6 +155,8 @@ public sealed partial class IntrinsicVoiceModulatorSystem : EntitySystem
 
         if (TryFindJobProtoFromIcon(proto, out var job))
             ent.Comp.JobName = job.LocalizedName;
+        else
+            ent.Comp.JobName = null;
 
         _popup.PopupEntity(Loc.GetString("intrinsic-voice-modulator-popup-success"), ent, args.Actor);
         UpdateUi(ent);
@@ -165,12 +166,12 @@ public sealed partial class IntrinsicVoiceModulatorSystem : EntitySystem
     {
         var (uid, comp) = ent;
 
-        if (!_ui.IsUiOpen(uid, IntrinsicVoiceModularUiKey.Key))
+        if (!_ui.IsUiOpen(uid, IntrinsicVoiceModulatorUiKey.Key))
             return;
 
         var buiState = new IntrinsicVoiceModulatorBoundUserInterfaceState(comp.VoiceName, comp.SpeechVerbProtoId, comp.JobIconProtoId);
 
-        _ui.SetUiState(uid, IntrinsicVoiceModularUiKey.Key, buiState);
+        _ui.SetUiState(uid, IntrinsicVoiceModulatorUiKey.Key, buiState);
     }
 
     private bool TryFindJobProtoFromIcon(JobIconPrototype jobIcon, [NotNullWhen(true)] out JobPrototype? job)

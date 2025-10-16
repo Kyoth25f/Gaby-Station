@@ -13,7 +13,7 @@ using Robust.Shared.Serialization;
 namespace Content.Shared._Gabystation.IntrinsicVoiceModulator;
 
 [Serializable, NetSerializable]
-public enum IntrinsicVoiceModularUiKey : byte
+public enum IntrinsicVoiceModulatorUiKey : byte
 {
     Key,
 }

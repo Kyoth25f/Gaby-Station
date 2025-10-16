@@ -22,6 +22,5 @@
   - sprite: /Textures/_Gabystation/Interface/Alerts/intrinsic_voice_modulator.rsi
     state: on
   name: intrinsic-voice-modulator-alert-name
-  descriptions: intrinsic-voice-modulator-alert-name-description
   minSeverity: 0
   maxSeverity: 1

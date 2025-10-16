@@ -5,6 +5,6 @@
 
 using Content.Shared.Actions;
 
-namespace Content.Shared._Gabystation.MalfAi.Events;
+namespace Content.Shared._Gabystation.IntrinsicVoiceModulator.Events;
 
 public sealed partial class OpenIntrinsicVoiceModulatorMenuEvent : InstantActionEvent { }

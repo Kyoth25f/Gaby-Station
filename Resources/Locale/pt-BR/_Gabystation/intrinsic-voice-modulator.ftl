@@ -7,4 +7,3 @@ intrinsic-voice-modulator-name-change-speech-style = Forma de falar
 intrinsic-voice-modulator-icon-label = Trabalho
 
 intrinsic-voice-modulator-alert-name = Ligar/desligar o modulador de voz
-intrinsic-voice-modulator-alert-name-description = Clique para alternar.
