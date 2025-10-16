@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 the biggest bruh <199992874+thebiggestbruh@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Goobstation.Common.Speech;
 using Content.Goobstation.Shared.Loudspeaker.Components;
 using Content.Goobstation.Shared.Loudspeaker.Events;

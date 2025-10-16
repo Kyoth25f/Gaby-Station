@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 _kote <143940725+FaDeOkno@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using Content.Goobstation.Common.Weapons.Ranged;
 using Content.Shared._Goobstation.Wizard.Projectiles;
