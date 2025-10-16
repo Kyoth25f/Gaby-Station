@@ -934,9 +934,6 @@
       - type: NpcFactionMember
         factions:
         - Syndicate
-      - type: AutoImplant
-        implants:
-        - DeathAcidifierImplant # Goobstation
       mindRoles:
       - MindRoleNukeops
   - type: AntagLoadProfileRule # Goobstation
