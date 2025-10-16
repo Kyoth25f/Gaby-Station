@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Kyoth25f <kyoth25f@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared._Gabystation.IntrinsicVoiceModulator;
 using Content.Shared._Gabystation.IntrinsicVoiceModulator.Components;

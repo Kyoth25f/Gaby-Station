@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Kyoth25f <kyoth25f@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Shared.Alert;
 using Content.Shared.Speech;
 using Content.Shared.StatusIcon;
