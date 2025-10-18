@@ -1204,3 +1204,11 @@ Entries:
       message: Adicionadas as mudanças do Goob até 12/10 (confira a aba do goob)!
   id: 136
   time: '2025-10-12T13:40:20.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: >-
+        Adiciona as últimas mudanças do Goob até 17/10 (verifique a aba do
+        Goob).
+  id: 137
+  time: '2025-10-18T04:29:24.0000000+00:00'
