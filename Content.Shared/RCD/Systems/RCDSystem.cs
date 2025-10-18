@@ -13,8 +13,11 @@
 // SPDX-FileCopyrightText: 2024 yglop <95057024+yglop@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Boaz1111 <149967078+Boaz1111@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 BombasterDS2 <bombasterds.github@mail.ru>
 // SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 // SPDX-FileCopyrightText: 2025 J <billsmith116@gmail.com>
+// SPDX-FileCopyrightText: 2025 Kyoth25f <41803390+Kyoth25f@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Kyoth25f <kyoth25f@gmail.com>
 // SPDX-FileCopyrightText: 2025 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
@@ -703,31 +706,19 @@ public sealed class RCDSystem : EntitySystem
                 break;
 
             case RcdMode.ConstructObject:
-                // Funky - Determine the correct prototype based on selected layer for RPD
-                // var proto = (component.UseMirrorPrototype 
-                //     && !string.IsNullOrEmpty(prototype.MirrorPrototype))
-                //     ? prototype.MirrorPrototype
-                //     : prototype.Prototype;
+                var proto = (component.UseMirrorPrototype && !string.IsNullOrEmpty(prototype.MirrorPrototype))
+                    ? prototype.MirrorPrototype
+                    : prototype.Prototype;
 
-                string proto;
+                // Funky - Determine the correct prototype based on selected layer for RPD
                 if (component.IsRpd && !prototype.NoLayers)
                 {
-                    if (_protoManager.TryIndex<EntityPrototype>(prototype.Prototype, out var entityProto) &&
+                    if (_protoManager.TryIndex<EntityPrototype>(proto, out var entityProto) &&
                         entityProto.TryGetComponent<AtmosPipeLayersComponent>(out var atmosPipeLayers, _entityManager.ComponentFactory) &&
                         _pipeLayersSystem.TryGetAlternativePrototype(atmosPipeLayers, _currentLayer, out var newProtoId))
                     {
                         proto = newProtoId;
                     }
-                    else
-                    {
-                        proto = prototype.Prototype;
-                    }
-                }
-                else
-                {
-                    proto = (component.UseMirrorPrototype && !string.IsNullOrEmpty(prototype.MirrorPrototype))
-                        ? prototype.MirrorPrototype
-                        : prototype.Prototype;
                 }
                 // Funky - end of changes
 
