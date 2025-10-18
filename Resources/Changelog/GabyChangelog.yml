@@ -1212,3 +1212,15 @@ Entries:
         Goob).
   id: 137
   time: '2025-10-18T04:29:24.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Tweak
+      message: IPCs não causam mais sepse na cirurgia.
+    - type: Fix
+      message: Corrigido bug do gemini causar sepse na cirurgia.
+    - type: Fix
+      message: >-
+        Corrigido bug de entidades contidas em inventários causar sepse na
+        cirurgia.
+  id: 138
+  time: '2025-10-18T04:33:08.0000000+00:00'
