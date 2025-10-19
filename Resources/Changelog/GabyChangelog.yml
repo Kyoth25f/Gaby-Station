@@ -1204,3 +1204,55 @@ Entries:
       message: Adicionadas as mudanças do Goob até 12/10 (confira a aba do goob)!
   id: 136
   time: '2025-10-12T13:40:20.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: >-
+        Adiciona as últimas mudanças do Goob até 17/10 (verifique a aba do
+        Goob).
+  id: 137
+  time: '2025-10-18T04:29:24.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Tweak
+      message: IPCs não causam mais sepse na cirurgia.
+    - type: Fix
+      message: Corrigido bug do gemini causar sepse na cirurgia.
+    - type: Fix
+      message: >-
+        Corrigido bug de entidades contidas em inventários causar sepse na
+        cirurgia.
+  id: 138
+  time: '2025-10-18T04:33:08.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Tweak
+      message: >-
+        Space Law e POP foram alterados, tendo entradas para todos os
+        departamentos, não esqueçam de ler elas!
+    - type: Add
+      message: >-
+        A equipe de segurança possui um Código de Conduta que deve ser seguida,
+        e os Procedimentos Operacionais Padrão para a segurança foram alterados
+        para permitir um convívio mutuo melhor com os tripulantes.
+    - type: Add
+      message: >-
+        Multas e Fianças agora estão listados na POP como formas reais para
+        substituir parcialmente ou completamente penas pelos crimes que
+        tripulantes cometem, os ricos prevalecem.
+    - type: Add
+      message: >-
+        Multas são aplicadas em violações da POP, a equipe de segurança está
+        encarregada de multar violações dos tripulantes,  a equipe de
+        administração cobrará conhecimento de POP aos Heads de seus respectivos
+        departamentos, então não esqueça de ler elas, NTRs podem multar
+        violações de POP dos comandantes caso recebam permissão expressa da
+        CentCom.
+  id: 139
+  time: '2025-10-18T14:12:22.0000000+00:00'
+- author: Lucasalemao10
+  changes:
+    - type: Add
+      message: ADICIONA GLACIER!!!!
+  id: 140
+  time: '2025-10-19T11:15:14.0000000+00:00'
