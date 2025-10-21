@@ -198,8 +198,6 @@
     - DoorBumpOpener
     - AnomalyHost
     - IPCDrinkBlacklist # Goobstation - Energycrit: Don't let self antagging IPCs steal power from other ipcs.
-  - type: OwnInteractionVerbs # EE: Interaction Verbs
-    allowedVerbs: []
 
 - type: entity
   save: false
