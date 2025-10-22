@@ -1264,3 +1264,9 @@ Entries:
       message: Arruma Glacier virando o inferno(eu espero)
   id: 141
   time: '2025-10-21T23:05:39.0000000+00:00'
+- author: Dreykor e capitaopato
+  changes:
+    - type: Add
+      message: Musica nova "Massacration" para o Lobby.
+  id: 142
+  time: '2025-10-22T20:13:52.0000000+00:00'
