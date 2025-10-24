@@ -15,6 +15,7 @@ using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Popups;
 using Content.Shared.Roles;
+using Content.Shared.Roles.Jobs;
 using Content.Shared.StatusIcon;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
@@ -30,6 +31,7 @@ public sealed partial class IntrinsicVoiceModulatorSystem : EntitySystem
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
+    [Dependency] private readonly SharedJobSystem _job = default!;
 
     private int _maxNameLenght;
 
@@ -153,7 +155,7 @@ public sealed partial class IntrinsicVoiceModulatorSystem : EntitySystem
 
         ent.Comp.JobIconProtoId = proto.ID;
 
-        if (TryFindJobProtoFromIcon(proto, out var job))
+        if (_job.TryFindJobFromIcon(proto, out var job))
             ent.Comp.JobName = job.LocalizedName;
         else
             ent.Comp.JobName = null;
@@ -172,20 +174,5 @@ public sealed partial class IntrinsicVoiceModulatorSystem : EntitySystem
         var buiState = new IntrinsicVoiceModulatorBoundUserInterfaceState(comp.VoiceName, comp.SpeechVerbProtoId, comp.JobIconProtoId);
 
         _ui.SetUiState(uid, IntrinsicVoiceModulatorUiKey.Key, buiState);
-    }
-
-    private bool TryFindJobProtoFromIcon(JobIconPrototype jobIcon, [NotNullWhen(true)] out JobPrototype? job)
-    {
-        foreach (var jobPrototype in _proto.EnumeratePrototypes<JobPrototype>())
-        {
-            if (jobPrototype.Icon == jobIcon.ID)
-            {
-                job = jobPrototype;
-                return true;
-            }
-        }
-
-        job = null;
-        return false;
     }
 }

@@ -18,6 +18,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Players;
 using Content.Shared.Players.PlayTimeTracking;
+using Content.Shared.StatusIcon;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -244,5 +245,21 @@ public abstract class SharedJobSystem : EntitySystem
             return 1;
 
         return prototype.Goobcoins;
+    }
+
+    // GabyStation
+    public bool TryFindJobFromIcon(JobIconPrototype jobIcon, [NotNullWhen(true)] out JobPrototype? job)
+    {
+        foreach (var jobPrototype in _prototypes.EnumeratePrototypes<JobPrototype>())
+        {
+            if (jobPrototype.Icon == jobIcon.ID)
+            {
+                job = jobPrototype;
+                return true;
+            }
+        }
+
+        job = null;
+        return false;
     }
 }
