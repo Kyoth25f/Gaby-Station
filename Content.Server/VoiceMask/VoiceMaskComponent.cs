@@ -10,6 +10,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Speech;
+using Content.Shared.StatusIcon;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.VoiceMask;
@@ -53,4 +54,10 @@ public sealed partial class VoiceMaskComponent : Component
     /// </summary>
     [DataField]
     public bool EnableAction = true; //Goobstation
+
+    [DataField]
+    public ProtoId<JobIconPrototype>? JobIconProtoId; // GabyStation -> Radio icons
+
+    [DataField]
+    public string? JobName; // GabyStation -> Radio icons
 }
