@@ -244,9 +244,6 @@
         conditions:
         - !type:ReagentThreshold
           min: 15
-        - !type:OrganType # DeltaV - Reduced toxin damage for Oni
-          type: Oni
-          shouldHave: false
         - !type:OrganType
           type: Dwarf
           shouldHave: false
@@ -295,14 +292,7 @@
         - !type:OrganType
           type: Dwarf
         amount: 1
-  # Begin DeltaV Additons - Oni heal brute and take less poison
-      - !type:HealthChange
-        conditions:
-        - !type:OrganType
-          type: Oni
-        damage:
-          groups:
-            Brute: -3
+          # Begin DeltaV Additons - Oni take less poison
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
@@ -328,9 +318,6 @@
           shouldHave: false
         - !type:OrganType # Goobstation - Yowie
           type: Yowie
-          shouldHave: false
-        - !type:OrganType # DeltaV - Oni Dont puke either
-          type: Oni
           shouldHave: false
       - !type:Drunk
         boozePower: 2
