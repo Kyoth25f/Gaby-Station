@@ -1276,3 +1276,9 @@ Entries:
       message: Corrigido intro, aliados e objetivos das empresas dos traidores.
   id: 143
   time: '2025-10-22T20:14:05.0000000+00:00'
+- author: vyas
+  changes:
+    - type: Tweak
+      message: Holo barrier, placas e decalques traduzidos.
+  id: 144
+  time: '2025-10-25T14:00:49.0000000+00:00'
