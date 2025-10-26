@@ -108,6 +108,7 @@
 # SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 # SPDX-FileCopyrightText: 2025 Kyoth25f <41803390+Kyoth25f@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 OttavioBasques <otaviobasques@gmail.com>
 # SPDX-FileCopyrightText: 2025 Panela <107573283+AgentePanela@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Phooooooooooooooooooooooooooooooosphate <184853112+Phooooooooooooooooooooooooooooooosphate@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
@@ -565,6 +566,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -591,6 +593,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -621,6 +624,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   # Goobstation - EE Plasmeme Change.
   - ChiefEngineerEnvirohelm
@@ -643,6 +647,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -671,6 +676,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -698,6 +704,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -728,6 +735,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -758,6 +766,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -782,6 +791,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -809,6 +819,7 @@
   - Animals
   - GroupSpeciesBreathToolSecurity
   - HeadofSecurityGloves
+  - CivilianShoes # Gabystation
   # Goobstation - EE Plasmeme Change.
   - HeadofSecurityEnvirohelm
   - HeadofSecurityEnvirosuit
@@ -831,6 +842,7 @@
   - SecurityStar
   - Animals
   - GroupSpeciesBreathToolSecurity
+  - CivilianShoes # Gabystation
   # Goobstation - EE Plasmeme Change.
   - WardenEnvirohelm
   - WardenEnvirosuit
@@ -854,6 +866,7 @@
   - SecurityStar
   - Animals
   - GroupSpeciesBreathToolSecurity
+  - CivilianShoes # Gabystation
   # Goobstation - EE Plasmeme Change.
   - SecurityOfficerEnvirohelm
   - SecurityOfficerEnvirosuit
@@ -881,6 +894,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -900,6 +914,7 @@
   - Trinkets
   - Animals
   - GroupSpeciesBreathToolSecurity
+  - CivilianShoes # Gabystation
   # Goobstation - EE Plasmeme Change.
   - SecurityCadetEnvirohelm
   - SecurityCadetEnvirosuit
@@ -931,6 +946,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   # Goobstation - EE Plasmeme Change.
   - ChiefMedicalOfficerEnvirohelm
@@ -961,6 +977,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   # Goobstation - EE Plasmeme Change.
   - MedicalDoctorEnvirohelm
@@ -984,6 +1001,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   # Goobstation - EE Plasmeme Change.
   - MedicalInternEnvirohelm
@@ -1012,6 +1030,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   # Goobstation - EE Plasmeme Change.
   - ChemistEnvirohelm
@@ -1041,6 +1060,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   # Goobstation - EE Plasmeme Change.
   - ParamedicEnvirohelm
@@ -1065,6 +1085,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -1089,6 +1110,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -1114,6 +1136,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
@@ -1138,6 +1161,7 @@
   - CivilianHat
   - CivilianFace
   - CivilianGloves
+  - CivilianShoes # Gabystation
   - CivilianOuterClothing
   - CivilianBelt
   # Goobstation - EE Plasmeme Change.
