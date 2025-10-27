@@ -401,7 +401,7 @@ public sealed class RCDSystem : EntitySystem
         if (session.SenderSession.AttachedEntity == null)
             return;
 
-        if (!_hands.TryGetActiveItem(session.SenderSession.AttachedEntity.Value, out var held)
+        if (!_hands.TryGetActiveItem(session.SenderSession.AttachedEntity.Value, out var held) // Goobstation, switched logic.
             || uid != held)
             return;
 
@@ -821,6 +821,6 @@ public sealed partial class RCDDoAfterEvent : DoAfterEvent
 
     public override DoAfterEvent Clone()
     {
-        return this;
+        return this; 
     }
 }
