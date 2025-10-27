@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Spatison <137375981+Spatison@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 loltart <159829224+loltart@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Robust.Shared.Audio; // Goobstation - Play music on announcement
 
 namespace Content.Server._White.GameTicking.Rules.Components;
