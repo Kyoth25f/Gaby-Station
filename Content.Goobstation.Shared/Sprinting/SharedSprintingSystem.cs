@@ -7,6 +7,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Common.Movement;
+using Content.Shared.Damage.Events;
 using Content.Shared._EinsteinEngines.Flight.Events;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Buckle.Components;
@@ -151,6 +152,10 @@ public abstract class SharedSprintingSystem : EntitySystem
 
         component.LastSprint = _timing.CurTime;
         component.IsSprinting = newSprintState;
+
+        // Raise the stamina-specific event (for `SharedStaminaSystem.cs`)
+        var staminaEv = new SprintingStateChangedEvent(uid, newSprintState);
+        RaiseLocalEvent(uid, ref staminaEv);
 
         if (newSprintState)
         {
