@@ -1310,3 +1310,13 @@ Entries:
       message: Agora a maioria dos cargos tem acesso aos calçados civis.
   id: 148
   time: '2025-10-26T23:06:17.0000000+00:00'
+- author: Struater, Kyoth25f
+  changes:
+    - type: Add
+      message: Os caminhos do herege foram traduzidos!
+    - type: Add
+      message: Acariciar os bots foi traduzido.
+    - type: Tweak
+      message: Traduções do dreno foram atualizadas.
+  id: 149
+  time: '2025-10-27T17:11:29.0000000+00:00'
