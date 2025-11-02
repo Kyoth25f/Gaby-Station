@@ -1,3 +1,4 @@
+// SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 // SPDX-FileCopyrightText: 2025 lambdatiger <11843718+lambdatiger@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 lambdatiger <spam.stnuocca.sl@gmail.com>
 //
