@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2025 lambdatiger <11843718+lambdatiger@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 lambdatiger <spam.stnuocca.sl@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

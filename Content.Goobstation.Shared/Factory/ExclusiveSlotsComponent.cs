@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Goobstation.Shared.Factory.Slots;
 using Content.Shared.DeviceLinking;
 using Robust.Shared.GameStates;
