@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Androidonator <33227516+Androidonator@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 namespace Content.Goobstation.Common.Damage.Events;
 
 /// <summary>
