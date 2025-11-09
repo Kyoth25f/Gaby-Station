@@ -1344,3 +1344,9 @@ Entries:
       message: Ícone da IA corrigido!
   id: 153
   time: '2025-11-09T13:41:45.0000000+00:00'
+- author: Victor Job e
+  changes:
+    - type: Tweak
+      message: Armaduras da sec buffadas.
+  id: 154
+  time: '2025-11-09T13:52:30.0000000+00:00'
