@@ -1338,3 +1338,9 @@ Entries:
       message: Adicionadas quatro novas caudas para o Daengati.
   id: 152
   time: '2025-11-01T01:45:45.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: Ícone da IA corrigido!
+  id: 153
+  time: '2025-11-09T13:41:45.0000000+00:00'
