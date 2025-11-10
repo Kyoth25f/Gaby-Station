@@ -1358,3 +1358,15 @@ Entries:
         Goob).
   id: 155
   time: '2025-11-09T13:55:02.0000000+00:00'
+- author: vyas
+  changes:
+    - type: Tweak
+      message: Mantem Saltern, Cluster, Omega e Packed pros novos padrões do Gaby.
+    - type: Remove
+      message: Gamma removido, feliz?
+    - type: Tweak
+      message: >-
+        Nova lista de mapas na rotação - todos os mapas serão mantidos pelo
+        Gaby.
+  id: 156
+  time: '2025-11-10T11:46:03.0000000+00:00'
