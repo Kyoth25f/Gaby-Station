@@ -180,5 +180,14 @@ public sealed partial class MindComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public int? NanoBankAccount { get; set; }
+
+    // Goob Station
+    /// <summary>
+    ///     The last mob entity this mind was in.
+    ///     Can be null.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public EntityUid? LastMob { get; set; }
+
 }
 
