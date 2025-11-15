@@ -1388,3 +1388,11 @@ Entries:
       message: Changed fun!
   id: 159
   time: '2025-11-15T15:38:03.0000000+00:00'
+- author: Crenissis
+  changes:
+    - type: Add
+      message: Adicionado um manto luxuoso.
+    - type: Tweak
+      message: Modificações nos sprites da hardsuit luxuosa.
+  id: 160
+  time: '2025-11-15T16:52:34.0000000+00:00'
