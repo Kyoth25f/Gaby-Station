@@ -1412,3 +1412,11 @@ Entries:
       message: Adiciona as mudanças do Goob até 16/11 (confira a aba do Goob)!
   id: 162
   time: '2025-11-16T12:18:48.0000000+00:00'
+- author: Lucasalemao10
+  changes:
+    - type: Tweak
+      message: >-
+        Shadowkins não sofrem mais penalidade de velocidade por serem pequenos,
+        o fim esta proximo
+  id: 163
+  time: '2025-11-19T13:17:47.0000000+00:00'
