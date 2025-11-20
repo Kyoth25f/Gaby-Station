@@ -300,7 +300,7 @@
   name: security clown ID card
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Misc/id_cards.rsi
+    sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: default
     - state: idsecurityclown
@@ -313,7 +313,7 @@
   name: command maid ID card
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Misc/id_cards.rsi
+    sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: default
     - state: idcommandmaid
@@ -326,7 +326,7 @@
   name: party maker ID card
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Misc/id_cards.rsi
+    sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: default
     - state: idpartymaker
@@ -341,7 +341,7 @@
   name: roboticist ID card
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Misc/id_cards.rsi
+    sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: default
     - state: idroboticist
