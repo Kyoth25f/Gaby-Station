@@ -1434,3 +1434,15 @@ Entries:
       message: Adicionada Malf AI!
   id: 165
   time: '2025-11-19T23:15:49.0000000+00:00'
+- author: Lucasalemao10
+  changes:
+    - type: Add
+      message: Re-adiciona a cura com alcool dos onis!!
+    - type: Fix
+      message: Onis não tomam mais dano extra de veneno
+    - type: Tweak
+      message: Pistolas podem ser utilizadas por onis agora
+    - type: Tweak
+      message: Livro guia dos onis atualizado e traduzido
+  id: 166
+  time: '2025-11-20T00:59:47.0000000+00:00'
