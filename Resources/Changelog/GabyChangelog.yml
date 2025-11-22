@@ -1458,3 +1458,23 @@ Entries:
       message: Os radiadores são compatíveis com as layers!
   id: 168
   time: '2025-11-22T04:45:08.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: >-
+        Corrigida a quantidade máxima de fábricas de ciborgue da IA mal
+        funcional. Apenas uma!
+    - type: Tweak
+      message: A sonda do final do protocolo doomsday agora gibba tudo que toca.
+    - type: Fix
+      message: >-
+        A mente do jogador vai corretamente para a IA ao construir um novo
+        núcleo.
+    - type: Add
+      message: Adicionadas algumas traduções para a IA mal funcional.
+    - type: Fix
+      message: Não é mais possível decretar doomsday pelo computador de comunicações.
+    - type: Tweak
+      message: 'Melhora a interação de múltiplas IAs e ciborgues controlados por IA. '
+  id: 169
+  time: '2025-11-22T04:46:19.0000000+00:00'
