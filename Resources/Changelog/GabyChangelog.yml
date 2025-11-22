@@ -1452,3 +1452,9 @@ Entries:
       message: Adiciona as mudanças do Goob até 19/11 (confira a aba do Goob)!
   id: 167
   time: '2025-11-20T02:34:54.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Add
+      message: Os radiadores são compatíveis com as layers!
+  id: 168
+  time: '2025-11-22T04:45:08.0000000+00:00'
