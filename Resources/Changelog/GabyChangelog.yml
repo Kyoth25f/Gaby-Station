@@ -1492,3 +1492,15 @@ Entries:
       message: Concerta dança alterando altura.
   id: 171
   time: '2025-11-22T23:29:12.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Add
+      message: O alerta ciano voltou ao computador de comunicações
+    - type: Fix
+      message: >-
+        Agora é de verdade! Não é mais possível decretar doomsday pelo
+        computador de comunicações.
+    - type: Fix
+      message: O intellicard foi corrigido.
+  id: 172
+  time: '2025-11-23T13:21:37.0000000+00:00'
