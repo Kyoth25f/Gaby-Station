@@ -1510,3 +1510,9 @@ Entries:
       message: conserta bug de cabelos com displacement
   id: 173
   time: '2025-11-23T19:48:01.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Add
+      message: Agora você pode oferecer itens.
+  id: 174
+  time: '2025-11-23T20:44:50.0000000+00:00'
