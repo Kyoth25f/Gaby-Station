@@ -133,9 +133,6 @@ public partial class ChatBox : UIWidget
         // Thanks robustengine, very cool.
         if (_coalescence && _lastLine == tup)
         {
-            if (!msg.CanCoalesce) // Goobstation Edit - Coalescing Chat
-                return;
-
             _lastLineRepeatCount++;
             AddLine(msg.WrappedMessage, color, _lastLineRepeatCount);
             Contents.RemoveEntry(^2);
