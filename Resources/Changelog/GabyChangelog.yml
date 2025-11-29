@@ -1556,3 +1556,9 @@ Entries:
       message: Novas palavras para o sotaque de pirata
   id: 180
   time: '2025-11-29T02:44:20.0000000+00:00'
+- author: joshepvodka
+  changes:
+    - type: Fix
+      message: RCDs agora podem construir portas por cima de firelocks.
+  id: 181
+  time: '2025-11-29T03:35:11.0000000+00:00'
