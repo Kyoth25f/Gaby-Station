@@ -1570,3 +1570,11 @@ Entries:
         Salvamento, POP de Blueshield adicionada e mais!
   id: 182
   time: '2025-11-29T03:40:11.0000000+00:00'
+- author: joshepvodka
+  changes:
+    - type: Tweak
+      message: >-
+        Aumenta resistência à radiação de paredes reforçadas e cortinas
+        anti-rad. 
+  id: 183
+  time: '2025-12-09T14:53:38.0000000+00:00'
