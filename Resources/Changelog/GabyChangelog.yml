@@ -1602,3 +1602,9 @@ Entries:
       message: Adicionada as atualizações do Goob até 07/12 (confira a aba do Goob)!
   id: 186
   time: '2025-12-13T18:04:20.0000000+00:00'
+- author: O-Verdadeiro-Biel
+  changes:
+    - type: Add
+      message: A máquina de venda de gás bluespace agora é pesquisável e craftável.
+  id: 187
+  time: '2025-12-16T20:24:32.0000000+00:00'
