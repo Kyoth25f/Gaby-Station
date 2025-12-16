@@ -1630,3 +1630,9 @@ Entries:
       message: Intervalo de ativação do scram diminuído.
   id: 190
   time: '2025-12-16T21:19:39.0000000+00:00'
+- author: joshepvodka
+  changes:
+    - type: Tweak
+      message: Adiciona barra de pesquisa de músicas na jukebox.
+  id: 191
+  time: '2025-12-16T22:03:31.0000000+00:00'
