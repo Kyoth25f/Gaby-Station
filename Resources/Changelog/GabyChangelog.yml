@@ -1642,3 +1642,9 @@ Entries:
       message: Adicionadas as alterações do Goob até 17/12 (vide a aba do Goob)!
   id: 192
   time: '2025-12-18T02:30:12.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Add
+      message: Adicionadas as traduções da aba de doações!
+  id: 193
+  time: '2025-12-18T03:31:27.0000000+00:00'
