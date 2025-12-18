@@ -1636,3 +1636,9 @@ Entries:
       message: Adiciona barra de pesquisa de músicas na jukebox.
   id: 191
   time: '2025-12-16T22:03:31.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Add
+      message: Adicionadas as alterações do Goob até 17/12 (vide a aba do Goob)!
+  id: 192
+  time: '2025-12-18T02:30:12.0000000+00:00'
