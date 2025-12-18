@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Goob Station Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Goobstation.Common.Atmos;
 using Content.Goobstation.Common.Temperature;
 using Content.Goobstation.Shared.Atmos.Events;
