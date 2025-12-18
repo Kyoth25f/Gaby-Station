@@ -247,7 +247,7 @@
     maxCharges: 3
   - type: Action
     checkCanInteract: false
-    useDelay: 60 # Gabystation no fun
+    useDelay: 30 # Goobstation
     itemIconStyle: BigAction
     priority: -20
     icon:
@@ -477,12 +477,12 @@
   components:
   - type: Action
     useDelay: 8
-    icon: 
+    icon:
       sprite: Interface/Actions/jump.rsi
       state: icon
   - type: InstantAction
     event: !type:GravityJumpEvent {}
-    
+
 - type: entity
   parent: BaseToggleAction
   id: ActionToggleRootable
