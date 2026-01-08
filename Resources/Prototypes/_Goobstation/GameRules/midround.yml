@@ -274,7 +274,7 @@
       Combat: 20
     eventType: HostilesSpawn
   - type: GameRule
-    chaosScore: 220 # ПРОКЛЯТИЕ 220!
+    chaosScore: 220
   - type: AntagSpawner
     prototype: MobHumanGreyTide
   - type: AntagSelection
