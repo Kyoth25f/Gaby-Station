@@ -1686,3 +1686,17 @@ Entries:
       message: Agora os segurança ganharam um bot chamado Beepsky.
   id: 199
   time: '2026-01-12T01:11:09.0000000+00:00'
+- author: Lucasalemao10
+  changes:
+    - type: Add
+      message: Adiciona todo conteudo de xenobiologia e virologia para glacier
+    - type: Add
+      message: Processador de minerios para salvatagem na glacier
+    - type: Add
+      message: BSO para glacier
+    - type: Tweak
+      message: >-
+        Leves mudanças na SM da glacier, sua contenção agora é menor e pode
+        gerar mais energia
+  id: 200
+  time: '2026-01-12T01:18:24.0000000+00:00'
