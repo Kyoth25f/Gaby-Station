@@ -1704,3 +1704,9 @@ Entries:
   changes: []
   id: 201
   time: '2026-01-12T15:48:59.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Add
+      message: Adicionadas as mudanças do Goob até 12/01/2026 (confira a aba do Goob)!
+  id: 202
+  time: '2026-01-12T17:37:55.0000000+00:00'
