@@ -3,7 +3,7 @@
   title: title-beta
   price: 650 # Por tempo limitado!
   color: "#bc8f8f"
-  available: true
+  available: false
 
 - type: titleListing
   id: ExclusiveContribuTitle
