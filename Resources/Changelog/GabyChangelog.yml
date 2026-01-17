@@ -1756,3 +1756,11 @@ Entries:
       message: Agora o Beepsky não detecta pessoas completamente invisíveis.
   id: 206
   time: '2026-01-17T19:36:48.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Fix
+      message: >-
+        Penguins agora tem sua velocidade de ataque padronizadas quando possuem
+        artes marciais, assim performam igualmente como qualquer outra raça.
+  id: 207
+  time: '2026-01-17T20:26:58.0000000+00:00'
