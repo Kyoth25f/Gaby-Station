@@ -612,8 +612,8 @@
     verbText: mode-select-verb-text
     key: enum.AmmoSelectorUiKey.Key # Goobstation - End
   - type: Battery
-    maxCharge: 5000
-    startingCharge: 5000
+    maxCharge: 7000 # Gabystation - Make CBURN life a bit easier
+    startingCharge: 7000 # Gabystation - Make CBURN life a bit easier
   # Goobstation
   - type: Tag
     tags:
