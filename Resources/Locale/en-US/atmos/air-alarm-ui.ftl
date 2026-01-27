@@ -39,13 +39,32 @@ air-alarm-ui-window-auto-mode-label = Auto mode
    *[invalid] Invalid
 }
 
-air-alarm-ui-window-listing-title = {$address} : {-air-alarm-state-name(state:$state)}
+air-alarm-ui-window-listing-title = {$address} : { $state ->
+    [normal] { -air-alarm-state-name(state: "normal") }
+    [warning] { -air-alarm-state-name(state: "warning") }
+    [danger] { -air-alarm-state-name(state: "danger") }
+    [emagged] { -air-alarm-state-name(state: "emagged") }
+   *[invalid] { -air-alarm-state-name(state: "invalid") }
+}
 air-alarm-ui-window-pressure = {$pressure} kPa
 air-alarm-ui-window-pressure-indicator = Pressure: [color={$color}]{$pressure} kPa[/color]
 air-alarm-ui-window-temperature = {$tempC} C ({$temperature} K)
 air-alarm-ui-window-temperature-indicator = Temperature: [color={$color}]{$tempC} C ({$temperature} K)[/color]
-air-alarm-ui-window-alarm-state = [color={$color}]{-air-alarm-state-name(state:$state)}[/color]
-air-alarm-ui-window-alarm-state-indicator = Status: [color={$color}]{-air-alarm-state-name(state:$state)}[/color]
+air-alarm-ui-window-alarm-state = [color={$color}]{ $state ->
+    [normal] { -air-alarm-state-name(state: "normal") }
+    [warning] { -air-alarm-state-name(state: "warning") }
+    [danger] { -air-alarm-state-name(state: "danger") }
+    [emagged] { -air-alarm-state-name(state: "emagged") }
+   *[invalid] { -air-alarm-state-name(state: "invalid") }
+}[/color]
+air-alarm-ui-window-alarm-state-indicator = Status: [color={$color}]{ $state ->
+    [normal] { -air-alarm-state-name(state: "normal") }
+    [warning] { -air-alarm-state-name(state: "warning") }
+    [danger] { -air-alarm-state-name(state: "danger") }
+    [emagged] { -air-alarm-state-name(state: "emagged") }
+   *[invalid] { -air-alarm-state-name(state: "invalid") }
+}[/color]
+
 
 air-alarm-ui-window-tab-vents = Vents
 air-alarm-ui-window-tab-scrubbers = Scrubbers

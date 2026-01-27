@@ -14,5 +14,17 @@ entity-heater-examined = It is set to { $setting ->
     [high] [color=red]{ -entity-heater-setting-name(setting: "high") }[/color]
    *[other] [color=purple]{ -entity-heater-setting-name(setting: "other") }[/color]
 }.
-entity-heater-switch-setting = Switch to { -entity-heater-setting-name(setting: $setting) }
-entity-heater-switched-setting = Switched to { -entity-heater-setting-name(setting: $setting) }.
+entity-heater-switch-setting = Switch to { $setting ->
+    [off] { -entity-heater-setting-name(setting: "off") }
+    [low] { -entity-heater-setting-name(setting: "low") }
+    [medium] { -entity-heater-setting-name(setting: "medium") }
+    [high] { -entity-heater-setting-name(setting: "high") }
+   *[other] { -entity-heater-setting-name(setting: "other") }
+}.
+entity-heater-switched-setting = Switched to { $setting ->
+    [off] { -entity-heater-setting-name(setting: "off") }
+    [low] { -entity-heater-setting-name(setting: "low") }
+    [medium] { -entity-heater-setting-name(setting: "medium") }
+    [high] { -entity-heater-setting-name(setting: "high") }
+   *[other] { -entity-heater-setting-name(setting: "other") }
+}.
