@@ -1854,3 +1854,9 @@ Entries:
       message: Buffs no equipamento de CBURN.
   id: 221
   time: '2026-01-27T16:37:16.0000000+00:00'
+- author: InvisibleSnake
+  changes:
+    - type: Add
+      message: Capivara Ronilson
+  id: 222
+  time: '2026-01-27T16:40:07.0000000+00:00'
