@@ -33,7 +33,6 @@ ent-StrongBlobTile = Strong Blob Tile
     .desc = A reinforced version of the regular tile. It does not allow air to pass through and protects against brute damage.
 ent-ReflectiveBlobTile = Blob Reflective Tiles
     .desc = It reflects lasers, but does not protect against brute damage as well.
-    .desc = { "" }
 objective-issuer-blob = Blob
 
 
