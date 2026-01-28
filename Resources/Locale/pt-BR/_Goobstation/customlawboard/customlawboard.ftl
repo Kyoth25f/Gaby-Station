@@ -4,5 +4,3 @@ custom-lawboard-up-arrow = ↑
 custom-lawboard-down-arrow = ↓
 
 custom-lawboard-updated = Quadro de leis atualizado
-`
-

@@ -1,35 +1,4 @@
-interaction-LookAt-name = Stare
-interaction-LookAt-description = Stare into the void and see it stare back.
-interaction-LookAt-success-self-popup = You stare at {THE($target)}.
-interaction-LookAt-success-target-popup = You feel {THE($user)} staring at you...
-interaction-LookAt-success-others-popup = {THE($user)} stares at {THE($target)}.
-
-interaction-Hug-name = Hug
-interaction-Hug-description = A hug a day keeps the psychological horrors beyond your comprehension away.
-interaction-Hug-success-self-popup = You hug {THE($target)}.
-interaction-Hug-success-target-popup = {THE($user)} hugs you.
-interaction-Hug-success-others-popup = {THE($user)} hugs {THE($target)}.
-
-interaction-KnockOn-name = Knock
-interaction-KnockOn-description = Knock on the target to attract attention.
-interaction-KnockOn-success-self-popup = You knock on {THE($target)}.
-interaction-KnockOn-success-target-popup = {THE($user)} knocks on you.
-interaction-KnockOn-success-others-popup = {THE($user)} knocks on {THE($target)}.
-
-# The below includes conditionals for if the user is holding an item
-interaction-WaveAt-name = Wave at
-interaction-WaveAt-description = Wave at the target. If you are holding an item, you will wave it.
-interaction-WaveAt-success-self-popup = You wave {$hasUsed ->
-    [false] at {THE($target)}.
-    *[true] your {$used} at {THE($target)}.
-}
-interaction-WaveAt-success-target-popup = {THE($user)} waves {$hasUsed ->
-    [false] at you.
-    *[true] {POSS-PRONOUN($user)} {$used} at you.
-}
-interaction-WaveAt-success-others-popup = {THE($user)} waves {$hasUsed ->
-    [false] at {THE($target)}.
-    *[true] {POSS-PRONOUN($user)} {$used} at {THE($target)}.interaction-LookAt-name = Encostar o olhar
+interaction-LookAt-name = Encostar o olhar
 interaction-LookAt-description = Encare o vazio e sinta ele encarar você de volta.
 interaction-LookAt-success-self-popup = Você encara {THE($target)}.
 interaction-LookAt-success-target-popup = Você sente {THE($user)} te encarando...
@@ -61,4 +30,3 @@ interaction-WaveAt-success-others-popup = {THE($user)} acena {$hasUsed ->
     [false] para {THE($target)}.
     *[true] com {POSS-PRONOUN($user)} {$used} para {THE($target)}.
 }
-

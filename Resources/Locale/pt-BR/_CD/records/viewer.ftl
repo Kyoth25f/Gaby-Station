@@ -10,7 +10,7 @@ cd-character-records-viewer-record-job = Cargo:
 cd-character-records-viewer-record-gender = Pronomes:
 cd-character-records-viewer-record-species = Espécie:
 
-#Imp edit minor wording
+# Imp edit minor wording
 
 cd-character-records-viewer-record-sec-fingerprint = Impressão Digital:
 cd-character-records-viewer-record-sec-dna = DNA:

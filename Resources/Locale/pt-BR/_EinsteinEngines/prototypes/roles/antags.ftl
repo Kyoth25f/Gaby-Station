@@ -1,4 +1,4 @@
-﻿# For Sol Alliance Navy Deserters
+# For Sol Alliance Navy Deserters
 ghost-role-information-deserter-name = Desertor da Marinha Solariana
 ghost-role-information-deserter-description = "Já cansei dessa merda do intendente não me pagar! Vamos pegar um dos dropships para dar uma volta e saquear para pagar a gente mesmo."
 ghost-role-information-deserter-rules =

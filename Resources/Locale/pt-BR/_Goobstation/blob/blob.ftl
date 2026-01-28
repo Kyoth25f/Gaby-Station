@@ -33,7 +33,6 @@ ent-StrongBlobTile = Tile Blob Reforçado
     .desc = Uma versão reforçada do tile comum. Não permite passagem de ar e protege contra dano bruto.
 ent-ReflectiveBlobTile = Tiles Reflexivos de Blob
     .desc = Reflete lasers, mas não protege tão bem contra dano bruto.
-    .desc = { "" }
 objective-issuer-blob = Blob
 
 ghost-role-information-blobbernaut-name = Blobbernaut
