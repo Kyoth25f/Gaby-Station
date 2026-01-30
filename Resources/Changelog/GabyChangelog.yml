@@ -1860,3 +1860,9 @@ Entries:
       message: Capivara Ronilson
   id: 222
   time: '2026-01-27T16:40:07.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Add
+      message: Adiciona manifesto de prontos.
+  id: 223
+  time: '2026-01-30T02:34:08.0000000+00:00'
