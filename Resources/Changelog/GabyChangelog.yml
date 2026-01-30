@@ -1866,3 +1866,9 @@ Entries:
       message: Adiciona manifesto de prontos.
   id: 223
   time: '2026-01-30T02:34:08.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: Corrigido Secret Plus reiniciar o round!
+  id: 224
+  time: '2026-01-30T03:00:43.0000000+00:00'
