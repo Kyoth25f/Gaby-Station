@@ -1,0 +1,1 @@
+station-beacon-general = Geral
