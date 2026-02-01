@@ -151,7 +151,7 @@
 # overcharged sniper laser
 - type: hitscan
   id: SniperOverchargedLaser
-  fireStacks: 0.7
+  # fireStacks: 0.7 # Gabystation Rework aramentos balísticos
   damage:
     types:
       Heat: 21
@@ -282,7 +282,7 @@
 # revolver overcharged laser
 - type: hitscan
   id: RevolverOverchargedLaser
-  fireStacks: 0.7
+  # fireStacks: 0.7 # Gabystation Rework aramentos balísticos
   damage:
     types:
       Heat: 18
