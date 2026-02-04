@@ -1921,3 +1921,9 @@ Entries:
       message: Added fun!
   id: 231
   time: '2026-02-04T21:35:25.0000000+00:00'
+- author: Crono209ggg
+  changes:
+    - type: Add
+      message: Reduz cooldown das injeções.
+  id: 232
+  time: '2026-02-04T22:12:10.0000000+00:00'
