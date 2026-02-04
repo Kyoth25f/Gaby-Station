@@ -1896,3 +1896,14 @@ Entries:
       message: Removed fun!
   id: 228
   time: '2026-02-01T20:55:49.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Add
+      message: Adiciona câmeras fotográficas.
+    - type: Add
+      message: >-
+        Agora os repórteres começam com um álbum de fotos que as mostra no fim
+        da rodada. Não se esqueça de assinar o álbum com uma caneta para que seu
+        nome apareça.
+  id: 229
+  time: '2026-02-04T21:12:13.0000000+00:00'
