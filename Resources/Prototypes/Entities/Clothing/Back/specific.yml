@@ -57,7 +57,9 @@
   - type: Item
     size: Ginormous
   - type: Clothing
-    slots: BACK
+    slots:
+     - BACK
+     - suitStorage  # Goob edit
     sprite: Clothing/Back/Backpacks/waterbackpack.rsi
   - type: ItemSlots
     slots:
