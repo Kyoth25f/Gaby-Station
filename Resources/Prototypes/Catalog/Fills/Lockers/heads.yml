@@ -493,6 +493,7 @@
     - id: ClothingBeltGeminiHoloProjector # Goobstation - Who better to do science with than yourself?
     - id: XenobiologyBountyComputerCircuitboard # Goobstation
     - id: MMI # Goobstation
+    - id: NTCustomLawboard # Goobstation - Custom Law Board
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
