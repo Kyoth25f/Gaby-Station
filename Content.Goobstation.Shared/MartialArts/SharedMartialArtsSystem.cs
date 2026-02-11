@@ -113,6 +113,8 @@ public abstract partial class SharedMartialArtsSystem : EntitySystem
     [Dependency] private readonly MobThresholdSystem _mobThreshold = default!;
     [Dependency] private readonly SharedSprintingSystem _sprinting = default!;
 
+    public static readonly EntProtoId MartsGenericSlow = "MartialArtsGenericSlowdownEffect";
+
     public override void Initialize()
     {
         base.Initialize();
@@ -536,7 +538,7 @@ public abstract partial class SharedMartialArtsSystem : EntitySystem
             case MartialArtsForms.CloseQuartersCombat:
                 var itcryeverytime =
                     new CanDoCQCEvent();
-                  /*  
+                  /*
                 var riposte = EnsureComp<RiposteeComponent>(user);
                 riposte.Data.TryAdd("CQC",
                     new(0.1f,
