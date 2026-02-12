@@ -1975,3 +1975,11 @@ Entries:
       message: Subframe removida.
   id: 238
   time: '2026-02-12T19:22:18.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Tweak
+      message: >-
+        Cores do Cap Cap Senior foram alteradas para combinar melhor com o resto
+        das roupas do capitão.
+  id: 239
+  time: '2026-02-12T19:28:00.0000000+00:00'
