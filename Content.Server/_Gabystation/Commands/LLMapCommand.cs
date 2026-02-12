@@ -1,11 +1,19 @@
+// SPDX-FileCopyrightText: 2025 Kyoth25f <kyoth25f@gmail.com>
+// SPDX-FileCopyrightText: 2026 GabyChangelog <agentepanela2@gmail.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using System.Text;
+using Content.Server.Administration;
+using Content.Shared.Administration;
 using Robust.Shared.Console;
 using Robust.Shared.Map;
 
-namespace Content.Shared._Gabystation.Commands;
+namespace Content.Server._Gabystation.Commands;
 
-public sealed class ListMapsCommand : LocalizedEntityCommands
+[AdminCommand(AdminFlags.Debug)]
+public sealed class LLMapCommand : LocalizedEntityCommands
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly IMapManager _map = default!;
