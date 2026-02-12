@@ -76,7 +76,6 @@
 using Content.Server.Administration.Logs;
 using Content.Server.GameTicking;
 using Content.Server.Ghost;
-//using Content.Goobstation.Shared.Blob.Components;
 using Content.Shared.Database;
 using Content.Shared.Ghost;
 using Content.Shared.Mind;
@@ -88,12 +87,10 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
 using System.Diagnostics.CodeAnalysis;
-using Content.Server.Mind.Commands;
 using Content.Shared._Goobstation.Wizard.BindSoul;
 using Content.Shared.Tag;
 
 // Goobstation
-using Content.Shared._Goobstation.Wizard.BindSoul;
 using Content.Shared.Mobs.Components;
 using Content.Goobstation.Shared.Mind.Components;
 
