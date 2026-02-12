@@ -1945,3 +1945,11 @@ Entries:
       message: Adiciona a musica "Still Alive" para o lobby e para a jukebox
   id: 235
   time: '2026-02-12T18:43:30.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Tweak
+      message: Agora o nome do autor do album aparece acima das fotos.
+    - type: Add
+      message: Adiciona câmera fotográfica ao loadout.
+  id: 236
+  time: '2026-02-12T18:56:20.0000000+00:00'
