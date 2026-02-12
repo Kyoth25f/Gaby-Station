@@ -30,7 +30,6 @@ using Content.Shared.Maps;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Prayer;
-using Content.Shared.StatusEffect;
 using Content.Shared.Stealth.Components;
 using Content.Shared.Stunnable;
 using Content.Shared.Vampire;
@@ -44,6 +43,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Content.Shared.Actions.Components;
+using Content.Shared.StatusEffectNew;
 
 namespace Content.Server.Vampire;
 
@@ -82,6 +82,7 @@ public sealed partial class VampireSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly SharedVampireSystem _vampire = default!;
     [Dependency] private readonly SharedChargesSystem _sharedChargesSystem = default!;
+    [Dependency] private readonly TurfSystem _turf = default!;
 
     private Dictionary<string, EntityUid> _actionEntities = new();
 
@@ -433,7 +434,9 @@ public sealed partial class VampireSystem : EntitySystem
         if (!_mapSystem.TryGetTileRef(vampireUid, grid, vampireTransform.Coordinates, out var tileRef))
             return true;
 
-        return tileRef.Tile.IsEmpty || tileRef.IsSpace() || tileRef.Tile.GetContentTileDefinition().ID == "Lattice";
+        return tileRef.Tile.IsEmpty
+            || _turf.IsSpace(tileRef)
+            || _turf.GetContentTileDefinition(tileRef.Tile).ID == "Lattice";
     }
 
     private bool IsNearPrayable(EntityUid vampireUid)

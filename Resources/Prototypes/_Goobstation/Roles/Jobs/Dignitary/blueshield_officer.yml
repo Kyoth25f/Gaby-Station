@@ -23,6 +23,7 @@
 # SPDX-FileCopyrightText: 2025 Ted Lukin <66275205+pheenty@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 coderabbitai[bot] <136622811+coderabbitai[bot]@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 pheenty <fedorlukin2006@gmail.com>
+# SPDX-FileCopyrightText: 2025 Androidonator <33227516+Androidonator@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -47,7 +48,12 @@
       inverted: true
       species:
       - Felinid
+  guides:
+  # - BlueshieldOfficer SOP
+  - Command
+  # - Succession
   goobcoins: 45
+  salary: 50 # Gaby content
   weight: 20
   startingGear: BlueshieldOfficerGear
   icon: "JobIconBlueshield"
@@ -77,9 +83,6 @@
       - type: CommandStaff
       - type: Condemned
         soulOwnedNotDevil: true
-  - !type:AddObjectiveSpecial
-    objectives:
-    - BlueshieldRandomCommandAliveObjective
   alternateTitles:
   - BlueshieldTitleSentinel
   - BlueshieldTitleGuard
@@ -97,7 +100,8 @@
   storage:
     back:
     - Flash
-    - ClothingMaskGasSecurity
+    - ClothingBSOMaskGasSwat
+    - CombatKnife
 
 - type: chameleonOutfit
   id: BlueshieldOfficerChameleonOutfit

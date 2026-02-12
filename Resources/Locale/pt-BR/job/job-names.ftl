@@ -33,7 +33,7 @@ job-name-janitor = zelador
 job-name-chaplain = capelão
 job-name-botanist = botanista
 job-name-bartender = bartender
-job-name-passenger = assistente
+job-name-passenger = Passageiro
 job-name-salvagespec = especialista de exploração
 job-name-station-ai = IA da estação
 job-name-qm = intendente logístico
@@ -49,6 +49,7 @@ job-name-ertjanitor = zelador da ERT
 job-name-boxer = boxeador
 job-name-zookeeper = funcionário de zoológico
 job-name-visitor = visitante
+job-name-geneticist = geneticista
 
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = técnico atmosférico
@@ -80,7 +81,7 @@ JobMedicalDoctor = médico
 JobMedicalIntern = médico interno
 JobMime = mímico
 JobMusician = músico
-JobParamedic = Paramedic
+JobParamedic = paramédico
 JobPassenger = passageiro
 JobPsychologist = psicólogo
 JobQuartermaster = intendente logístico

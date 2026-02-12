@@ -96,7 +96,14 @@
   icon: "JobIconSecurityOfficer"
   supervisors: job-supervisors-hos
   canBeAntag: false
+  guides: # goobstation
+  - Security
+  # - Legal SOP
+  # - OfficerCadet SOP
+  - CorporateJudo
+  # - Alert Levels
   goobcoins: 30 #Goob content
+  salary: 50 # Gaby content
   access:
   - Security
   - Brig

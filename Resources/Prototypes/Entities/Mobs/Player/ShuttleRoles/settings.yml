@@ -107,7 +107,7 @@
       roleLoadout: [ RoleSurvivalStandard ]
 
 # Security
-# Following use EventHumanoidMindShielded since they are heads and probably should have mindshields
+# Following use EventHumanoidMindShielded since they are security and probably should have mindshields
 
 - type: randomHumanoidSettings
   id: VisitorSecurity
@@ -364,6 +364,31 @@
 
 # Civilian
 
+#Goobstation start
+- type: randomHumanoidSettings
+  id: VisitorCivilianLibrarian
+  parent: EventHumanoidLibrarian
+  components:
+    - type: GhostRole
+      name: ghost-role-information-civilian-name
+      description: ghost-role-information-civilian-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+
+- type: randomHumanoidSettings
+  id: VisitorCivilianChef
+  parent: EventHumanoidChef
+  components:
+    - type: GhostRole
+      name: ghost-role-information-civilian-name
+      description: ghost-role-information-civilian-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+#Goobstation end
+
+
 - type: randomHumanoidSettings
   id: VisitorCivilian
   parent: EventHumanoid
@@ -384,6 +409,7 @@
     - type: Loadout
       prototypes: [ VisitorBartender, VisitorBartenderAlt ]
       roleLoadout: [ RoleSurvivalStandard ]
+    - type: SoberGen # Corvax-Wega-Genetics
 
 - type: randomHumanoidSettings
   id: VisitorBotanist
@@ -411,6 +437,7 @@
   components:
     - type: CultResistant # Funky cult
     - type: BibleUser
+    - type: CurseImmune # Goobstation - Wraith
     - type: CanEnchant
     - type: GhostRole
       name: job-name-chaplain
@@ -420,7 +447,7 @@
 
 - type: randomHumanoidSettings
   id: VisitorChef
-  parent: VisitorCivilian
+  parent: VisitorCivilianChef #Goobstation
   components:
     - type: GhostRole
       name: job-name-chef
@@ -475,7 +502,7 @@
 
 - type: randomHumanoidSettings
   id: VisitorLibrarian
-  parent: VisitorCivilian
+  parent: VisitorCivilianLibrarian #Goobstation
   components:
     - type: GhostRole
       name: job-name-librarian

@@ -84,7 +84,12 @@
   startingGear: DoctorGear
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-cmo
+  guides: # goobstation
+  - MedicalDoctor
+  - Medical
+  - Medicine
   goobcoins: 20 #Goob content
+  salary: 50 # Gaby content
   access:
   - Medical
   - Maintenance

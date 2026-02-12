@@ -28,7 +28,7 @@
   id: WeaponEnergyGunLawbringer
   name: steal-target-groups-weapon-lawbringer
   sprite:
-    sprite: _Goobstation/Objects/Weapons/Guns/Battery/lawbringer.rsi
+    sprite: _Gabystation/Misc/lawbringer_stealobjective.rsi # Gabystation Skins
     state: icon
 
 - type: stealTargetGroup
@@ -43,6 +43,13 @@
   name: steal-target-groups-rapid-syringe-gun
   sprite:
     sprite: _Goobstation/Objects/Weapons/Guns/Cannons/rapid_syringe_gun.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: ExecutiveBriefcase
+  name: steal-target-groups-executive-briefcase
+  sprite:
+    sprite: _Goobstation/Objects/Tools/executive_briefcase.rsi
     state: icon
 
 - type: stealTargetGroup

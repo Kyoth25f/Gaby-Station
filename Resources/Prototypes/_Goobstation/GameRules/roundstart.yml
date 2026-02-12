@@ -29,6 +29,19 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# SubGamemodes
+
+- type: entity
+  parent: BaseGameRule
+  id: TraitorSubGamemodesRule
+  components:
+  - type: SubGamemodes
+    rules:
+    - id: SubgamemodeTraitor
+      prob: 0.5
+
+# GameModes
+
 - type: entity
   parent: BaseGameRule
   id: Changeling
@@ -99,7 +112,7 @@
 
 - type: entity
   parent: BaseTraitorRule
-  id: CalmTraitor # For Dual Antag Gamemodes / Funky: For gamemodes that need nerfed antags
+  id: CalmTraitor # For Dual Antag Gamemodes
   components:
   - type: GameRule
     minPlayers: 30
@@ -123,7 +136,7 @@
 
 - type: entity
   parent: Changeling
-  id: CalmLing # For Dual Antag Gamemodes / Funky: For gamemodes that need nerfed antags
+  id: CalmLing # For Dual Antag Gamemodes
   components:
   - type: GameRule
     minPlayers: 30
@@ -146,7 +159,7 @@
 
 - type: entity
   parent: BaseNukeopsRule
-  id: Calmops # For Dual Antag Gamemodes / Funky: For gamemodes that need nerfed antags
+  id: Calmops # For Dual Antag Gamemodes
   components:
   - type: GameRule
     minPlayers: 35 # Gabystation (40??????)
@@ -196,8 +209,8 @@
     - prefRoles: [ Nukeops ]
       fallbackRoles: [ NukeopsCommander, NukeopsMedic ]
       spawnerPrototype: SpawnPointNukeopsOperative
-      max: 2
-      playerRatio: 30
+      max: 10
+      playerRatio: 20
       startingGear: SyndicateOperativeGearFull
       unequipOldGear: true
       components:
@@ -213,10 +226,10 @@
       - MindRoleNukeops
   - type: Tag
     tags:
-      - RoundstartAntag # Calmer than extreme = normal
+      - CalmAntag
 
 - type: entity
-  id: CalmRevs # For Dual Antag Gamemodes / Funky: For rounds that need a nerfed version in general
+  id: CalmRevs # For Dual Antag Gamemodes
   parent: BaseGameRule
   components:
   - type: GameRule
@@ -235,7 +248,7 @@
         text: head-rev-role-greeting
         color: CornflowerBlue
         sound: "/Audio/Ambience/Antag/headrev_start.ogg"
-      #startingGear: HeadRevGear
+      startingGear: HeadRevGear
       components:
       - type: Revolutionary
       - type: HeadRevolutionary
@@ -243,7 +256,7 @@
       - MindRoleHeadRevolutionary
   - type: Tag
     tags:
-      - RoundstartAntag # Funky: Calmer than extreme = normal
+      - CalmAntag
 # Blob
 - type: entity
   id: BlobRule
@@ -286,21 +299,15 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: StationEvent
-    weight: 5.5 # Gabystation - faz blob raro
+    weight: 1
     duration: 1
     earliestStart: 50
     minimumPlayers: 30
     maxOccurrences: 1
     chaos:
-      Hostile: 150
-      Medical: 150
-      Death: 150
-    maxChaos:
-      Hostile: 30
-      Combat: -60
-      Power: 70
-      Medical: 70
-      Atmos: 70
+      Hostile: 200
+      Death: 300
+      Medical: 200
     eventType: HostilesSpawn
   - type: GameRule
     chaosScore: 1500
@@ -402,7 +409,7 @@
     definitions:
     - prefRoles: [ Devil ]
       max: 1
-      playerRatio: 20
+      playerRatio: 40 # from 20 --> 40 , makes it less likely to spawn (Fuck devils)
       chaosScore: 150
       jobBlacklist: [ Chaplain, Mime, ChiefEngineer, ResearchDirector, Quartermaster ] #chaplain is obvious, mime can't write.
       mindRoles:
@@ -411,3 +418,30 @@
   - type: Tag
     tags:
     - RoundstartAntag
+
+- type: entity
+  parent: Thief
+  id: OopsAllThieves
+  components:
+  - type: GameRule
+    minPlayers: 30
+    chaosScore: 1200
+  - type: AntagSelection
+    agentName: thief-round-end-agent-name
+    definitions:
+    - prefRoles: [ Thief ]
+      max: 10
+      playerRatio: 7
+      lateJoinAdditional: true
+      allowNonHumans: true
+      multiAntagSetting: NotExclusive
+      startingGear: ThiefGear
+      components:
+      - type: Pacified
+      - type: Thieving
+        stripTimeReduction: 2
+        stealthy: true
+      mindRoles:
+      - MindRoleThief
+      briefing:
+        sound: "/Audio/Misc/thief_greeting.ogg"

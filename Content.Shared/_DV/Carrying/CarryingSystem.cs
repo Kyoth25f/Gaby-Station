@@ -1,21 +1,28 @@
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
 // SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 // SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
+// SPDX-FileCopyrightText: 2025 Rouden <149893554+Roudenn@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Roudenn <romabond091@gmail.com>
 // SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
+// SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 // SPDX-FileCopyrightText: 2025 SolsticeOfTheWinter <solsticeofthewinter@gmail.com>
+// SPDX-FileCopyrightText: 2025 X <70487315+XWasHere@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2025 fishbait <gnesse@gmail.com>
+// SPDX-FileCopyrightText: 2025 thetuerk <46725294+ThanosDeGraf@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Shared._DV.Polymorph;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Climbing.Events;
 using Content.Shared.DoAfter;
 using Content.Shared.Hands;
-using Content.Shared.Hands.Components;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Item;
@@ -35,8 +42,9 @@ using Content.Shared.Throwing;
 using Content.Shared.Verbs;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
-using Robust.Shared.Physics.Components;
 using System.Numerics;
+using Content.Shared._EinsteinEngines.Contests;
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Mind.Components;
 
 namespace Content.Shared._DV.Carrying;
@@ -54,14 +62,12 @@ public sealed class CarryingSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly StandingStateSystem _standingState = default!;
     [Dependency] private readonly SharedVirtualItemSystem  _virtualItem = default!;
-
-    private EntityQuery<PhysicsComponent> _physicsQuery;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
+    [Dependency] private readonly ContestsSystem _contests = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-
-        _physicsQuery = GetEntityQuery<PhysicsComponent>();
 
         SubscribeLocalEvent<CarriableComponent, GetVerbsEvent<AlternativeVerb>>(AddCarryVerb);
         SubscribeLocalEvent<CarryingComponent, GetVerbsEvent<InnateVerb>>(AddInsertCarriedVerb);
@@ -82,6 +88,7 @@ public sealed class CarryingSystem : EntitySystem
         SubscribeLocalEvent<BeingCarriedComponent, UnstrappedEvent>(OnDrop);
         SubscribeLocalEvent<BeingCarriedComponent, EscapeInventoryEvent>(OnDrop);
         SubscribeLocalEvent<CarriableComponent, CarryDoAfterEvent>(OnDoAfter);
+        SubscribeLocalEvent<BeingCarriedComponent, EntityTerminatingEvent>(OnDelete);
     }
 
     private void AddCarryVerb(Entity<CarriableComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
@@ -107,7 +114,8 @@ public sealed class CarryingSystem : EntitySystem
         // If the person is carrying someone, and the carried person is a pseudo-item, and the target entity is a storage,
         // then add an action to insert the carried entity into the target
         // AKA put carried felenid into a duffelbag
-        if (args.Using is not {} carried || !args.CanAccess || !TryComp<PseudoItemComponent>(carried, out var pseudoItem))
+        var carried = ent.Comp.Carried; // Goob edit start - It made ZERO sense to grab args.Using, which would point to a virtual item.
+        if (!args.CanAccess || !TryComp<PseudoItemComponent>(ent.Comp.Carried, out var pseudoItem)) // Goob edit end - OF COURSE if you have CarryingComponent you are carrying something, why even check that.
             return;
 
         var target = args.Target;
@@ -134,7 +142,11 @@ public sealed class CarryingSystem : EntitySystem
     /// </summary>
     private void OnVirtualItemDeleted(Entity<CarryingComponent> ent, ref VirtualItemDeletedEvent args)
     {
-        if (HasComp<CarriableComponent>(args.BlockingEntity))
+        // Goobstation - VirtualItemDeletedEvent is raised on both the blocking entity and the user,
+        //               so we need to check that the item being deleted is the carried person item and
+        //               not something unrelated like the virtual item for pulling another player.
+        //               See https://github.com/Goob-Station/Goob-Station/issues/2121
+        if (args.BlockingEntity == ent.Comp.Carried && HasComp<CarriableComponent>(args.BlockingEntity))
             DropCarried(ent, args.BlockingEntity);
     }
 
@@ -144,13 +156,17 @@ public sealed class CarryingSystem : EntitySystem
     /// </summary>
     private void OnThrow(Entity<CarryingComponent> ent, ref BeforeThrowEvent args)
     {
+        if (ent.Owner != args.PlayerUid) // Goobstation
+            return;
+
         if (!TryComp<VirtualItemComponent>(args.ItemUid, out var virtItem) || !HasComp<CarriableComponent>(virtItem.BlockingEntity))
             return;
 
         var carried = virtItem.BlockingEntity;
         args.ItemUid = carried;
 
-        args.ThrowSpeed = 5f * MassContest(ent, carried);
+        args.ThrowSpeed = 5f * _contests.MassContest(ent, carried);
+        args.GrabThrow = true;
     }
 
     private void OnParentChanged(Entity<CarryingComponent> ent, ref EntParentChangedMessage args)
@@ -326,7 +342,7 @@ public sealed class CarryingSystem : EntitySystem
 
     private void ApplyCarrySlowdown(EntityUid carrier, EntityUid carried)
     {
-        var massRatio = MassContest(carrier, carried);
+        var massRatio = _contests.MassContest(carrier, carried);
 
         if (massRatio == 0)
             massRatio = 1;
@@ -349,31 +365,21 @@ public sealed class CarryingSystem : EntitySystem
             !HasComp<BeingCarriedComponent>(carrier) &&
             !HasComp<BeingCarriedComponent>(carried) &&
             // finally check that there are enough free hands
-            TryComp<HandsComponent>(carrier, out var hands) &&
-            hands.CountFreeHands() >= carried.Comp.FreeHandsRequired;
-    }
-
-    private float MassContest(EntityUid roller, EntityUid target)
-    {
-        if (!_physicsQuery.TryComp(roller, out var rollerPhysics) || !_physicsQuery.TryComp(target, out var targetPhysics))
-            return 1f;
-
-        if (targetPhysics.FixturesMass == 0)
-            return 1f;
-
-        return rollerPhysics.FixturesMass / targetPhysics.FixturesMass;
+            _hands.CountFreeHands(carrier) >= carried.Comp.FreeHandsRequired;
     }
 
     private TimeSpan GetPickupDuration(EntityUid carrier, EntityUid carried)
     {
         var length = TimeSpan.FromSeconds(3);
 
-        var mod = MassContest(carrier, carried);
-        if (mod != 0)
-            length /= mod;
+        var mod = _contests.MassContest(carried, carrier);
+        length *= mod;
 
         return length;
     }
+
+    private void OnDelete(Entity<BeingCarriedComponent> ent, ref EntityTerminatingEvent args)
+        => DropCarried(ent.Comp.Carrier, ent.Owner);
 
     public override void Update(float frameTime)
     {

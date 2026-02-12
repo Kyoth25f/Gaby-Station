@@ -1,5 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Froffy025 <78222136+Froffy025@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Froffy025 <scotttaco025@gmail.com>
+# SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 Lucasalemao10 <100492096+Lucasalemao10@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -7,8 +10,9 @@
 - type: marking
   id: UndershirtDefault
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:
@@ -21,8 +25,9 @@
 - type: marking
   id: UndershirtRolled
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:
@@ -35,8 +40,9 @@
 - type: marking
   id: UndershirtSleeveless
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:
@@ -49,8 +55,9 @@
 - type: marking
   id: UndershirtRolledSleeveless
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:
@@ -63,8 +70,9 @@
 - type: marking
   id: UndershirtGrossSleeveless
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:
@@ -77,8 +85,9 @@
 - type: marking
   id: UndershirtNanotrasen
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:
@@ -91,8 +100,9 @@
 - type: marking
   id: UndershirtBinder
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:
@@ -105,8 +115,9 @@
 - type: marking
   id: UndershirtBraClassic
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:
@@ -119,8 +130,9 @@
 - type: marking
   id: UndershirtBraSports
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:
@@ -133,8 +145,9 @@
 - type: marking
   id: UndershirtBraStrapless
   bodyPart: Undershirt
+  markingType: NonGenetics # Corvax-Wega-Genetics
   markingCategory: Undershirt
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy]
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Daengati, Tajaran] # goob edit - yowies; Gaby Station - Daengati, Tajaran
   coloring:
     default:
       type:

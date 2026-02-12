@@ -1,6 +1,8 @@
 // SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aviu00 <aviu00@protonmail.com>
+// SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -20,6 +22,7 @@ using Content.Shared.Heretic.Components;
 using Content.Shared.Mind;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
+using Content.Shared.NPC.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Silicons.StationAi;
@@ -28,6 +31,7 @@ using Content.Shared.Stunnable;
 using Content.Shared.Tag;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 
@@ -38,10 +42,12 @@ public abstract class SharedMansusGraspSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IComponentFactory _compFactory = default!;
     [Dependency] private readonly INetManager _net = default!;
+    [Dependency] private readonly IMapManager _mapMan = default!;
 
     [Dependency] private readonly SharedDoorSystem _door = default!;
     [Dependency] private readonly DamageableSystem _damage = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
+    [Dependency] private readonly StatusEffectNew.StatusEffectsSystem _statusNew = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly BackStabSystem _backstab = default!;
@@ -49,19 +55,28 @@ public abstract class SharedMansusGraspSystem : EntitySystem
     [Dependency] private readonly SharedVoidCurseSystem _voidCurse = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly SharedStarMarkSystem _starMark = default!;
+    [Dependency] private readonly NpcFactionSystem _faction = default!;
 
     public bool TryApplyGraspEffectAndMark(EntityUid user,
         HereticComponent hereticComp,
         EntityUid target,
-        EntityUid? grasp)
+        EntityUid? grasp,
+        out bool triggerGrasp)
     {
+        triggerGrasp = true;
+
         if (hereticComp.CurrentPath == null)
             return true;
 
         if (hereticComp.PathStage >= 2)
         {
-            if (!ApplyGraspEffect((user, hereticComp), target, grasp))
+            if (!ApplyGraspEffect((user, hereticComp), target, grasp, out var applyMark, out triggerGrasp))
                 return false;
+
+            if (!applyMark)
+                return true;
         }
 
         if (hereticComp.PathStage >= 4 && HasComp<StatusEffectsComponent>(target))
@@ -71,13 +86,26 @@ public abstract class SharedMansusGraspSystem : EntitySystem
             markComp.Path = hereticComp.CurrentPath;
             markComp.Repetitions = hereticComp.CurrentPath == "Ash" ? 5 : 1;
             Dirty(target, markComp);
+
+            if (hereticComp.CurrentPath == "Cosmos")
+            {
+                var cosmosMark = EnsureComp<HereticCosmicMarkComponent>(target);
+                cosmosMark.CosmicDiamondUid = Spawn(cosmosMark.CosmicDiamond, Transform(target).Coordinates);
+                _transform.AttachToGridOrMap(cosmosMark.CosmicDiamondUid.Value);
+            }
         }
 
         return true;
     }
 
-    public bool ApplyGraspEffect(Entity<HereticComponent> user, EntityUid target, EntityUid? grasp)
+    public bool ApplyGraspEffect(Entity<HereticComponent> user,
+        EntityUid target,
+        EntityUid? grasp,
+        out bool applyMark,
+        out bool triggerGrasp)
     {
+        applyMark = true;
+        triggerGrasp = true;
         var (performer, heretic) = user;
 
         switch (heretic.CurrentPath)
@@ -134,7 +162,8 @@ public abstract class SharedMansusGraspSystem : EntitySystem
 
             case "Flesh":
             {
-                if (TryComp<MobStateComponent>(target, out var mobState) && mobState.CurrentState == MobState.Dead)
+                if (TryComp<MobStateComponent>(target, out var mobState) && mobState.CurrentState != MobState.Alive &&
+                    !HasComp<BorgChassisComponent>(target))
                 {
                     if (HasComp<GhoulComponent>(target))
                     {
@@ -151,10 +180,12 @@ public abstract class SharedMansusGraspSystem : EntitySystem
                     }
 
                     var ghoul = _compFactory.GetComponent<GhoulComponent>();
-                    ghoul.BoundHeretic = GetNetEntity(performer);
+                    ghoul.BoundHeretic = performer;
                     ghoul.GiveBlade = true;
 
                     AddComp(target, ghoul);
+                    applyMark = false;
+                    triggerGrasp = false;
                 }
 
                 break;
@@ -192,6 +223,12 @@ public abstract class SharedMansusGraspSystem : EntitySystem
                 break;
             }
 
+            case "Cosmos":
+            {
+                if (_starMark.TryApplyStarMark(target))
+                    _starMark.SpawnCosmicField(Transform(performer).Coordinates, heretic.PathStage);
+                break;
+            }
             default:
                 return true;
         }

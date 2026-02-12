@@ -113,6 +113,13 @@ public partial class ListingData : IEquatable<ListingData>, ICloneable
     public EntProtoId? ProductAction;
 
     /// <summary>
+    /// The number of charges to grant when purchasing an action if applicable.
+    /// If null or 0, no charges are granted to existing actions.
+    /// </summary>
+    [DataField]
+    public int? ProductActionCharges; // Funkystation - Malf Ai
+
+    /// <summary>
     /// The listing ID of the related upgrade listing. Can be used to link a <see cref="ProductAction"/> to an
     /// upgrade or to use standalone as an upgrade
     /// </summary>
@@ -163,6 +170,9 @@ public partial class ListingData : IEquatable<ListingData>, ICloneable
 
     public Dictionary<ProtoId<CurrencyPrototype>, FixedPoint2> OldCost = new();
 
+    // Goobstation
+    public Dictionary<ProtoId<CurrencyPrototype>, FixedPoint2>? SaleCost;
+
     [DataField]
     public List<string> Components = new();
     // WD END
@@ -181,6 +191,15 @@ public partial class ListingData : IEquatable<ListingData>, ICloneable
     [DataField]
     public HashSet<ProtoId<ListingPrototype>> BlockRefundListings = new();
 
+    [DataField]
+    public bool ResetRestockOnPurchase = false; // goob edit
+
+    [DataField]
+    public TimeSpan RestockDuration = TimeSpan.FromMinutes(10); // goob edit
+
+    [DataField]
+    public TimeSpan? RestockAfterPurchase { get; private set; } // goob edit
+
     public bool Equals(ListingData? listing)
     {
         if (listing == null)
@@ -194,6 +213,8 @@ public partial class ListingData : IEquatable<ListingData>, ICloneable
             ProductAction != listing.ProductAction ||
             RaiseProductEventOnUser != listing.RaiseProductEventOnUser || // Goobstation
             DisableRefund != listing.DisableRefund || // Goobstation
+            ResetRestockOnPurchase != listing.ResetRestockOnPurchase || // Goobstation
+            RestockAfterPurchase != listing.RestockAfterPurchase || // Goobstation
             RestockTime != listing.RestockTime)
             return false;
 
@@ -241,6 +262,7 @@ public partial class ListingData : IEquatable<ListingData>, ICloneable
             Priority = Priority,
             ProductEntity = ProductEntity,
             ProductAction = ProductAction,
+            ProductActionCharges = ProductActionCharges, // Funkystation - Malf Ai
             ProductUpgradeId = ProductUpgradeId,
             ProductActionEntity = ProductActionEntity,
             ProductEvent = ProductEvent,
@@ -248,6 +270,8 @@ public partial class ListingData : IEquatable<ListingData>, ICloneable
             ProductHereticKnowledge = ProductHereticKnowledge, // goob edit
             DisableRefund = DisableRefund, // goob edit
             BlockRefundListings = BlockRefundListings, // goob edit
+            ResetRestockOnPurchase = ResetRestockOnPurchase, // goob edit
+            RestockAfterPurchase = RestockAfterPurchase, // goob edit
             PurchaseAmount = PurchaseAmount,
             RestockTime = RestockTime,
             // WD START
@@ -255,6 +279,7 @@ public partial class ListingData : IEquatable<ListingData>, ICloneable
             SaleBlacklist = SaleBlacklist,
             DiscountValue = DiscountValue,
             OldCost = OldCost,
+            SaleCost = SaleCost,
             Components = Components,
             // WD END
         };
@@ -265,6 +290,5 @@ public partial class ListingData : IEquatable<ListingData>, ICloneable
 ///     Defines a set item listing that is available in a store
 /// </summary>
 [Prototype("listing")]
-[Serializable, NetSerializable]
 [DataDefinition]
 public sealed partial class ListingPrototype : ListingData, IPrototype;

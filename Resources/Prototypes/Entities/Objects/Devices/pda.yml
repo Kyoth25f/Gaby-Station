@@ -259,6 +259,7 @@
       - NanoTaskCartridge
       - NewsReaderCartridge
       - NanoChatCartridge # DeltaV
+      - NanoBankCartridge # Gabystation
     cartridgeSlot:
       priority: -1
       name: device-pda-slot-component-slot-name-cartridge
@@ -306,6 +307,8 @@
     understands:
     - TauCetiBasic
     - RobotTalk
+  - type: EdibleMatter # Corvax-Wega-Add
+    canBeEaten: false # Corvax-Wega-Add
 
 - type: entity
   parent: BasePDA
@@ -339,6 +342,7 @@
     - NewsReaderCartridge
     - WantedListCartridge
     - NanoChatCartridge # DeltaV
+    - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: BasePDA
@@ -354,6 +358,7 @@
       - NewsReaderCartridge
       - MedTekCartridge
       - NanoChatCartridge # DeltaV
+      - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: BasePDA
@@ -405,7 +410,7 @@
     state: pda-internmed
   - type: GuideHelp
     guides:
-    - Medical Doctor
+    - MedicalDoctor
 
 - type: entity
   parent: BaseSecurityPDA
@@ -662,13 +667,16 @@
     accentVColor: "#a23e3e"
   - type: Icon
     state: pda-qm
-  - type: CartridgeLoader # DeltaV - MailMetrics courier tracker
+  - type: CartridgeLoader
     preinstalled:
-      - CrewManifestCartridge
-      - NotekeeperCartridge
-      - NewsReaderCartridge
-      - MailMetricsCartridge
-      - NanoChatCartridge # DeltaV
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - AstroNavCartridge
+    - MailMetricsCartridge
+    - NanoChatCartridge # DeltaV
+    - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: BasePDA
@@ -715,6 +723,7 @@
       - NewsReaderCartridge
       - AstroNavCartridge
       - NanoChatCartridge # DeltaV
+      - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: BasePDA
@@ -949,7 +958,7 @@
     state: pda-medical
   - type: GuideHelp
     guides:
-    - Medical Doctor
+    - MedicalDoctor
 
 - type: entity
   parent: MedicalPDA
@@ -1066,6 +1075,7 @@
     - WantedListCartridge
     - LogProbeCartridge
     - NanoChatCartridge # DeltaV
+    - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: BaseSecurityPDA
@@ -1114,6 +1124,7 @@
     id: CentcomIDCard
     penSlot:
       startingItem: PenCentcom
+      priority: -1
       whitelist:
         tags:
         - Write
@@ -1138,6 +1149,7 @@
       - LogProbeCartridge
       - AstroNavCartridge
       - NanoChatCartridge # DeltaV
+      - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: CentcomPDA
@@ -1166,6 +1178,7 @@
       - MedTekCartridge
       - AstroNavCartridge
       - NanoChatCartridge # DeltaV
+      - NanoBankCartridge # Gabystation
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
@@ -1288,6 +1301,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NanoChatCartridge # DeltaV
+      - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: BaseSecurityPDA
@@ -1321,6 +1335,7 @@
       - LogProbeCartridge
       - AstroNavCartridge
       - NanoChatCartridge # DeltaV
+      - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: ERTLeaderPDA
@@ -1491,6 +1506,7 @@
     - WantedListCartridge
     - LogProbeCartridge
     - NanoChatCartridge # DeltaV
+    - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: BaseMedicalPDA
@@ -1520,6 +1536,7 @@
     - WantedListCartridge
     - MedTekCartridge
     - NanoChatCartridge # DeltaV
+    - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: ClownPDA
@@ -1666,6 +1683,7 @@
       - NanoTaskCartridge
       - MedTekCartridge
       - NanoChatCartridge # DeltaV
+      - NanoBankCartridge # Gabystation
 
 - type: entity
   parent: BasePDA
@@ -1721,3 +1739,14 @@
     borderColor: "#7F3300"
   - type: Icon
     state: pda-wizard
+
+- type: entity
+  parent: ClearPDA
+  id: ScurretPDA
+  description: A temporary PDA granted to scurret temps. Doesn't do much. Wawa!
+  components:
+  - type: Pda
+    id: VisitorIDCard
+  - type: Tag #  Ignore Chameleon tags
+    tags:
+    - DoorBumpOpener

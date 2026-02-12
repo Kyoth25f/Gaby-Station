@@ -802,6 +802,10 @@
         Plastic: 12
     - type: StaticPrice
       price: 15
+    - type: Tag # Goobstation - augment construction
+      tags:
+      - DroneUsable
+      - AugmentRechargerBoard
 
 - type: entity
   id: PowerCageRechargerCircuitboard
@@ -845,6 +849,10 @@
         Plastic: 12
     - type: StaticPrice
       price: 15
+    - type: Tag # Goobstation - augment construction
+      tags:
+      - DroneUsable
+      - AugmentStationBoard
 
 - type: entity
   id: WeaponCapacitorRechargerCircuitboard
@@ -1182,6 +1190,7 @@
         Cable: 2
     - type: Tag
       tags:
+      - DroneUsable # Goobstation
       - MicrowaveMachineBoard
 
 - type: entity
@@ -1531,6 +1540,20 @@
         Steel: 5
 
 - type: entity
+  id: BluespaceGasVendorMachineCircuitBoard
+  parent: BaseMachineCircuitboard
+  name: bluespace gas vendor machine board
+  description: A machine printed board for a bluespace gas vendor machine.
+  components:
+    - type: MachineBoard
+      prototype: BluespaceVendor
+      stackRequirements:
+       Steel: 4
+       Manipulator: 4
+       Plasma: 2
+       Glass: 2
+
+- type: entity
   id: ThermomachineUpgradedFreezerMachineCircuitBoard
   parent: BaseMachineCircuitboard
   name: upgraded freezer thermomachine machine board
@@ -1602,3 +1625,15 @@
     deconstructionTarget: null
     node: advancedheater
 # Assmos Change End
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: WashingMachineCircuitboard
+  name: washing machine board
+  components:
+  - type: MachineBoard
+    prototype: WashingMachine
+    stackRequirements:
+      Steel: 1
+      Manipulator: 1
+      Cable: 1

@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
+// SPDX-FileCopyrightText: 2025 Spatison <137375981+Spatison@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 loltart <159829224+loltart@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Robust.Shared.Audio; // Goobstation - Play music on announcement
+
 namespace Content.Server._White.GameTicking.Rules.Components;
 
 [RegisterComponent]
@@ -20,6 +28,22 @@ public sealed partial class XenomorphsRuleComponent : Component
 
     [DataField]
     public string? Announcement = "xenomorphs-announcement";
+
+    [DataField] // Goobstation - play music on announcement
+    public SoundSpecifier XenomorphInfestationSound =
+            new SoundPathSpecifier("/Audio/_Goobstation/Music/Black_Swarm_Short.ogg")
+            {
+                Params = AudioParams.Default
+                    .WithVolume(-8f)
+            };
+
+    [DataField] // Goobstation - play music on announcement
+    public SoundSpecifier XenomorphTakeoverSound =
+            new SoundPathSpecifier("/Audio/_Goobstation/Music/Colonial_Marines_The_Final_Battle.ogg")
+            {
+                Params = AudioParams.Default
+                    .WithVolume(-8f)
+            };
 
     [DataField]
     public Color AnnouncementColor = Color.Red;

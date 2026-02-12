@@ -72,9 +72,14 @@
 // SPDX-FileCopyrightText: 2024 to4no_fix <156101927+chavonadelal@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 voidnull000 <18663194+voidnull000@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 GabyChangelog <agentepanela2@gmail.com>
 // SPDX-FileCopyrightText: 2025 James Simonson <jamessimo89@gmail.com>
+// SPDX-FileCopyrightText: 2025 MilenVolf <63782763+MilenVolf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Rouden <149893554+Roudenn@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 // SPDX-FileCopyrightText: 2025 Soup-Byte07 <135303377+Soup-Byte07@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 chromiumboy <50505512+chromiumboy@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 eoineoineoin <helloworld@eoinrul.es>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -113,8 +118,7 @@ public sealed partial class CriminalRecordsConsoleWindow : FancyWindow
 
     public readonly EntityUid Console;
 
-    [ValidatePrototypeId<LocalizedDatasetPrototype>]
-    private const string ReasonPlaceholders = "CriminalRecordsWantedReasonPlaceholders";
+    private static readonly ProtoId<LocalizedDatasetPrototype> ReasonPlaceholders = "CriminalRecordsWantedReasonPlaceholders";
 
     public Action<uint?>? OnKeySelected;
     public Action<StationRecordFilterType, string>? OnFiltersChanged;
@@ -123,12 +127,14 @@ public sealed partial class CriminalRecordsConsoleWindow : FancyWindow
     public Action<CriminalRecord, bool, bool>? OnHistoryUpdated;
     public Action? OnHistoryClosed;
     public Action<SecurityStatus, string>? OnDialogConfirmed;
+    public Action<string, string>? OnRequestArrestWarrant;
 
     public Action<SecurityStatus>? OnStatusFilterPressed;
     private uint _maxLength;
     private bool _access;
     private uint? _selectedKey;
     private CriminalRecord? _selectedRecord;
+    private GeneralStationRecord? _selectedStationRecord;
 
     private DialogWindow? _reasonDialog;
 
@@ -226,6 +232,8 @@ public sealed partial class CriminalRecordsConsoleWindow : FancyWindow
             if (_selectedRecord is { } record)
                 OnHistoryUpdated?.Invoke(record, _access, true);
         };
+
+        PrintArrestWarrantButton.OnPressed += GetArrestWarrantReason;
     }
 
     public void StatusFilterPressed(SecurityStatus statusSelected)
@@ -277,10 +285,12 @@ public sealed partial class CriminalRecordsConsoleWindow : FancyWindow
             PopulateRecordContainer(state.StationRecord, state.CriminalRecord);
             OnHistoryUpdated?.Invoke(state.CriminalRecord, _access, false);
             _selectedRecord = state.CriminalRecord;
+            _selectedStationRecord = state.StationRecord;
         }
         else
         {
             _selectedRecord = null;
+            _selectedStationRecord = null;
             OnHistoryClosed?.Invoke();
         }
     }
@@ -375,7 +385,7 @@ public sealed partial class CriminalRecordsConsoleWindow : FancyWindow
 
         var field = "reason";
         var title = Loc.GetString("criminal-records-status-" + status.ToString().ToLower());
-        var placeholders = _proto.Index<LocalizedDatasetPrototype>(ReasonPlaceholders);
+        var placeholders = _proto.Index(ReasonPlaceholders);
         var placeholder = Loc.GetString("criminal-records-console-reason-placeholder", ("placeholder", _random.Pick(placeholders))); // just funny it doesn't actually get used
         var prompt = Loc.GetString("criminal-records-console-reason");
         var entry = new QuickDialogEntry(field, QuickDialogEntryType.LongText, prompt, placeholder);
@@ -428,5 +438,43 @@ public sealed partial class CriminalRecordsConsoleWindow : FancyWindow
         }
 
         return result;
+    }
+
+    private void GetArrestWarrantReason(BaseButton.ButtonEventArgs args) // GabyStation
+    {
+        if (_selectedRecord == null || _selectedStationRecord == null)
+            return;
+
+        
+        var reasonEntry = new QuickDialogEntry(
+            "reason", 
+            QuickDialogEntryType.LongText,
+            Loc.GetString("criminal-records-console-reason"),
+            Loc.GetString("criminal-records-console-reason-placeholder")
+        );
+
+        var observationsEntry = new QuickDialogEntry(
+            "observations",
+            QuickDialogEntryType.LongText,
+            Loc.GetString("criminal-records-console-arrest-warrant-observations"),
+            Loc.GetString("criminal-records-console-arrest-warrant-observations-placeholder")
+        );
+
+        var entries = new List<QuickDialogEntry>() { reasonEntry, observationsEntry };
+        var title = Loc.GetString("criminal-records-console-print-arrest-warrant");
+        _reasonDialog = new DialogWindow(title, entries);
+
+        _reasonDialog.OnConfirmed += responses =>
+        {
+            var reason = responses["reason"];
+            var observations = responses["observations"];
+
+            if (reason.Length < 1 || reason.Length > _maxLength)
+                return;
+
+            OnRequestArrestWarrant?.Invoke(reason, observations);
+        };
+
+        _reasonDialog.OnClose += () => { _reasonDialog = null; };
     }
 }

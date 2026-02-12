@@ -24,7 +24,7 @@ public sealed partial class SingleMarkingPicker : BoxContainer
     [Dependency] private readonly IEntityManager _entityManager = default!;
 
     private readonly SpriteSystem _sprite;
-    
+
     /// <summary>
     ///     What happens if a marking is selected.
     ///     It will send the 'slot' (marking index)
@@ -47,6 +47,8 @@ public sealed partial class SingleMarkingPicker : BoxContainer
     ///     Sends a 'slot' number, and the marking in question.
     /// </summary>
     public Action<(int slot, Marking marking)>? OnColorChanged;
+
+    public bool IgnoreSpecies { get; set; } = false; //Corvax-Wega-Genetics
 
     // current selected slot
     private int _slot = -1;
@@ -165,7 +167,16 @@ public sealed partial class SingleMarkingPicker : BoxContainer
         _species = species;
         _totalPoints = totalPoints;
 
-        _markingPrototypeCache = _markingManager.MarkingsByCategoryAndSpecies(Category, _species);
+        //Corvax-Wega-Genetics-Start
+        if (IgnoreSpecies)
+        {
+            _markingPrototypeCache = _markingManager.MarkingsByCategory(Category);
+        }
+        else
+        {
+            _markingPrototypeCache = _markingManager.MarkingsByCategoryAndSpecies(Category, _species);
+        }
+        //Corvax-Wega-Genetics-End
 
         Visible = _markingPrototypeCache.Count != 0;
         if (_markingPrototypeCache.Count == 0)
@@ -185,7 +196,15 @@ public sealed partial class SingleMarkingPicker : BoxContainer
             throw new ArgumentException("Tried to populate marking list without a set species!");
         }
 
-        _markingPrototypeCache ??= _markingManager.MarkingsByCategoryAndSpecies(Category, _species);
+        //Corvax-Wega-Genetics-Start
+        if (_markingPrototypeCache == null)
+        {
+            if (IgnoreSpecies)
+                _markingPrototypeCache = _markingManager.MarkingsByCategory(Category);
+            else
+                _markingPrototypeCache = _markingManager.MarkingsByCategoryAndSpecies(Category, _species);
+        }
+        //Corvax-Wega-Genetics-End
 
         MarkingSelectorContainer.Visible = _markings != null && _markings.Count != 0;
         if (_markings == null || _markings.Count == 0)
@@ -240,6 +259,7 @@ public sealed partial class SingleMarkingPicker : BoxContainer
                 HorizontalExpand = true
             };
             selector.Color = marking.MarkingColors[i];
+            selector.SelectorType = ColorSelectorSliders.ColorSelectorType.Hsv; // defaults color selector to HSV
 
             var colorIndex = i;
             selector.OnColorChanged += color =>

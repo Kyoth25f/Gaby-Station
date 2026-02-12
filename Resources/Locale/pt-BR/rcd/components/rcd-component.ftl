@@ -17,6 +17,8 @@ rcd-component-tile-indestructible-message = Esse azulejo não pode ser destruíd
 rcd-component-deconstruct-target-not-on-whitelist-message = Você não pode desconstruir isso!
 rcd-component-nothing-to-deconstruct-message = Não há nada para desconstruir!
 rcd-component-tile-obstructed-message = Você não pode desconstruir azulejos quando há algo em cima deles!
+rcd-component-deconstruct-target-no-access = Você não tem acesso para desconstruir isso!
+rcd-component-deconstruct-target-is-bolted = Parafusos de trava previnem a desconstrução!
 
 # Construção
 rcd-component-no-valid-grid = Você está muito longe do espaço aberto para construir aqui!
@@ -29,11 +31,16 @@ rcd-component-cannot-build-identical-tile = Esse azulejo já existe aí!
 
 ## Nomes de categoria
 
-rcd-component-walls-and-flooring = Paredes e pisos
-rcd-component-windows-and-grilles = Janelas e grades
+rcd-component-walls-and-flooring = Paredes & Pisos
+rcd-component-windows-and-grilles = Janelas & Grades
 rcd-component-airlocks = Airlocks
 rcd-component-electrical = Elétrica
 rcd-component-lighting = Iluminação
+rcd-component-piping = Canos
+rcd-component-atmosphericutility = Utilitários
+rcd-component-pumpsvalves = Bombas & Válvulas
+rcd-component-vents = Ventilações
+rcd-component-sensorsmonitors = Sensores & Monitores
 
 ### Nomes de protótipos
 

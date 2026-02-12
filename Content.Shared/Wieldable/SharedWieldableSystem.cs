@@ -69,10 +69,6 @@ using Robust.Shared.Collections;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
 using Content.Shared.Item.ItemToggle;
-// Lavaland Change
-using Content.Shared.StatusEffect;
-using Content.Shared.Stunnable;
-using Robust.Shared.Audio;
 
 namespace Content.Shared.Wieldable;
 
@@ -88,15 +84,12 @@ public abstract class SharedWieldableSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedVirtualItemSystem _virtualItem = default!;
     [Dependency] private readonly UseDelaySystem _delay = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!; // Lavaland Change
-    [Dependency] private readonly SharedStunSystem _stun = default!; // Lavaland Change
-    // [Dependency] private readonly SharedAudioSystem _audio = default!; // Lavaland Change
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<WieldableComponent, UseInHandEvent>(OnUseInHand, 
+        SubscribeLocalEvent<WieldableComponent, UseInHandEvent>(OnUseInHand,
             before: [typeof(SharedGunSystem), typeof(BatteryWeaponFireModesSystem), typeof(ItemToggleSystem)]); // Goob - before item toogle for hardlight bow
         SubscribeLocalEvent<WieldableComponent, ItemUnwieldedEvent>(OnItemUnwielded);
         SubscribeLocalEvent<WieldableComponent, GotUnequippedHandEvent>(OnItemLeaveHand);
@@ -126,19 +119,7 @@ public abstract class SharedWieldableSystem : EntitySystem
         if (TryComp<WieldableComponent>(uid, out var wieldable) &&
             !wieldable.Wielded)
         {
-            // Lavaland Change: If the weapon can fumble, the player will get knocked down if they try to use the weapon without wielding it.
-            if (component.FumbleOnAttempt)
-            {
-                args.Message = Loc.GetString("wieldable-component-requires-fumble", ("item", uid));
-                var playSound = !_statusEffects.HasStatusEffect(args.User, "KnockedDown");
-                _stun.TryKnockdown(args.User, TimeSpan.FromSeconds(1.5f), true);
-                if (playSound)
-                    _audio.PlayPredicted(new SoundPathSpecifier("/Audio/Effects/slip.ogg"), args.User, args.User);
-            }
-            else
-            {
-                args.Message = Loc.GetString("wieldable-component-requires", ("item", uid));
-            }
+            args.Message = Loc.GetString("wieldable-component-requires", ("item", uid));
             args.Cancelled = true;
         }
     }
@@ -176,8 +157,7 @@ public abstract class SharedWieldableSystem : EntitySystem
 
     private void OnDeselectWieldable(EntityUid uid, WieldableComponent component, HandDeselectedEvent args)
     {
-        if (!component.Wielded ||
-            _hands.EnumerateHands(args.User).Count() > 2)
+        if (_hands.GetHandCount(args.User) > 2)
             return;
 
         TryUnwield(uid, component, args.User);
@@ -234,7 +214,7 @@ public abstract class SharedWieldableSystem : EntitySystem
         if (args.Hands == null || !args.CanAccess || !args.CanInteract)
             return;
 
-        if (!_hands.IsHolding(args.User, uid, out _, args.Hands))
+        if (!_hands.IsHolding((args.User, args.Hands), uid, out _))
             return;
 
         // TODO VERB TOOLTIPS Make CanWield or some other function return string, set as verb tooltip and disable
@@ -277,7 +257,7 @@ public abstract class SharedWieldableSystem : EntitySystem
         }
 
         // Is it.. actually in one of their hands?
-        if (checkHolding && !_hands.IsHolding(user, uid, out _, hands))
+        if (checkHolding && !_hands.IsHolding((user, hands), uid, out _))
         {
             if (!quiet)
                 _popup.PopupClient(Loc.GetString("wieldable-component-not-in-hands", ("item", uid)), user, user);
@@ -388,6 +368,19 @@ public abstract class SharedWieldableSystem : EntitySystem
     }
 
     /// <summary>
+    /// Makes an entity unwield all currently wielded items.
+    /// </summary>
+    /// <param name="force">If this is true we will bypass UnwieldAttemptEvent.</param>
+    public void UnwieldAll(Entity<HandsComponent?> wielder, bool force = false)
+    {
+        foreach (var held in _hands.EnumerateHeld(wielder))
+        {
+            if (TryComp<WieldableComponent>(held, out var wieldable))
+                TryUnwield(held, wieldable, wielder, force);
+        }
+    }
+
+    /// <summary>
     /// Sets wielded without doing any checks.
     /// </summary>
     private void SetWielded(Entity<WieldableComponent> ent, bool wielded)
@@ -402,7 +395,7 @@ public abstract class SharedWieldableSystem : EntitySystem
         _item.SetHeldPrefix(uid, component.OldInhandPrefix);
 
         var user = args.User;
-        _virtualItem.DeleteInHandsMatching(user, uid);
+        _virtualItem.DeleteInHandsMatching(user, uid, false); // Goob edit
 
         if (!args.Force) // don't play sound/popup if this was a forced unwield
         {
