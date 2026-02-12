@@ -36,6 +36,8 @@ public sealed class DashActionSystem : EntitySystem
 
         SubscribeLocalEvent<DashActionComponent, ComponentInit>(OnComponentInit);
         SubscribeLocalEvent<DashActionComponent, ComponentShutdown>(OnComponentShutdown);
+        
+        SubscribeLocalEvent<DashActionComponent, FlightAttemptEvent>(OnDashFlightAttempt);
     }
 
     private void OnDashAction(DashActionEvent args)
