@@ -1967,3 +1967,11 @@ Entries:
       message: Tajara tem visão no escuro
   id: 237
   time: '2026-02-12T19:17:37.0000000+00:00'
+- author: cristalyssd
+  changes:
+    - type: Add
+      message: Mais cores e canister variados no spray de tinta!
+    - type: Remove
+      message: Subframe removida.
+  id: 238
+  time: '2026-02-12T19:22:18.0000000+00:00'
