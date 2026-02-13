@@ -148,7 +148,8 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Content.Shared.Standing; // Gaby
 using Content.Shared.DoAfter; // Gaby
-using Content.Goobstation.Common.Standing; // Gaby
+using Content.Goobstation.Common.Standing;
+using Content.Shared.Stunnable; // Gaby
 
 namespace Content.Server.Fluids.EntitySystems;
 
@@ -219,7 +220,7 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
 
         SubscribeLocalEvent<EvaporationComponent, MapInitEvent>(OnEvaporationMapInit);
 
-        SubscribeLocalEvent<LayingDownComponent, MoveEvent>(OnCrawlInPuddle); // Gaby
+        SubscribeLocalEvent<KnockedDownComponent, MoveEvent>(OnCrawlInPuddle); // Gaby
 
         InitializeTransfers();
     }
@@ -919,7 +920,7 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
     }
 
     // Caso a entidade esteja deitado por cima de uma poça e se movimeta pra outro tile, suja a roupa e coloca o liquido nela.
-    private void OnCrawlInPuddle(Entity<LayingDownComponent> ent, ref MoveEvent args) // Gaby
+    private void OnCrawlInPuddle(Entity<KnockedDownComponent> ent, ref MoveEvent args) // Gaby
     {
         if (!_standing.IsDown(ent.Owner))
             return;
@@ -940,7 +941,7 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
         var isSuperSlippery = TryComp<SlipperyComponent>(puddleUid, out var slippery) && slippery.SlipData.SuperSlippery;
         var slippedEv = new SlippedEvent(puddleUid, isSuperSlippery);
         RaiseLocalEvent(ent.Owner, slippedEv);
-        
+
         // Copia uma parte do OnPuddleSlip
         if (HasComp<ReactiveComponent>(ent.Owner) && !HasComp<SlidingComponent>(ent.Owner))
         {
