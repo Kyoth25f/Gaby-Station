@@ -1995,3 +1995,11 @@ Entries:
       message: Moths não podem mais voar ao fim do dash.
   id: 241
   time: '2026-02-15T03:54:36.0000000+00:00'
+- author: Day-OS
+  changes:
+    - type: Add
+      message: Sintéticos, uma espécie genérica de robôs autônomos
+    - type: Tweak
+      message: Conserta emotes de IPCs
+  id: 242
+  time: '2026-02-19T14:09:14.0000000+00:00'
