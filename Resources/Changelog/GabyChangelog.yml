@@ -2009,3 +2009,9 @@ Entries:
       message: Pequenas correções e ajustes na genética.
   id: 243
   time: '2026-02-19T15:48:31.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Tweak
+      message: Membros de comando, warden e brigmed receberam um aumento.
+  id: 244
+  time: '2026-02-19T15:59:09.0000000+00:00'
