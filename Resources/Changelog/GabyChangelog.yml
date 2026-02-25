@@ -2031,3 +2031,13 @@ Entries:
       message: Adiciona as mudanças do Goob até 19/02 (verifique a aba do Goob)!
   id: 247
   time: '2026-02-19T16:46:38.0000000+00:00'
+- author: Bruno469
+  changes:
+    - type: Add
+      message: >-
+        Adicionada a Cápsula Compacta (Compact Pod), uma pequena nave para
+        exploração espacial.
+    - type: Add
+      message: Adicionada pesquisa de "Compact Pod" no Tier 2 de Industrial.
+  id: 248
+  time: '2026-02-25T23:57:31.0000000+00:00'
