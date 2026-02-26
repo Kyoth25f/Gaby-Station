@@ -2047,3 +2047,9 @@ Entries:
       message: S.A.A.E. Sistema Autônomo de Anúncios da Estação adicionada ao jogo
   id: 249
   time: '2026-02-26T12:29:22.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Tweak
+      message: O culto do sangue foi retrabalhado.
+  id: 250
+  time: '2026-02-26T14:14:44.0000000+00:00'
