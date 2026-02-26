@@ -2041,3 +2041,9 @@ Entries:
       message: Adicionada pesquisa de "Compact Pod" no Tier 2 de Industrial.
   id: 248
   time: '2026-02-25T23:57:31.0000000+00:00'
+- author: Struater
+  changes:
+    - type: Add
+      message: S.A.A.E. Sistema Autônomo de Anúncios da Estação adicionada ao jogo
+  id: 249
+  time: '2026-02-26T12:29:22.0000000+00:00'
