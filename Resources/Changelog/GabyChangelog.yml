@@ -2061,3 +2061,9 @@ Entries:
       message: Arma laser agora tem 25 tiros invés de 50.
   id: 251
   time: '2026-02-26T19:50:50.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Add
+      message: A máscara de gás SWAT agora modifica sua voz igual a dreadsuit.
+  id: 252
+  time: '2026-02-26T21:39:13.0000000+00:00'
