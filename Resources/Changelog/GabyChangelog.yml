@@ -2089,3 +2089,11 @@ Entries:
         Goob)!
   id: 255
   time: '2026-02-28T14:16:42.0000000+00:00'
+- author: OttavioBasques
+  changes:
+    - type: Tweak
+      message: >-
+        Escudo do BSO pode agora ser equipado no slot das costas providenciado
+        pela armadura.
+  id: 256
+  time: '2026-03-07T13:51:01.0000000+00:00'
