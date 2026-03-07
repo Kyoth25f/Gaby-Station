@@ -2201,3 +2201,9 @@ Entries:
       message: Adicionadas as mudanças do Goob até 07/03 (confira a aba do Goob)!
   id: 265
   time: '2026-03-07T16:33:00.0000000+00:00'
+- author: SrKolobanov
+  changes:
+    - type: Fix
+      message: Chapéus e boinas voltam a ter seus valores de proteção antigos.
+  id: 266
+  time: '2026-03-07T16:41:56.0000000+00:00'
