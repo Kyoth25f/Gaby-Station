@@ -2130,3 +2130,17 @@ Entries:
       message: Prisoneiros não tem mais acesso pra sair da genpop.
   id: 260
   time: '2026-03-07T14:37:37.0000000+00:00'
+- author: SrKolobanov
+  changes:
+    - type: Add
+      message: Nova entrada no livro-guia para o daengati.
+    - type: Add
+      message: >-
+        Habilidade de cauterizar feridas e incisões bem lentamente utilizando as
+        garras do daengati.
+    - type: Tweak
+      message: >-
+        Características de defesa e fraqueza contra temperaturas do daengati
+        foram ajustadas.
+  id: 261
+  time: '2026-03-07T15:09:10.0000000+00:00'
