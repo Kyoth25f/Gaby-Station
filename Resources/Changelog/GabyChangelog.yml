@@ -2181,3 +2181,9 @@ Entries:
         agora.
   id: 262
   time: '2026-03-07T15:11:10.0000000+00:00'
+- author: Lucasalemao10
+  changes:
+    - type: Tweak
+      message: Shadowkins agora não são mais vulneraveis ao flash
+  id: 263
+  time: '2026-03-07T15:25:57.0000000+00:00'
