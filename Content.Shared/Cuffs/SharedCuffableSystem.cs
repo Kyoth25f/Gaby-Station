@@ -1057,8 +1057,3 @@ namespace Content.Shared.Cuffs
         public SlotFlags TargetSlots { get; set; }
     }
 }
-
-[Serializable, NetSerializable]
-public sealed partial class AddCuffDoAfterEvent : SimpleDoAfterEvent // Goob Edit moved out of class made public
-{
-}
