@@ -2235,3 +2235,11 @@ Entries:
       message: Adicionadas as mudanças até 14/03 (verifique a aba do Goob)!
   id: 270
   time: '2026-03-14T17:58:50.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Add
+      message: >-
+        Módulos de MODsuit estão aqui e são pesquisaveis na sci, e provavelmente
+        mais deles vão vir em breve!
+  id: 271
+  time: '2026-03-14T18:36:27.0000000+00:00'
