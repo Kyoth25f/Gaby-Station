@@ -55,6 +55,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Configuration;
 using Content.Shared.Body.Organ;
+using Content.Shared.Tag;
 
 namespace Content.Shared._Shitmed.Medical.Surgery;
 
@@ -85,6 +86,7 @@ public abstract partial class SharedSurgerySystem : EntitySystem
     [Dependency] private readonly SharedInteractionSystem _interaction = default!;
     [Dependency] private readonly IConfigurationManager _config = default!;
     [Dependency] protected readonly StatusEffectsSystem Status = default!;
+    [Dependency] private readonly TagSystem _tag = defaul!;
 
     private EntityQuery<BodyComponent> _bodyQuery;
     private EntityQuery<StackComponent> _stackQuery;

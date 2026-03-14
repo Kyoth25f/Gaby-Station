@@ -31,3 +31,9 @@
 
 - type: Tag
   id: ModsuitHandUpgrade
+
+- type: Tag
+  id: SurgicalMask
+
+- type: Tag
+  id: SterilGloves

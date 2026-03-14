@@ -56,6 +56,7 @@ using Content.Shared._Gabystation.CCVar;
 using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared._EinsteinEngines.Silicon.Components;
 using Content.Shared._Shitmed.Surgery;
+using Content.Shared.Tag;
 
 namespace Content.Shared._Shitmed.Medical.Surgery;
 
@@ -72,6 +73,9 @@ public abstract partial class SharedSurgerySystem
     private float _sepsisLocationPenalty;
     private float _sepsisCrowdingPenalty;
     private float _crowdingCheckRange;
+
+    private static readonly ProtoId<TagPrototype> SurgicalMaskTag = "SurgicalMask";
+    private static readonly ProtoId<TagPrototype> SterilGlovesTag = "SterilGloves";
 
     private void InitializeSteps()
     {
@@ -752,9 +756,16 @@ public abstract partial class SharedSurgerySystem
 
         bool IsSanitazed(EntityUid ent)
         {
-            return HasComp<SanitizedComponent>(ent)
-                || _inventory.TryGetSlotEntity(ent, "gloves", out var _)
-                && _inventory.TryGetSlotEntity(ent, "mask", out var _);
+            if (HasComp<SanitizedComponent>(ent))
+                return true;
+
+            var isUsingGloves = _inventory.TryGetSlotEntity(ent, "gloves", out var gloveEnt)
+                && _tag.HasTag(gloveEnt.Value, SterilGlovesTag);
+
+            var isUsingMask = _inventory.TryGetSlotEntity(ent, "mask", out var maskEnt)
+                && _tag.HasTag(maskEnt.Value, SurgicalMaskTag);
+
+            return isUsingGloves && isUsingMask;
         }
     }
 
