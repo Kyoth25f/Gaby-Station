@@ -2229,3 +2229,9 @@ Entries:
       message: Adiciona bolsa intravenosa e suporte para bolsa intravenosa.
   id: 269
   time: '2026-03-14T17:20:16.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Add
+      message: Adicionadas as mudanças até 14/03 (verifique a aba do Goob)!
+  id: 270
+  time: '2026-03-14T17:58:50.0000000+00:00'
