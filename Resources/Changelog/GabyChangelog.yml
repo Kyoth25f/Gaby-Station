@@ -2213,3 +2213,9 @@ Entries:
       message: Todos os agasalhos agora tem proteção basica!
   id: 267
   time: '2026-03-08T14:19:23.0000000+00:00'
+- author: Lucasalemao10
+  changes:
+    - type: Add
+      message: Adiciona cirurgia de pacifismo
+  id: 268
+  time: '2026-03-14T17:15:12.0000000+00:00'
