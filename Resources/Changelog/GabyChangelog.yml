@@ -2243,3 +2243,9 @@ Entries:
         mais deles vão vir em breve!
   id: 271
   time: '2026-03-14T18:36:27.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Add
+      message: Adiciona guarda prisional para monitorar os detentos.
+  id: 272
+  time: '2026-03-29T17:18:27.0000000+00:00'
