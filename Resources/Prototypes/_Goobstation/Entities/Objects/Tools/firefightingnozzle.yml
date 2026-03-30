@@ -67,6 +67,7 @@
   name: atmos resin
   description: Special grenade for atmosians.
   components:
+  - type: TriggerOnSpawn
   - type: Sprite
     sprite: Objects/Weapons/Grenades/frozen-smoke-capsule.rsi
     state: icon
@@ -74,8 +75,9 @@
     duration: 8
     spreadAmount: 200
     smokePrototype: Resin
+    keysIn:
+    - timer
   - type: TimerTrigger
-    delay: 0.3
-  - type: DeleteOnTrigger
+    delay: 0.5
 
 
