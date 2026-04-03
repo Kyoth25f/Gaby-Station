@@ -2283,3 +2283,11 @@ Entries:
       message: Novas Músicas na Jukebox
   id: 277
   time: '2026-04-03T01:00:16.0000000+00:00'
+- author: SrKolobanov
+  changes:
+    - type: Add
+      message: Botas de salto-alto de combate para a Segurança e BSO.
+    - type: Tweak
+      message: BSO agora pode selecionar a jumpsuit no loadout.
+  id: 278
+  time: '2026-04-03T01:27:50.0000000+00:00'
