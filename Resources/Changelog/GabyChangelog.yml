@@ -2297,3 +2297,9 @@ Entries:
       message: Flatpacks de computadores de comunicação para os heads!
   id: 279
   time: '2026-04-03T01:39:47.0000000+00:00'
+- author: Struater
+  changes:
+    - type: Add
+      message: 7 novos kits para Traidores.
+  id: 280
+  time: '2026-04-03T02:02:54.0000000+00:00'
