@@ -2291,3 +2291,9 @@ Entries:
       message: BSO agora pode selecionar a jumpsuit no loadout.
   id: 278
   time: '2026-04-03T01:27:50.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Add
+      message: Flatpacks de computadores de comunicação para os heads!
+  id: 279
+  time: '2026-04-03T01:39:47.0000000+00:00'
