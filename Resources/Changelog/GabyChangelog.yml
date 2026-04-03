@@ -2333,3 +2333,9 @@ Entries:
         por um Greytider.
   id: 284
   time: '2026-04-03T23:46:25.0000000+00:00'
+- author: Struater
+  changes:
+    - type: Add
+      message: Loneops agora pode declarar guerra.
+  id: 285
+  time: '2026-04-03T23:50:49.0000000+00:00'
