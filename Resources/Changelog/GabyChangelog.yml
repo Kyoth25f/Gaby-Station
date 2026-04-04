@@ -2368,3 +2368,11 @@ Entries:
       message: Rapid Syringe Gun do armário do Médico Chefe
   id: 287
   time: '2026-04-04T14:01:59.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Fix
+      message: >-
+        Magos, piratas, nukies, e ERTs agora podem usar suas próprias máquinas
+        de venda, pois agora elas são grátis de usar. 
+  id: 288
+  time: '2026-04-04T14:03:52.0000000+00:00'
