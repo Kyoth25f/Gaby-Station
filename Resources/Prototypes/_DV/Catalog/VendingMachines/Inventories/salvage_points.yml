@@ -119,8 +119,6 @@
     cost: 2000
   - id: ClothingShoesBootsMoon
     cost: 2000
-  - id: ClothingShoesBootsJump
-    cost: 2000
   - id: ClothingOuterHardsuitSalvage
     cost: 2000
     #TODO: super resonator for 2500
