@@ -2360,3 +2360,11 @@ Entries:
         e o efeito sonoro.
   id: 286
   time: '2026-04-04T02:44:00.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Add
+      message: MP-17 "Guardian"- A arma de cura do Médico Chefe
+    - type: Remove
+      message: Rapid Syringe Gun do armário do Médico Chefe
+  id: 287
+  time: '2026-04-04T14:01:59.0000000+00:00'
