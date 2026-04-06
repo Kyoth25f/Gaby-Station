@@ -1194,6 +1194,9 @@
   id: Medkit
 
 - type: Tag
+  id: MesonGoggles # Goobstation - more toolbelt items
+
+- type: Tag
   id: Metal
 
 - type: Tag # Assmos - Metal Hydrogen
