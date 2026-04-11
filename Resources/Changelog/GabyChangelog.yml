@@ -2390,3 +2390,9 @@ Entries:
       message: Restaura a nave da lavaland para a do goob!
   id: 290
   time: '2026-04-11T03:57:25.0000000+00:00'
+- author: Wizard-Thorkell
+  changes:
+    - type: Add
+      message: Os trajes agora são imunes a tiros de seringa.
+  id: 291
+  time: '2026-04-11T04:17:33.0000000+00:00'
