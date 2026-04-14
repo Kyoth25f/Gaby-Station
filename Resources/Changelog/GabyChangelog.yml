@@ -2460,3 +2460,9 @@ Entries:
       message: A estação Gamma está de volta na rotação e atualizada!
   id: 297
   time: '2026-04-14T02:57:11.0000000+00:00'
+- author: CRISOOOOO
+  changes:
+    - type: Add
+      message: Nova estação de evento Hyperion!
+  id: 298
+  time: '2026-04-14T03:00:45.0000000+00:00'
