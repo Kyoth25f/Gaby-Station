@@ -2466,3 +2466,9 @@ Entries:
       message: Nova estação de evento Hyperion!
   id: 298
   time: '2026-04-14T03:00:45.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Tweak
+      message: A capa, mantle e ensemble do HOS agora tem uma câmera.
+  id: 299
+  time: '2026-04-14T03:12:58.0000000+00:00'
