@@ -2448,3 +2448,9 @@ Entries:
       message: Magboots de sec pra counterar o vento espacial.
   id: 295
   time: '2026-04-12T14:50:37.0000000+00:00'
+- author: CRISOOOOO
+  changes:
+    - type: Add
+      message: A estação Falcon está de volta na rotação e atualizada!
+  id: 296
+  time: '2026-04-14T02:56:01.0000000+00:00'
