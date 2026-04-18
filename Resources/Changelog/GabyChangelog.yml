@@ -2490,3 +2490,9 @@ Entries:
       message: Oni charge!
   id: 302
   time: '2026-04-18T16:21:32.0000000+00:00'
+- author: Wizard-Thorkell
+  changes:
+    - type: Tweak
+      message: Atualização regra de roleplay 13.
+  id: 303
+  time: '2026-04-18T23:12:29.0000000+00:00'
