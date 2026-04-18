@@ -2502,3 +2502,9 @@ Entries:
       message: tunnel clown removido da rotação de ghostroles de meio de round!
   id: 304
   time: '2026-04-18T23:25:34.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Tweak
+      message: O manifesto revolucionário voltou com suas frases.
+  id: 305
+  time: '2026-04-18T23:27:54.0000000+00:00'
