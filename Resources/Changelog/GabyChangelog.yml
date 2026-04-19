@@ -2540,3 +2540,9 @@ Entries:
         bodycam.
   id: 310
   time: '2026-04-19T20:55:34.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Add
+      message: Adiciona propulsor grande e enorme para mapeamento.
+  id: 311
+  time: '2026-04-19T21:00:35.0000000+00:00'
