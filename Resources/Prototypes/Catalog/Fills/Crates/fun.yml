@@ -551,6 +551,7 @@
         amount: 2
       - id: ClothingShoesSkates
       - id: RubberChicken
+      - id: TennisBall # goob edit
 
 - type: entity
   id: CrateFunBikeHornImplants
