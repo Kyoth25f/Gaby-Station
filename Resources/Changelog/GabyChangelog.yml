@@ -2578,3 +2578,9 @@ Entries:
       message: Corrigido bug que fazia os LoneOps não conseguirem declarar guerra.
   id: 316
   time: '2026-05-01T02:20:31.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Tweak
+      message: Luvas "Berserker" da caixa x-00 agora são insuladas.
+  id: 317
+  time: '2026-05-01T03:13:08.0000000+00:00'
