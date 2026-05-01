@@ -2572,3 +2572,9 @@ Entries:
       message: Adiciona impressora de livros.
   id: 315
   time: '2026-05-01T02:18:23.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: Corrigido bug que fazia os LoneOps não conseguirem declarar guerra.
+  id: 316
+  time: '2026-05-01T02:20:31.0000000+00:00'
