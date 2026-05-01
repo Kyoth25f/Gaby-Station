@@ -2560,3 +2560,9 @@ Entries:
         segurado.
   id: 313
   time: '2026-05-01T02:04:28.0000000+00:00'
+- author: CRISOOOOO
+  changes:
+    - type: Remove
+      message: SerpentCrest NÃO está mais na rotação de mapas.
+  id: 314
+  time: '2026-05-01T02:06:52.0000000+00:00'
