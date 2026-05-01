@@ -2566,3 +2566,9 @@ Entries:
       message: SerpentCrest NÃO está mais na rotação de mapas.
   id: 314
   time: '2026-05-01T02:06:52.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Add
+      message: Adiciona impressora de livros.
+  id: 315
+  time: '2026-05-01T02:18:23.0000000+00:00'
