@@ -2608,3 +2608,11 @@ Entries:
       message: Port óculos medchem/medchemflash
   id: 320
   time: '2026-05-03T00:20:22.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Tweak
+      message: >-
+        Rods agora não gibbam mais, e no lugar, causam 70 de dano bruto ao
+        acertar um mob.
+  id: 321
+  time: '2026-05-03T14:45:12.0000000+00:00'
