@@ -2697,3 +2697,9 @@ Entries:
       message: Beanbag não é mais AP.
   id: 322
   time: '2026-05-03T14:57:34.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Fix
+      message: Carga de estilhaço do fabricador de segurança funciona agora.
+  id: 323
+  time: '2026-05-03T14:58:54.0000000+00:00'
