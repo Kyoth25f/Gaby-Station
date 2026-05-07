@@ -2703,3 +2703,9 @@ Entries:
       message: Carga de estilhaço do fabricador de segurança funciona agora.
   id: 323
   time: '2026-05-03T14:58:54.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: Corrigido LoneOps ganhar 300 TC ao declarar guerra.
+  id: 324
+  time: '2026-05-07T23:42:11.0000000+00:00'
