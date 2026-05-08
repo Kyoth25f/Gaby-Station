@@ -121,12 +121,6 @@
   name: Atmos
   artist: asardonicsailor
 
-- type: lobbyBackground
-  id: cburn
-  background: /Textures/LobbyScreens/cburn.webp
-  name: Cburn
-  artist: PubliclyExecutedPig
-
 # Gaby station - disable Goob screens (ou meios meh)
 #- type: lobbyBackground
 #  id: clown

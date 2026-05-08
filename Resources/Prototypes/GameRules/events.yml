@@ -207,6 +207,8 @@
     - id: BingleSpawn #Goobstation - Bingle
     - id: SlaughterDemonMidround # Goobstation - Slaughter Demon
     - id: XenomorphsInfestation # WD EDIT
+    - id: SlasherSpawn # Goobstation - The Slasher
+    - id: SpacePirates # Goobstation - you probably can read whom this rule spawns
     - id: GreyTideAntagMidround # Goobstation - New Midrounds
     - id: SingulothKnightsMidround # Goobstation - New Midrounds
     #- id: DarkLordMidround # Goobstation - New Midrounds
@@ -216,7 +218,6 @@
     #- id: TunnelClownMidround # Goobstation
     #- id: WraithMidround # Goobstation - Wraith
     #TODO when midrounds are "reviewed" by the chudmins add them back
-    #TODO When Slasher is Ready - id: SlasherSpawn # Goobstation - The Slasher
 
 - type: entity
   id: BaseStationEvent
@@ -866,8 +867,8 @@
   - type: StationEvent
     earliestStart: 35
     weight: 6.0 # Goobstation - was 5.5
-    minimumPlayers: 20 # Goobstation - was 20
-    duration: null
+    minimumPlayers: 20 # Dumontstation was 50 # Goobstation - was 20
+    duration: 720 # Goobstation - required for custom nuke music. 720s to ensure loneop can hear the music and still have space for other midrounds incase of failure
     maxOccurrences: 1 # Gabystation - loneops apenas uma vez por round
     chaos: # Goobstation
       Hostile: 200
@@ -881,6 +882,7 @@
   - type: LoadMapRule
     gridPath: /Maps/Shuttles/ShuttleEvent/striker_loneops.yml # GabyStation
   - type: NukeopsRule
+    localePrefix: "loneop-" #Goobstation
     roundEndBehavior: Nothing
     warDeclarationMinOps: 1 # <--- GabyStation - Adicionado aqui para permitir guerra com 1 jogador
     warNukieArriveDelay: 300 # <--- GabyStation - Adicionado para manter o Lone preso por 5 minutos.
