@@ -2745,3 +2745,9 @@ Entries:
         patrocinador @brunn_0.
   id: 328
   time: '2026-05-08T02:39:14.0000000+00:00'
+- author: O-Verdadeiro-Biel
+  changes:
+    - type: Fix
+      message: O antagonista IA Malfuncional agora pode aparecer naturalmente.
+  id: 329
+  time: '2026-05-08T02:40:27.0000000+00:00'
