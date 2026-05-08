@@ -300,6 +300,11 @@
     # Recursive
     - id: ClosetMaintenanceFilledRandom
       prob: 0.01
+    # Andromeda Loot
+    - !type:NestedSelector
+      tableId: AndromedaMaintLoot # Andromeda plushies. Should really be a part of the AllPlushiesTable, but meh.
+      prob: 0.10
+
 
 - type: entity
   id: ClosetMaintenanceFilledRandom
