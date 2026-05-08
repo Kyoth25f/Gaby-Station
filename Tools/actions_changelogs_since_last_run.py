@@ -30,7 +30,8 @@ GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 DISCORD_SPLIT_LIMIT = 2000
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
-CHANGELOG_FILE = "Resources/Changelog/GoobChangelog.yml"
+CHANGELOG_FILES = ["Resources/Changelog/GabyChangelog.yml", "Resources/Changelog/GoobChangelog.yml"]
+
 
 TYPES_TO_EMOJI = {"Fix": "🐛", "Add": "🆕", "Remove": "❌", "Tweak": "⚒️"}
 
@@ -42,22 +43,24 @@ def main():
         print("No discord webhook URL found, skipping discord send")
         return
 
-    if DEBUG:
-        # to debug this script locally, you can use
-        # a separate local file as the old changelog
-        last_changelog_stream = DEBUG_CHANGELOG_FILE_OLD.read_text()
-    else:
-        # when running this normally in a GitHub actions workflow,
-        # it will get the old changelog from the GitHub API
-        last_changelog_stream = get_last_changelog()
 
-    last_changelog = yaml.safe_load(last_changelog_stream)
-    with open(CHANGELOG_FILE, "r") as f:
-        cur_changelog = yaml.safe_load(f)
+    for changelog_file in CHANGELOG_FILES:
+        if DEBUG:
+            # to debug this script locally, you can use
+            # a separate local file as the old changelog
+            last_changelog_stream = DEBUG_CHANGELOG_FILE_OLD.read_text()
+        else:
+            # when running this normally in a GitHub actions workflow,
+            # it will get the old changelog from the GitHub API
+            last_changelog_stream = get_last_changelog()
 
-    diff = diff_changelog(last_changelog, cur_changelog)
-    message_lines = changelog_entries_to_message_lines(diff)
-    send_message_lines(message_lines)
+        last_changelog = yaml.safe_load(last_changelog_stream)
+        with open(changelog_file, "r") as f:
+            cur_changelog = yaml.safe_load(f)
+
+        diff = diff_changelog(last_changelog, cur_changelog)
+        message_lines = changelog_entries_to_message_lines(diff)
+        send_message_lines(message_lines)
 
 
 def get_most_recent_workflow(
