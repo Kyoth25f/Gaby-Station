@@ -2715,3 +2715,17 @@ Entries:
       message: Janie Plushie
   id: 325
   time: '2026-05-08T02:17:05.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Remove
+      message: Detetive não pode mais começar com uma MK58 dourada.
+    - type: Tweak
+      message: >-
+        Agora oficiais não podem spawnar com ambas as versões da MK58.
+        Verifiquem seu loadout!
+    - type: Fix
+      message: >-
+        O Clinico Brigadista agora pode selecionar um extra de trabalho de
+        segurança e a MK58 dourada.
+  id: 326
+  time: '2026-05-08T02:21:25.0000000+00:00'
