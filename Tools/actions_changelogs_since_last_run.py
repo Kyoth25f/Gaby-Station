@@ -52,7 +52,7 @@ def main():
         else:
             # when running this normally in a GitHub actions workflow,
             # it will get the old changelog from the GitHub API
-            last_changelog_stream = get_last_changelog()
+            last_changelog_stream = get_last_changelog(changelog_file)
 
         last_changelog = yaml.safe_load(last_changelog_stream)
         with open(changelog_file, "r") as f:
@@ -96,7 +96,7 @@ def get_past_runs(sess: requests.Session, current_run: Any) -> Any:
     return resp.json()
 
 
-def get_last_changelog() -> str:
+def get_last_changelog(changelog_file) -> str:
     github_repository = os.environ["GITHUB_REPOSITORY"]
     github_run = os.environ["GITHUB_RUN_ID"]
     github_token = os.environ["GITHUB_TOKEN"]
@@ -110,14 +110,14 @@ def get_last_changelog() -> str:
     last_sha = most_recent["head_commit"]["id"]
     print(f"Last successful publish job was {most_recent['id']}: {last_sha}")
     last_changelog_stream = get_last_changelog_by_sha(
-        session, last_sha, github_repository
+        session, last_sha, github_repository, changelog_file
     )
 
     return last_changelog_stream
 
 
 def get_last_changelog_by_sha(
-    sess: requests.Session, sha: str, github_repository: str
+    sess: requests.Session, sha: str, github_repository: str, changelog_file: str
 ) -> str:
     """
     Use GitHub API to get the previous version of the changelog YAML (Actions builds are fetched with a shallow clone)
@@ -128,7 +128,7 @@ def get_last_changelog_by_sha(
     headers = {"Accept": "application/vnd.github.raw"}
 
     resp = sess.get(
-        f"{GITHUB_API_URL}/repos/{github_repository}/contents/{CHANGELOG_FILE}",
+        f"{GITHUB_API_URL}/repos/{github_repository}/contents/{changelog_file}",
         headers=headers,
         params=params,
     )
