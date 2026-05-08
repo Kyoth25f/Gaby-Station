@@ -2729,3 +2729,11 @@ Entries:
         segurança e a MK58 dourada.
   id: 326
   time: '2026-05-08T02:21:25.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Tweak
+      message: >-
+        O computador de missão da logística agora permite qualquer um com acesso
+        de logística pular missões.
+  id: 327
+  time: '2026-05-08T02:24:29.0000000+00:00'
