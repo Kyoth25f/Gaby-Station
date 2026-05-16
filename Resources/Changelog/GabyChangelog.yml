@@ -2777,3 +2777,17 @@ Entries:
       message: Caixas de circuito de durand e gygax são categorizadas corretamente.
   id: 332
   time: '2026-05-16T13:05:52.0000000+00:00'
+- author: SrKolobanov
+  changes:
+    - type: Add
+      message: >-
+        Um novo kit Chester Mk. II, que utiliza munição de rifle .315 e
+        variantes, foi adicionado ao arsenal do BSO.
+    - type: Tweak
+      message: >-
+        Com exceção da munição de prática, a munição de .315 só pode ser
+        adquirida na loja de pontos de fidelidade do NTR.
+    - type: Remove
+      message: O kit Chester padrão deixa o arsenal do BSO.
+  id: 333
+  time: '2026-05-16T23:39:10.0000000+00:00'
