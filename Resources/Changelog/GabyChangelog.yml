@@ -2830,3 +2830,11 @@ Entries:
       message: Sprites de modsuit dos feroxi agora estão funcionando!
   id: 338
   time: '2026-05-17T18:36:49.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Fix
+      message: >-
+        Corrige bug que lone ops não conseguia declarar guerra depois de 12
+        minutos spawnado!
+  id: 339
+  time: '2026-05-17T19:09:10.0000000+00:00'
