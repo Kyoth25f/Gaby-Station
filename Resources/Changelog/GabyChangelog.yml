@@ -2824,3 +2824,9 @@ Entries:
         meio de bundles indeterminados agora.
   id: 337
   time: '2026-05-17T15:14:25.0000000+00:00'
+- author: Lucasalemao10
+  changes:
+    - type: Fix
+      message: Sprites de modsuit dos feroxi agora estão funcionando!
+  id: 338
+  time: '2026-05-17T18:36:49.0000000+00:00'
