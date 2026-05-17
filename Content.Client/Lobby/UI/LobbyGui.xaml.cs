@@ -74,7 +74,7 @@ namespace Content.Client.Lobby.UI
             SetAnchorPreset(MainContainer, LayoutPreset.Wide);
             SetAnchorPreset(Background, LayoutPreset.Wide);
 
-            var logoTexture = _resCache.GetResource<TextureResource>("/Textures/Logo/lobby.png");
+            var logoTexture = _resCache.GetResource<TextureResource>("/Textures/_Dumont/Logo/lobby.png");
             Logo.Texture = logoTexture;
 
             AHelpButton.AddStyleClass("ButtonColorGaby");
