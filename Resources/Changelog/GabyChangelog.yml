@@ -2816,3 +2816,11 @@ Entries:
       message: Resprite do projetor de holofan atmosférico.
   id: 336
   time: '2026-05-17T15:01:05.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Tweak
+      message: >-
+        Bastão de contrator apenas é comprável por nukies, contratores e por
+        meio de bundles indeterminados agora.
+  id: 337
+  time: '2026-05-17T15:14:25.0000000+00:00'
