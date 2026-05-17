@@ -2810,3 +2810,9 @@ Entries:
         ela cancela a ação de colocar.
   id: 335
   time: '2026-05-17T14:49:03.0000000+00:00'
+- author: Unlimited-Pii
+  changes:
+    - type: Tweak
+      message: Resprite do projetor de holofan atmosférico.
+  id: 336
+  time: '2026-05-17T15:01:05.0000000+00:00'
