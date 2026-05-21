@@ -191,7 +191,8 @@ public sealed partial class ChatUIController : IOnSystemChanged<CharacterInfoSys
         if (newHighlights.Count(c => c == '-') > 1)
             newHighlights = newHighlights.Split('-')[0] + "\n@" + newHighlights.Split('-')[^1];
 
-        if (_loc.TryGetString($"highlights-{jobId}", out var jobMatches))
+        if (!string.IsNullOrWhiteSpace(jobId)
+            && _loc.TryGetString($"highlights-{jobId}", out var jobMatches))
             newHighlights += '\n' + jobMatches.Replace(", ", "\n");
 
         UpdateHighlights(newHighlights);
