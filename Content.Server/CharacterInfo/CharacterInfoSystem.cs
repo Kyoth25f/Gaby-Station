@@ -42,7 +42,7 @@ public sealed class CharacterInfoSystem : EntitySystem
     [Dependency] private readonly SharedObjectivesSystem _objectives = default!;
     [Dependency] private readonly EconomyManagerSystem _bank = default!;
     [Dependency] private readonly StationSystem _station = default!; // Gaby change
-    [Dependency] private readonly PrototypeManager _proto = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
 
     public override void Initialize()
     {
