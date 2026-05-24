@@ -284,29 +284,15 @@ public abstract class SharedChargesSystem : EntitySystem
     /// <summary>
     ///     Add a charge to an action if it can be recharged, otherwise add a new instance of the action.
     /// </summary>
-    public void RefundAction(EntityUid performer, EntProtoId actionPrototypeId)
+    public void RefundAction(EntityUid performer, EntityUid actionUid)
     {
-        var found = false;
-
-        // procura por uma action que possa ser recarregada.
-        foreach (var action in _actions.GetActions(performer))
+        if (TryComp<LimitedChargesComponent>(actionUid, out var chargesComp))
         {
-            if (MetaData(action.Owner).EntityPrototype?.ID != actionPrototypeId.Id)
-                continue;
-
-            if (!TryComp<LimitedChargesComponent>(action.Owner, out var chargesComp))
-                continue; // se não pode ser recarregada, procura pela próxima.
-
-            var charges = GetCurrentCharges(action.Owner);
-            if (charges == chargesComp.MaxCharges)
-                continue; //se a carga já está no máximo, pule para a próxima
-
-            found = true; // encontramos uma que pode ser recarregada! recarrega e encerra.
-            AddCharges(action.Owner, 1);
-            break;
+            AddCharges((actionUid, chargesComp), 1);
+            return;
         }
 
-        if (!found) // nenhuma action pôde ser recarregada. adiciona uma nova.
-          _actions.AddAction(performer, actionPrototypeId);
+        if (MetaData(actionUid).EntityPrototype is { } actionProto)
+            _actions.AddAction(performer, actionProto.ID);
     }
 }

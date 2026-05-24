@@ -29,9 +29,9 @@ public sealed partial class AIBuildRequestEvent : EntityEventArgs
     public EntityUid Requester { get; }
     public EntityCoordinates Target { get; }
     public EntProtoId Prototype { get; }
-    public EntProtoId? RefundAction { get; }
+    public EntityUid? RefundAction { get; }
 
-    public AIBuildRequestEvent(EntityUid requester, EntityCoordinates target, EntProtoId prototype, EntProtoId? refundAction)
+    public AIBuildRequestEvent(EntityUid requester, EntityCoordinates target, EntProtoId prototype, EntityUid? refundAction)
     {
         Requester = requester;
         Target = target;

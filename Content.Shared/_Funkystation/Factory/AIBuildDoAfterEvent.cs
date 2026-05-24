@@ -15,11 +15,11 @@ public sealed partial class AIBuildDoAfterEvent : DoAfterEvent
 {
     public NetCoordinates Location;
     public string Prototype = default!;
-    public EntProtoId? RefundAction = null;
+    public EntityUid? RefundAction = null;
 
     public AIBuildDoAfterEvent() { }
 
-    public AIBuildDoAfterEvent(NetCoordinates location, string prototype, EntProtoId? refundAction)
+    public AIBuildDoAfterEvent(NetCoordinates location, string prototype, EntityUid? refundAction)
     {
         Location = location;
         Prototype = prototype;

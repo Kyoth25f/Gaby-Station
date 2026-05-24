@@ -36,7 +36,7 @@ public sealed partial class MalfAiRoboticsFactorySystem : EntitySystem
         if (!args.Target.IsValid(EntityManager))
             return;
 
-        var refundAction = MetaData(args.Action).EntityPrototype?.ID;
+        var refundAction = args.Action.Owner;
         var ev = new AIBuildRequestEvent(malf.Owner, args.Target, RoboticsFactoryPrototype, refundAction);
         RaiseLocalEvent(ev);
 
