@@ -2838,3 +2838,9 @@ Entries:
         minutos spawnado!
   id: 339
   time: '2026-05-17T19:09:10.0000000+00:00'
+- author: Unlimited-Pii
+  changes:
+    - type: Tweak
+      message: Healium buffado, agora ele é uma opção versátil decente para a Med.
+  id: 340
+  time: '2026-05-29T23:47:23.0000000+00:00'
