@@ -55,7 +55,7 @@ public sealed class CharacterInfoSystem : EntitySystem
     private void OnCharacterInfoEvent(CharacterInfoEvent msg, EntitySessionEventArgs args)
     {
         var entity = GetEntity(msg.NetEntity);
-        var data = new CharacterData(entity, msg.JobTitle, msg.Objectives, msg.Briefing, Name(entity), msg.NanoBankBriefing, msg.Job);
+        var data = new CharacterData(entity, msg.JobTitle, msg.Objectives, msg.Briefing, Name(entity), msg.NanoBankBriefing, msg.Job); // Dumont Station - passa o id do job
 
         OnCharacterUpdate?.Invoke(data);
     }
@@ -74,7 +74,7 @@ public sealed class CharacterInfoSystem : EntitySystem
         string? Briefing,
         string EntityName,
         string? NanoBankBriefing, // Gabystation change - Bank
-        ProtoId<JobPrototype>? JobId
+        ProtoId<JobPrototype>? JobId // Dumont Station - passa o id do job
     );
 
     /// <summary>

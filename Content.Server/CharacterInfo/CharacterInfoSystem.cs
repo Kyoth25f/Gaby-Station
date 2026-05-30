@@ -61,7 +61,7 @@ public sealed class CharacterInfoSystem : EntitySystem
 
         var objectives = new Dictionary<string, List<ObjectiveInfo>>();
         var jobTitle = Loc.GetString("character-info-no-profession");
-        ProtoId<JobPrototype>? job = null;
+        ProtoId<JobPrototype>? job = null; // Dumont Station - passa o id do job
         string? briefing = null;
         string? nanoBankBriefing = null; // Gabystation change - bank
         if (_minds.TryGetMind(entity, out var mindId, out var mind))
@@ -80,6 +80,7 @@ public sealed class CharacterInfoSystem : EntitySystem
                 objectives[issuer].Add(info.Value);
             }
 
+            // Dumont Station - passa o id do job
             if (_jobs.MindTryGetJobId(mindId, out job)
                 && _proto.TryIndex(job, out var jobProto))
                 jobTitle = jobProto.LocalizedName;
@@ -99,6 +100,6 @@ public sealed class CharacterInfoSystem : EntitySystem
                 nanoBankBriefing = Loc.GetString("economy-character-info-unknown");
         }
 
-        RaiseNetworkEvent(new CharacterInfoEvent(GetNetEntity(entity), jobTitle, objectives, briefing, nanoBankBriefing, job), args.SenderSession);
+        RaiseNetworkEvent(new CharacterInfoEvent(GetNetEntity(entity), jobTitle, objectives, briefing, nanoBankBriefing, job), args.SenderSession); // Dumont Station - passa o id do job
     }
 }
