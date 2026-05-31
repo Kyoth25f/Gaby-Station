@@ -2858,3 +2858,9 @@ Entries:
         jarro a menos.
   id: 341
   time: '2026-05-30T22:26:02.0000000+00:00'
+- author: CRISOOOOO
+  changes:
+    - type: Remove
+      message: Glacier foi removido da rotação de mapas.
+  id: 342
+  time: '2026-05-31T01:59:25.0000000+00:00'
