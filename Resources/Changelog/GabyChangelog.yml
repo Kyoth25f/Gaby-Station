@@ -2908,3 +2908,15 @@ Entries:
       message: Algumas traduções foram consertadas.
   id: 348
   time: '2026-06-02T12:59:27.0000000+00:00'
+- author: Struater
+  changes:
+    - type: Remove
+      message: Sec vermelha
+    - type: Tweak
+      message: Agora a Segurança é azul, mudança total no visual em respeito as cores
+    - type: Tweak
+      message: Alguns resprites no BSO
+    - type: Tweak
+      message: Alguns ícones de trabalho foram alterados.
+  id: 349
+  time: '2026-06-02T13:18:06.0000000+00:00'
