@@ -2902,3 +2902,9 @@ Entries:
       message: Alguns sprites novos do goob recoloridos
   id: 347
   time: '2026-06-02T12:00:56.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Fix
+      message: Algumas traduções foram consertadas.
+  id: 348
+  time: '2026-06-02T12:59:27.0000000+00:00'
