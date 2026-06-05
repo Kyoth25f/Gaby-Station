@@ -2981,3 +2981,11 @@ Entries:
       message: A estação Eclipse Starport foi adicionada à rotação de mapas.
   id: 358
   time: '2026-06-05T16:14:45.0000000+00:00'
+- author: Redmagician14
+  changes:
+    - type: Remove
+      message: >-
+        Remove campo "data" de vários documentos da impressora de documentos
+        (início do turno ainda é necessário).
+  id: 359
+  time: '2026-06-05T17:57:07.0000000+00:00'
