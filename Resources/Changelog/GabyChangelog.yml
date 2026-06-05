@@ -2969,3 +2969,9 @@ Entries:
       message: Portados sprites do funky!
   id: 356
   time: '2026-06-05T15:58:42.0000000+00:00'
+- author: sTRUATER
+  changes:
+    - type: Fix
+      message: Corrigido alguns sprites da sec e bso estarem nas cores antigas
+  id: 357
+  time: '2026-06-05T16:05:11.0000000+00:00'
