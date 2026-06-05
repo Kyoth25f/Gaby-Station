@@ -2963,3 +2963,9 @@ Entries:
       message: Armas corpo a corpo de mech podem fazer wideswing.
   id: 355
   time: '2026-06-05T15:57:26.0000000+00:00'
+- author: CRISOOOOO
+  changes:
+    - type: Tweak
+      message: Portados sprites do funky!
+  id: 356
+  time: '2026-06-05T15:58:42.0000000+00:00'
