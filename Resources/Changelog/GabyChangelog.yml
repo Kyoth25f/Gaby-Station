@@ -2957,3 +2957,9 @@ Entries:
         ser enviadas de outra forma como interfone.
   id: 354
   time: '2026-06-05T15:51:20.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Tweak
+      message: Armas corpo a corpo de mech podem fazer wideswing.
+  id: 355
+  time: '2026-06-05T15:57:26.0000000+00:00'
