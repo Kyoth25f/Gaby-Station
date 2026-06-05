@@ -2932,3 +2932,11 @@ Entries:
       message: 9 Beards styles
   id: 351
   time: '2026-06-05T13:00:14.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Add
+      message: >-
+        Nova pistola pode ser selecionada por oficiais no loadout: A phaser, a
+        pistola arma laser/atordoador.
+  id: 352
+  time: '2026-06-05T13:02:58.0000000+00:00'
