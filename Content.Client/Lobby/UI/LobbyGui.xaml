@@ -142,7 +142,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     <controls:HSpacer Spacing="3" />
                     <!-- logo -->
                     <BoxContainer Orientation="Vertical" SeparationOverride="4" Name="LogoContainer" HorizontalAlignment="Center"
-                        VerticalAlignment="Center" HorizontalExpand="True" Margin="0 8">
+                        VerticalAlignment="Center" HorizontalExpand="True" Margin="8 0">
                         <TextureRect Name="Logo" Stretch="KeepAspectCentered"/>
                     </BoxContainer>
                     <controls:HSpacer Spacing="3" />
