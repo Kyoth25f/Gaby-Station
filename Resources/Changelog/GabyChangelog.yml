@@ -3013,3 +3013,11 @@ Entries:
         isso... 
   id: 362
   time: '2026-06-07T14:07:39.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Add
+      message: Adiciona a ação de alternar HUDs para os fantasmas.
+    - type: Tweak
+      message: Agora os fantasmas podem interagir com objetos com interface.
+  id: 363
+  time: '2026-06-07T14:13:21.0000000+00:00'
