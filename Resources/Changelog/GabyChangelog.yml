@@ -3027,3 +3027,13 @@ Entries:
       message: 'Novo gerador de energia: Reator Nuclear!'
   id: 364
   time: '2026-06-07T14:15:19.0000000+00:00'
+- author: Struater
+  changes:
+    - type: Add
+      message: Telefones, façam mais fake news
+    - type: Add
+      message: >-
+        Adicionado o Mercador de Telefones para o evento de distribuição de
+        trabalhos
+  id: 365
+  time: '2026-06-07T15:20:56.0000000+00:00'
