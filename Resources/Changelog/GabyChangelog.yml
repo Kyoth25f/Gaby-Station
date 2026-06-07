@@ -3001,3 +3001,15 @@ Entries:
       message: Agora o áudio abafa quando passa por paredes.
   id: 361
   time: '2026-06-07T14:00:26.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Remove
+      message: Removido Gaby Station!
+    - type: Add
+      message: Adicionado Dumont Station!
+    - type: Tweak
+      message: >-
+        A moeda local mudou! Vá trocar esse Gaby Coins, ninguém usa mais
+        isso... 
+  id: 362
+  time: '2026-06-07T14:07:39.0000000+00:00'
