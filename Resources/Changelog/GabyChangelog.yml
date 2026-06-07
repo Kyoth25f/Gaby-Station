@@ -3059,3 +3059,11 @@ Entries:
       message: Módulos de modsuit são de tamanho enorme agora.
   id: 368
   time: '2026-06-07T15:26:54.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Tweak
+      message: >-
+        Mudança para spawns de vários midrounds. Lone ops não vai mais spawnar
+        *todo* round.
+  id: 369
+  time: '2026-06-07T15:31:16.0000000+00:00'
