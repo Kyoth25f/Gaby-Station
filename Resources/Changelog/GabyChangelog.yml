@@ -3037,3 +3037,13 @@ Entries:
         trabalhos
   id: 365
   time: '2026-06-07T15:20:56.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Add
+      message: Tablet de equipes de segurança pro armário do chefe de segurança.
+    - type: Add
+      message: Megafone de segurança pro armário do chefe de segurança.
+    - type: Remove
+      message: Tablet de equipes de segurança do armário do capitão.
+  id: 366
+  time: '2026-06-07T15:23:02.0000000+00:00'
