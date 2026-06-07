@@ -3053,3 +3053,9 @@ Entries:
       message: Waddlers removidos da rotação.
   id: 367
   time: '2026-06-07T15:25:01.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Tweak
+      message: Módulos de modsuit são de tamanho enorme agora.
+  id: 368
+  time: '2026-06-07T15:26:54.0000000+00:00'
