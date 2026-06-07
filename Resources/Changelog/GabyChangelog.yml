@@ -3067,3 +3067,11 @@ Entries:
         *todo* round.
   id: 369
   time: '2026-06-07T15:31:16.0000000+00:00'
+- author: Heartbeat
+  changes:
+    - type: Add
+      message: Poster de recrutamento de ERT.
+    - type: Remove
+      message: Poster de recrutamento de DS.
+  id: 370
+  time: '2026-06-07T15:33:50.0000000+00:00'
