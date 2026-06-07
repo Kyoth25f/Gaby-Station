@@ -267,6 +267,9 @@ namespace Content.Client.Stylesheets
         public static readonly Color DisabledFore = Color.FromHex("#5A5A5A");
 
         public static readonly Color DumontTheme = Color.FromHex("#007a33");
+        public static readonly Color DumontLightTheme = Color.FromHex("#00C44F");
+        public static readonly Color DumontYellowTheme = Color.FromHex("#FFB100");
+        public static readonly Color DumontLightYellowTheme = Color.FromHex("#FFCD59");
 
         public static readonly Color ButtonColorDefault = Color.FromHex("#464966");
         public static readonly Color ButtonColorDefaultRed = Color.FromHex("#D43B3B");
@@ -790,7 +793,7 @@ namespace Content.Client.Stylesheets
                     new SelectorElement(typeof(Label), new[] {DefaultWindow.StyleClassWindowTitle}, null, null),
                     new[]
                     {
-                        new StyleProperty(Label.StylePropertyFontColor, DumontTheme),
+                        new StyleProperty(Label.StylePropertyFontColor, DumontLightTheme),
                         new StyleProperty(Label.StylePropertyFont, notoSansDisplayBold14),
                     }),
                 // Alert (white) window title.
@@ -1503,7 +1506,7 @@ namespace Content.Client.Stylesheets
                         new StyleProperty(Label.StylePropertyFont, notoSansDisplayBold14),
                     }),
 
-                // gaby station
+                // Dumont Station
                 new StyleRule(
                     new SelectorElement(typeof(MenuButton), new[] {MenuButton.StyleClassDumontTopButton}, null, new[] {Button.StylePseudoClassNormal}),
                     new[]
@@ -1757,7 +1760,7 @@ namespace Content.Client.Stylesheets
                 // Window Headers
                 Element<Label>().Class("FancyWindowTitle")
                     .Prop("font", boxFont13)
-                    .Prop("font-color", DumontTheme),
+                    .Prop("font-color", DumontLightTheme),
 
                 Element<PanelContainer>().Class("WindowHeadingBackground")
                     .Prop("panel", new StyleBoxTexture(BaseButtonOpenLeft) { Padding = default })
@@ -1912,7 +1915,7 @@ namespace Content.Client.Stylesheets
                 // ---
 
                 Element<Label>().Class("StatusFieldTitle")
-                    .Prop("font-color", DumontTheme),
+                    .Prop("font-color", DumontLightTheme),
 
                 Element<Label>().Class("Good")
                     .Prop("font-color", GoodGreenFore),
