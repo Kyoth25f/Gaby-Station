@@ -3021,3 +3021,9 @@ Entries:
       message: Agora os fantasmas podem interagir com objetos com interface.
   id: 363
   time: '2026-06-07T14:13:21.0000000+00:00'
+- author: O-Verdadeiro-Biel
+  changes:
+    - type: Add
+      message: 'Novo gerador de energia: Reator Nuclear!'
+  id: 364
+  time: '2026-06-07T14:15:19.0000000+00:00'
