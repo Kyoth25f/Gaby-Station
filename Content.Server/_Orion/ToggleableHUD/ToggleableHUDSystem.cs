@@ -62,35 +62,44 @@ public sealed class ToggleableHudSystem : EntitySystem
         if (actionToggle)
         {
             EnsureComp<ShowJobIconsComponent>(uid);
-            EnsureComp<ShowMindShieldIconsComponent>(uid);
-            EnsureComp<ShowCriminalRecordIconsComponent>(uid);
 
             // HealthBars should have a list of damage containers
             var healthBars = EnsureComp<ShowHealthBarsComponent>(uid);
             healthBars.DamageContainers = new List<ProtoId<DamageContainerPrototype>>(component.DamageContainers);
             Dirty(uid, healthBars);
             EnsureComp<ShowHealthIconsComponent>(uid);
-            EnsureComp<ShowDiseaseIconsComponent>(uid);
 
-            EnsureComp<ShowSyndicateIconsComponent>(uid);
+            if (component.IsAdmin)
+            {
+                EnsureComp<ShowMindShieldIconsComponent>(uid);
+                EnsureComp<ShowCriminalRecordIconsComponent>(uid);
 
-            EnsureComp<ShowHungerIconsComponent>(uid);
-            EnsureComp<ShowThirstIconsComponent>(uid);
+                EnsureComp<ShowDiseaseIconsComponent>(uid);
+
+                EnsureComp<ShowSyndicateIconsComponent>(uid);
+
+                EnsureComp<ShowHungerIconsComponent>(uid);
+                EnsureComp<ShowThirstIconsComponent>(uid);
+            }
         }
         else
         {
             RemComp<ShowJobIconsComponent>(uid);
-            RemComp<ShowMindShieldIconsComponent>(uid);
-            RemComp<ShowCriminalRecordIconsComponent>(uid);
-
             RemComp<ShowHealthBarsComponent>(uid);
             RemComp<ShowHealthIconsComponent>(uid);
-            RemComp<ShowDiseaseIconsComponent>(uid);
 
-            RemComp<ShowSyndicateIconsComponent>(uid);
+            if (component.IsAdmin)
+            {
+                RemComp<ShowMindShieldIconsComponent>(uid);
+                RemComp<ShowCriminalRecordIconsComponent>(uid);
 
-            RemComp<ShowHungerIconsComponent>(uid);
-            RemComp<ShowThirstIconsComponent>(uid);
+                RemComp<ShowDiseaseIconsComponent>(uid);
+
+                RemComp<ShowSyndicateIconsComponent>(uid);
+
+                RemComp<ShowHungerIconsComponent>(uid);
+                RemComp<ShowThirstIconsComponent>(uid);
+            }
         }
 
         _popup.PopupEntity(popupMessage, uid, uid);
