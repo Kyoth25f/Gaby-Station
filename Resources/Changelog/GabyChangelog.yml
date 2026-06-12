@@ -3097,3 +3097,11 @@ Entries:
         eficientes.
   id: 373
   time: '2026-06-12T19:09:51.0000000+00:00'
+- author: Unlimited-Pii
+  changes:
+    - type: Add
+      message: >-
+        APCs agora possuem capacidade de sobrecarregarem e desligarem após o
+        suprimento passar de 25kW.
+  id: 374
+  time: '2026-06-12T19:11:04.0000000+00:00'
