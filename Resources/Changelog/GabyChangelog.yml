@@ -3105,3 +3105,9 @@ Entries:
         suprimento passar de 25kW.
   id: 374
   time: '2026-06-12T19:11:04.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Fix
+      message: Pequenas correções com os indutores.
+  id: 375
+  time: '2026-06-12T19:15:29.0000000+00:00'
