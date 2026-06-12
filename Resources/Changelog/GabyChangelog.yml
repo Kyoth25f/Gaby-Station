@@ -3081,3 +3081,9 @@ Entries:
       message: Removida tooltip dos ícones do chat.
   id: 371
   time: '2026-06-07T15:59:37.0000000+00:00'
+- author: Kyoth25f
+  changes:
+    - type: Remove
+      message: Removidos alguns huds dos fantasmas.
+  id: 372
+  time: '2026-06-12T19:06:24.0000000+00:00'
